@@ -2949,10 +2949,10 @@ function toggleMenu() {
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <button class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="background: none; border: none; cursor: pointer; padding: 0;">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="AI 선거솔루션 연구소" class="logo-image" style="display:none;">
                 <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
-            </a>
+            </button>
             
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             
@@ -2974,10 +2974,10 @@ function toggleMenu() {
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">AI 선거 혁명</div>
-            <h1>승리 확률 <span class="stat-highlight">90%</span>를<br>현실로 만드는 시스템</h1>
+            <h1>사람을 줄여도,<br><span class="stat-highlight">표는 더 나옵니다</span></h1>
             <p class="hero-subtitle">
-                감(感)으로 하는 선거는 끝났습니다.<br>
-                AI 선거 지휘 시스템으로 불확실성을 제거하고 승리를 설계하세요.
+                당신의 선거 캠프를 AI가 지휘하게 하십시오.<br>
+                감(感)으로 하는 선거는 끝났습니다. 데이터 기반의 정확한 전략으로 승리하세요.
             </p>
             <div class="cta-buttons">
                 <button class="btn btn-primary" onclick="scrollToSection('demo')">무료 데모 신청</button>
@@ -2985,12 +2985,59 @@ function toggleMenu() {
             </div>
             
             <div class="scroll-indicator">
-                <button class="scroll-down" onclick="scrollToSection('problem')" style="background: none; border: none; cursor: pointer;">
+                <button class="scroll-down" onclick="scrollToSection('why-ai')" style="background: none; border: none; cursor: pointer;">
                     <span>더 알아보기</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why AI Section -->
+    <section id="why-ai" class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--gold);">이제는 선거가 아닙니다. 전략 게임입니다.</h2>
+            <p class="section-subtitle" style="color: #fff; font-size: 1.3rem; margin-bottom: 4rem;">
+                이 게임은 더 이상 사람의 감이나 노력만으로 이길 수 있는 구조가 아닙니다.<br>
+                승패는 누가 더 정밀한 데이터를 가지고, 더 빠른 의사결정을 내리느냐에 따라 결정됩니다.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                <div class="feature-card" style="background: rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🎯</div>
+                    <h3 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.5rem;">치명적인 전략 공백</h3>
+                    <p style="color: #ccc; line-height: 1.8;">경쟁 후보가 데이터로 움직일 때, 당신의 캠프는 과거의 방식에 머물러 있습니까? 이 공백은 선거 막판에 따라잡을 수 없는 격차를 만듭니다.</p>
+                </div>
+
+                <div class="feature-card" style="background: rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">⚡</div>
+                    <h3 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.5rem;">당신이 '인력'으로 처리하는 일들</h3>
+                    <p style="color: #ccc; line-height: 1.8;">
+                        • 데이터 수집 인력<br>
+                        • 정책 정리 스태프<br>
+                        • 유권자 분석 담당자<br>
+                        • 문자 발송팀<br>
+                        • SNS 콘텐츠 기획자<br>
+                        • 메시지 수정·관리 담당
+                    </p>
+                </div>
+
+                <div class="feature-card" style="background: rgba(255,255,255,0.05); padding: 2.5rem; border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <div style="font-size: 3rem; margin-bottom: 1.5rem;">🤖</div>
+                    <h3 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.5rem;">AI가 자동 수행합니다</h3>
+                    <p style="color: #ccc; line-height: 1.8;">
+                        <strong style="color: var(--gold);">더 빠르게:</strong> 사람이 며칠 걸릴 분석을 AI는 실시간으로 처리합니다.<br>
+                        <strong style="color: var(--gold);">더 정밀하게:</strong> 수백만 개의 데이터 포인트에서 유의미한 패턴을 찾아냅니다.<br>
+                        <strong style="color: var(--gold);">지치지 않고:</strong> 24시간, 365일. 캠프에서 가장 성실한 전략가가 됩니다.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 5rem; padding: 3rem; background: rgba(212, 175, 55, 0.1); border-radius: 20px; border: 2px solid var(--gold); text-align: center;">
+                <p style="font-size: 1.5rem; color: var(--gold); font-weight: 700; margin-bottom: 1rem;">이 모든 인건비, 감당하고 계십니까?</p>
+                <p style="font-size: 1.2rem; color: #fff;">AI 선거 솔루션은, 이 모든 것을 자동화합니다.</p>
             </div>
         </div>
     </section>
@@ -3025,6 +3072,141 @@ function toggleMenu() {
             
             <div class="section-nav-btn" style="text-align: center;">
                 <a href="#solution" class="btn btn-primary">AI 솔루션으로 해결하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Old School vs AI Comparison -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">무기 자체가 다릅니다. 그리고 그 차이는 '표차'로 드러납니다.</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem;">
+                <!-- Old School -->
+                <div style="background: #fff; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <h3 style="color: #666; font-size: 2rem; margin-bottom: 2rem; text-align: center;">다른 후보가 하는 것</h3>
+                    
+                    <div style="space-y: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                            <div style="font-size: 2.5rem;">👟</div>
+                            <div>
+                                <p style="color: #333; font-size: 1.1rem;">열심히 발로 뛴다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                            <div style="font-size: 2.5rem;">📰</div>
+                            <div>
+                                <p style="color: #333; font-size: 1.1rem;">전단지 뿌린다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                            <div style="font-size: 2.5rem;">🧠</div>
+                            <div>
+                                <p style="color: #333; font-size: 1.1rem;">감으로 타이밍 잡는다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
+                            <div style="font-size: 2.5rem;">📊</div>
+                            <div>
+                                <p style="color: #333; font-size: 1.1rem;">여론조사 수치로 판단한다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="font-size: 2.5rem;">💬</div>
+                            <div>
+                                <p style="color: #333; font-size: 1.1rem;">주변 조언에 의존한다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Strategy -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem; border-radius: 20px; box-shadow: 0 20px 40px rgba(102,126,234,0.3);">
+                    <h3 style="color: #fff; font-size: 2rem; margin-bottom: 2rem; text-align: center;">AI 솔루션을 쓰는 후보가 하는 것</h3>
+                    
+                    <div style="space-y: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 2.5rem;">📈</div>
+                            <div>
+                                <p style="color: #fff; font-size: 1.1rem; font-weight: 600;">'누가 반응하는가'를 실시간으로 본다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 2.5rem;">💡</div>
+                            <div>
+                                <p style="color: #fff; font-size: 1.1rem; font-weight: 600;">'무엇을 말해야 하는가'를 자동 제안받는다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 2.5rem;">👥</div>
+                            <div>
+                                <p style="color: #fff; font-size: 1.1rem; font-weight: 600;">유세 메시지를 유권자별로 개인화해 전송한다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                            <div style="font-size: 2.5rem;">♟️</div>
+                            <div>
+                                <p style="color: #fff; font-size: 1.1rem; font-weight: 600;">그날그날의 전략을 AI가 직접 수립한다</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1.5rem;">
+                            <div style="font-size: 2.5rem;">📅</div>
+                            <div>
+                                <p style="color: #fff; font-size: 1.1rem; font-weight: 600;">다음날 무엇을 해야 할지를 매일 아침 보고받는다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Highlight -->
+            <div style="margin-top: 5rem; text-align: center;">
+                <h3 style="font-size: 2.5rem; margin-bottom: 3rem; color: #1a1a2e;">감이 아니라, 수치로 결과를 증명합니다.</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 15px; color: white;">
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">30~50%</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">인건비 절감</div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 2.5rem; border-radius: 15px; color: white;">
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">1.5배~2배</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">선거 효과 (득표율) 상승</div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 2.5rem; border-radius: 15px; color: white;">
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">20~40%</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">광고·홍보비 절감</div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 2.5rem; border-radius: 15px; color: white;">
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">최대 15%</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">핵심 유권자 전환율 증가</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Proposition -->
+            <div style="margin-top: 5rem; padding: 3rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 20px; text-align: center;">
+                <p style="font-size: 1.8rem; color: var(--gold); font-weight: 700; margin-bottom: 1.5rem;">
+                    비용은 줄이고, 표는 더 얻는 공식이 실제로 작동합니다.
+                </p>
+                <p style="font-size: 1.3rem; color: #fff; line-height: 1.8;">
+                    동일한 예산으로 <strong style="color: var(--gold);">2배 더 많은 유권자</strong>에게 도달하고,<br>
+                    동일한 시간으로 <strong style="color: var(--gold);">3배 더 정밀하게</strong> 표심을 공략하며,<br>
+                    동일한 메시지로도 <strong style="color: var(--gold);">5배 더 높은 반응률</strong>을 확보할 수 있습니다.
+                </p>
+                <p style="font-size: 1.5rem; color: var(--gold); margin-top: 2rem; font-weight: 700;">
+                    AI는 결과로 말합니다.
+                </p>
             </div>
         </div>
     </section>
@@ -3146,19 +3328,33 @@ function toggleMenu() {
                     <div class="video-icon">🎥</div>
                     <h3>공천을 받기 위한 사전준비 전략</h3>
                 </div>
-                <div class="video-wrapper">
-                    <iframe 
-                        src="https://www.youtube.com/embed/NpK76bKELSs?rel=0&modestbranding=1" 
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allowfullscreen
-                        style="width: 100%; height: 100%; border-radius: 12px;">
-                    </iframe>
-                </div>
+                <a href="https://youtu.be/NpK76bKELSs" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+                    <div class="video-wrapper" style="position: relative; cursor: pointer; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                        <img 
+                            src="https://img.youtube.com/vi/NpK76bKELSs/sddefault.jpg" 
+                            alt="공천을 받기 위한 사전준비 전략"
+                            onerror="this.src='https://img.youtube.com/vi/NpK76bKELSs/hqdefault.jpg'"
+                            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255, 0, 0, 0.95)" stroke="white" stroke-width="3"/>
+                                <polygon points="40,32 40,68 70,50" fill="white"/>
+                            </svg>
+                        </div>
+                        <div style="position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 12px; border-radius: 8px; color: white;">
+                            <p style="margin: 0; font-size: 1rem; font-weight: 600;">▶ YouTube에서 전체 영상 보기</p>
+                        </div>
+                    </div>
+                </a>
                 <p class="video-description">
                     당심 70% vs 민심 30%, 정량적 데이터로 승부하는 공천 전략을 영상으로 확인하세요
                 </p>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="https://youtu.be/NpK76bKELSs" target="_blank" rel="noopener noreferrer" 
+                       style="display: inline-block; padding: 0.75rem 1.5rem; background: #FF0000; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+                        YouTube에서 보기 ▶
+                    </a>
+                </div>
             </div>
 
             <div class="strategy-intro">
@@ -3279,23 +3475,33 @@ function toggleMenu() {
                     <div class="video-icon">🎥</div>
                     <h3>영상으로 보는 선거 문자 발송의 법적 지뢰밭</h3>
                 </div>
-                <div class="video-wrapper" id="video2">
-                    <img 
-                        src="https://img.youtube.com/vi/yZp-STrot9E/maxresdefault.jpg" 
-                        alt="선거 문자 발송 법적 지뢰밭"
-                        class="video-thumbnail"
-                        onclick="loadVideo('video2', 'yZp-STrot9E')"
-                        style="cursor: pointer; width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
-                    <div class="play-button" onclick="loadVideo('video2', 'yZp-STrot9E')" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer; z-index: 10;">
-                        <svg width="80" height="80" viewBox="0 0 80 80">
-                            <circle cx="40" cy="40" r="35" fill="rgba(255, 0, 0, 0.8)"/>
-                            <polygon points="32,25 32,55 55,40" fill="white"/>
-                        </svg>
+                <a href="https://youtu.be/yZp-STrot9E" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+                    <div class="video-wrapper" style="position: relative; cursor: pointer; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                        <img 
+                            src="https://img.youtube.com/vi/yZp-STrot9E/sddefault.jpg" 
+                            alt="영상으로 보는 선거 문자 발송의 법적 지뢰밭"
+                            onerror="this.src='https://img.youtube.com/vi/yZp-STrot9E/hqdefault.jpg'"
+                            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255, 0, 0, 0.95)" stroke="white" stroke-width="3"/>
+                                <polygon points="40,32 40,68 70,50" fill="white"/>
+                            </svg>
+                        </div>
+                        <div style="position: absolute; bottom: 15px; left: 15px; right: 15px; background: rgba(0,0,0,0.7); padding: 12px; border-radius: 8px; color: white;">
+                            <p style="margin: 0; font-size: 1rem; font-weight: 600;">▶ YouTube에서 전체 영상 보기</p>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <p class="video-description">
                     단 한 번의 잘못된 전송이 선거 캠페인 전체를 무너뜨리는 이유를 영상으로 확인하세요
                 </p>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="https://youtu.be/yZp-STrot9E" target="_blank" rel="noopener noreferrer" 
+                       style="display: inline-block; padding: 0.75rem 1.5rem; background: #FF0000; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+                        YouTube에서 보기 ▶
+                    </a>
+                </div>
             </div>
 
             <div class="legal-warning-box">
@@ -4493,6 +4699,153 @@ function toggleMenu() {
         </div>
     </section>
 
+    <!-- Final Proposal Section -->
+    <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); padding: 6rem 0;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 3rem; color: var(--gold); margin-bottom: 2rem; font-weight: 800;">마지막 제안</h2>
+                
+                <div style="background: rgba(255,255,255,0.05); padding: 4rem; border-radius: 20px; border: 2px solid var(--gold); margin-bottom: 3rem;">
+                    <p style="font-size: 1.8rem; color: #fff; line-height: 1.8; margin-bottom: 2rem;">
+                        ⚠️ 당신이 지금 1억 원 예산을 가지고 있다면,<br>
+                        <strong style="color: var(--gold);">1억 원어치 사람을 뽑겠습니까?</strong>
+                    </p>
+                    
+                    <p style="font-size: 2rem; color: var(--gold); font-weight: 700; margin: 2rem 0;">
+                        AI 전략실 하나로 전체 선거를 지휘하시겠습니까?
+                    </p>
+                </div>
+
+                <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; margin: 4rem 0;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">👥</div>
+                        <div style="font-size: 1.5rem; color: #ccc;">10명의 스태프</div>
+                    </div>
+                    
+                    <div style="font-size: 3rem; color: var(--gold);">⚖️</div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">🤖</div>
+                        <div style="font-size: 1.5rem; color: var(--gold); font-weight: 700;">AI 1개</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 3rem; border-radius: 15px; margin-bottom: 3rem;">
+                    <p style="font-size: 1.4rem; color: #fff; line-height: 2;">
+                        우리는 후보자님의 <strong style="color: var(--gold);">시간을 줄이고, 지출을 최소화하며,<br>
+                        표는 극대화할 수 있는 길</strong>을 이미 알고 있습니다.
+                    </p>
+                </div>
+
+                <div style="margin-top: 4rem; padding: 4rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px;">
+                    <h3 style="font-size: 2.5rem; color: #fff; margin-bottom: 2rem; font-weight: 700;">
+                        이제 선택의 문제가 아닙니다. 생존의 문제입니다.
+                    </h3>
+                    <p style="font-size: 1.5rem; color: #fff; line-height: 1.8; margin-bottom: 3rem;">
+                        AI를 아는가, 모르는가에 따라<br>
+                        당선과 낙선이 결정되는 시대가 시작되었습니다.
+                    </p>
+                    
+                    <p style="font-size: 2.5rem; color: var(--gold); font-weight: 800; margin-bottom: 3rem;">
+                        지금 이 순간부터 AI를 모르면,<br>
+                        <span style="color: #fff;">이미 선거에서 밀리고 있는 중입니다.</span>
+                    </p>
+
+                    <div class="cta-buttons" style="margin-top: 3rem;">
+                        <button class="btn btn-primary" onclick="scrollToSection('demo')" style="font-size: 1.3rem; padding: 1.5rem 3rem; background: var(--gold); color: #000; border: none;">
+                            지금 바로 리셀러로 등록하고<br>2026 지방선거 시장을 선점하세요
+                        </button>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding: 2rem; background: rgba(0,0,0,0.2); border-radius: 10px;">
+                        <p style="color: var(--gold); font-size: 1.2rem; margin-bottom: 0.5rem;">조기 등록 파트너에게는</p>
+                        <p style="color: #fff; font-size: 1.1rem;">추가 혜택과 프리미엄 영업 지역 우선 배정</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 4rem; text-align: left; padding: 3rem; background: rgba(255,255,255,0.03); border-radius: 15px; border-left: 4px solid var(--gold);">
+                    <h4 style="color: var(--gold); font-size: 1.8rem; margin-bottom: 2rem;">
+                        📱 심재우: AI 응용 리더십과 과학 커뮤니케이션 전문가
+                    </h4>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; color: #ccc; font-size: 1.1rem; line-height: 2;">
+                        <div>
+                            <p><strong style="color: var(--gold);">30년 경력의</strong></p>
+                            <p>혁신·리더십·AI 전략 컨설턴트</p>
+                        </div>
+                        
+                        <div>
+                            <p><strong style="color: var(--gold);">총 50권의 저서 집필</strong></p>
+                            <p>AI, 리더십, 조직 변화 등 다양한 분야를<br>아우르는 전문 저술가입니다</p>
+                        </div>
+                        
+                        <div>
+                            <p>🏢 현대자동차 엔지니어</p>
+                        </div>
+                        
+                        <div>
+                            <p>🌐 GE 글로벌 리더</p>
+                        </div>
+                        
+                        <div>
+                            <p>🇺🇸 다국적 기업 컨설팅</p>
+                        </div>
+                        
+                        <div>
+                            <p><strong style="color: var(--gold);">핵심 프로젝트</strong></p>
+                            <p>AI 선거 올인원 솔루션</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h5 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 1.5rem;">주요 기능</h5>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📊</div>
+                                <p style="color: #ccc; font-size: 1rem;">데이터 기반 정책 설계</p>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📝</div>
+                                <p style="color: #ccc; font-size: 1rem;">바이럴 콘텐츠 자동 생성</p>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">⏰</div>
+                                <p style="color: #ccc; font-size: 1rem;">실시간 위기 관리</p>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📱</div>
+                                <p style="color: #ccc; font-size: 1rem;">정밀 유권자 타겟팅</p>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🌐</div>
+                                <p style="color: #ccc; font-size: 1rem;">24시간 자동 소통</p>
+                            </div>
+                            
+                            <div style="text-align: center;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎯</div>
+                                <p style="color: #ccc; font-size: 1rem;">지지층 결집 및 후원 최적화</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(212, 175, 55, 0.1); border-radius: 10px;">
+                        <p style="color: var(--gold); font-size: 1.3rem; margin-bottom: 1rem;">
+                            <strong>세계 최초, 14가지 승리 전략 개발</strong>
+                        </p>
+                        <p style="color: #ccc; font-size: 1.1rem;">
+                            데이터 기반 스마트 캠페인으로<br>
+                            선거의 효율성과 효과성을 극대화합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -4616,20 +4969,6 @@ function toggleMenu() {
         });
 
         // Video thumbnail to iframe conversion
-        function loadVideo(videoId, youtubeId) {
-            const container = document.getElementById(videoId);
-            container.innerHTML = `
-                <iframe 
-                    src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=0&controls=1&playsinline=1&rel=0&modestbranding=1" 
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                    style="width: 100%; height: 100%; border-radius: 12px;">
-                </iframe>
-            `;
-        }
-
         // Reseller Application Form Handler
         document.getElementById('resellerApplicationForm').addEventListener('submit', function(e) {
             e.preventDefault();
