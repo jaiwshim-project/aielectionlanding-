@@ -157,6 +157,257 @@
             width: 100%;
         }
 
+        /* Dropdown Menu Styles */
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item.has-dropdown > .nav-button::after,
+        .nav-item.has-dropdown > .nav-button:hover::after {
+            width: 0;
+        }
+
+        .nav-item.has-dropdown > .nav-button {
+            padding-right: 20px;
+        }
+
+        .nav-item.has-dropdown > .nav-button::before {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item.has-dropdown:hover > .nav-button::before,
+        .nav-item.has-dropdown.active > .nav-button::before {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(15, 52, 96, 0.98);
+            min-width: 200px;
+            border-radius: 8px;
+            padding: 10px 0;
+            margin-top: 10px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(218, 165, 32, 0.3);
+            z-index: 1000;
+        }
+
+        .nav-item:hover .dropdown-menu,
+        .nav-item.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+        }
+
+        .dropdown-menu .nav-button {
+            display: block;
+            width: 100%;
+            padding: 12px 25px;
+            text-align: left;
+            white-space: nowrap;
+            border-radius: 0;
+        }
+
+        .dropdown-menu .nav-button::after {
+            display: none;
+        }
+
+        .dropdown-menu .nav-button:hover {
+            background: rgba(218, 165, 32, 0.2);
+        }
+
+        /* Enhanced Comparison Table Styles */
+        .comparison-table-container {
+            overflow-x: auto;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* 테이블 헤더 라벨 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(15, 52, 96, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            table-layout: fixed;
+        }
+
+        .comparison-table thead th {
+            width: 20%;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            padding: 25px 20px;
+            vertical-align: middle;
+            border: none;
+        }
+
+        .comparison-table thead th:first-child {
+            color: var(--gold);
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 52, 96, 0.8) 100%);
+        }
+
+        .comparison-table thead th.header-old {
+            width: 40%;
+            color: #fff;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.6) 0%, rgba(178, 34, 34, 0.5) 100%);
+        }
+
+        .comparison-table thead th.header-new {
+            width: 40%;
+            color: #fff;
+            background: linear-gradient(135deg, rgba(218, 165, 32, 0.6) 0%, rgba(184, 134, 11, 0.5) 100%);
+        }
+
+        .comparison-table thead .comparison-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .comparison-table tbody td:nth-child(1) {
+            width: 20%;
+        }
+
+        .comparison-table tbody td:nth-child(2) {
+            width: 40%;
+        }
+
+        .comparison-table tbody td:nth-child(3) {
+            width: 40%;
+        }
+
+        .comparison-table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: rgba(218, 165, 32, 0.05);
+            transform: scale(1.01);
+        }
+
+        .comparison-table tbody td {
+            padding: 30px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: middle;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody td:first-child {
+            background: rgba(26, 26, 46, 0.5);
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--gold);
+            text-align: center;
+            border-right: 2px solid rgba(218, 165, 32, 0.3);
+        }
+
+        .comparison-table tbody td:nth-child(2) {
+            background: rgba(139, 0, 0, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .comparison-table tbody td:nth-child(3) {
+            background: rgba(218, 165, 32, 0.1);
+        }
+
+        .comparison-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .comparison-main {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .comparison-sub {
+            font-size: 0.95rem;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border-left: 3px solid;
+            font-style: italic;
+        }
+
+        .comparison-table tbody td:nth-child(2) .comparison-sub {
+            border-left-color: rgba(255, 100, 100, 0.6);
+            color: rgba(255, 150, 150, 0.9);
+        }
+
+        .comparison-table tbody td:nth-child(3) .comparison-sub {
+            border-left-color: var(--gold);
+            color: rgba(218, 165, 32, 0.9);
+        }
+
+        .comparison-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-table-container {
+                overflow-x: auto;
+            }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table thead th {
+                font-size: 0.9rem;
+                padding: 15px 8px;
+            }
+
+            .comparison-table thead .comparison-icon {
+                font-size: 1.5rem;
+                margin-bottom: 3px;
+            }
+
+            .comparison-table tbody td {
+                padding: 15px 8px;
+            }
+
+            .comparison-table tbody td:first-child {
+                font-size: 0.9rem;
+            }
+
+            .comparison-main {
+                font-size: 0.85rem;
+            }
+
+            .comparison-sub {
+                font-size: 0.75rem;
+                padding: 8px 10px;
+            }
+
+            .comparison-icon {
+                font-size: 1.2rem;
+            }
+        }
+
         .footer-link-btn {
             background: none;
             border: none;
@@ -210,8 +461,9 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 padding: 40px 20px;
-                gap: 30px;
+                gap: 15px;
                 transition: left 0.3s ease;
+                overflow-y: auto;
             }
 
             .nav-links.active {
@@ -224,6 +476,58 @@
 
             .logo-image {
                 height: 40px;
+            }
+
+            /* Mobile Dropdown Styles */
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-item > .nav-button {
+                width: 100%;
+                text-align: left;
+                font-size: 1.1rem;
+                padding: 15px 20px;
+                background: rgba(15, 52, 96, 0.5);
+                border-radius: 8px;
+            }
+
+            .nav-item.has-dropdown > .nav-button::before {
+                right: 20px;
+                font-size: 0.8rem;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                overflow: hidden;
+                margin-top: 0;
+                padding: 0;
+                transform: none;
+                transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+                background: rgba(15, 52, 96, 0.3);
+                border: none;
+                border-radius: 0 0 8px 8px;
+            }
+
+            .nav-item.active .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                max-height: 500px;
+                padding: 10px 0;
+                margin-top: 5px;
+            }
+
+            .dropdown-menu .nav-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+                background: transparent;
+            }
+
+            .dropdown-menu .nav-button:hover {
+                background: rgba(218, 165, 32, 0.2);
             }
         }
 
@@ -2944,6 +3248,52 @@ function toggleMenu() {
         navLinks.classList.toggle('active');
     }
 }
+
+// 드롭다운 메뉴 토글 (모바일용)
+function toggleDropdown(event) {
+    // 모바일에서만 작동
+    if (window.innerWidth <= 768) {
+        const navItem = event.currentTarget.parentElement;
+
+        // 다른 모든 드롭다운 닫기
+        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+            if (item !== navItem) {
+                item.classList.remove('active');
+            }
+        });
+
+        // 현재 드롭다운 토글
+        navItem.classList.toggle('active');
+
+        // 기본 동작 방지 (스크롤 방지)
+        event.preventDefault();
+        event.stopPropagation();
+    }
+}
+
+// 페이지 로드 시 드롭다운 이벤트 리스너 추가
+document.addEventListener('DOMContentLoaded', function() {
+    // 드롭다운이 있는 메뉴에 클릭 이벤트 추가
+    document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+        button.addEventListener('click', toggleDropdown);
+    });
+
+    // 드롭다운 서브메뉴 클릭 시 메뉴 닫기
+    document.querySelectorAll('.dropdown-menu .nav-button').forEach(button => {
+        button.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                const navLinks = document.getElementById('navLinks');
+                if (navLinks) {
+                    navLinks.classList.remove('active');
+                }
+                // 드롭다운도 닫기
+                document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+    });
+});
 </script>
 <body>
     <!-- Navigation -->
@@ -2957,15 +3307,44 @@ function toggleMenu() {
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             
             <ul class="nav-links" id="navLinks">
-                <li><button class="nav-button" onclick="scrollToSection('solution')">솔루션</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('strategy')">공천 전략</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('legal')">불법문자발송</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('election-law')">선거법 안내</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('pricing')">가격표</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('comparison')">비교분석</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('results')">성과</button></li>
-                <li><button class="nav-button" onclick="scrollToSection('reseller')">리셀러 모집</button></li>
-                <li><button class="nav-button nav-cta" onclick="scrollToSection('demo')">무료 데모</button></li>
+                <!-- 솔루션 드롭다운 -->
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><button class="nav-button" onclick="scrollToSection('solution')">AI 선거 시스템</button></li>
+                        <li><button class="nav-button" onclick="scrollToSection('strategy')">공천 전략</button></li>
+                        <li><button class="nav-button" onclick="scrollToSection('election-vehicle')">AI 선거차량</button></li>
+                    </ul>
+                </li>
+
+                <!-- 법률 가이드 드롭다운 -->
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><button class="nav-button" onclick="scrollToSection('legal')">불법문자발송</button></li>
+                        <li><button class="nav-button" onclick="scrollToSection('election-law')">선거법 안내</button></li>
+                    </ul>
+                </li>
+
+                <!-- 가격/비교 드롭다운 -->
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><button class="nav-button" onclick="scrollToSection('pricing')">가격표</button></li>
+                        <li><button class="nav-button" onclick="scrollToSection('comparison')">비교분석</button></li>
+                        <li><button class="nav-button" onclick="scrollToSection('results')">성과</button></li>
+                    </ul>
+                </li>
+
+                <!-- 리셀러 모집 -->
+                <li class="nav-item">
+                    <button class="nav-button" onclick="scrollToSection('reseller')">리셀러 모집</button>
+                </li>
+
+                <!-- 무료 데모 CTA -->
+                <li class="nav-item">
+                    <button class="nav-button nav-cta" onclick="scrollToSection('demo')">무료 데모</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -3569,6 +3948,112 @@ function toggleMenu() {
                 <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--gold);">지금이 공천 경쟁력을 확보할 마지막 골든 타임입니다</h3>
                 <p style="font-size: 1.2rem; margin-bottom: 30px; color: rgba(255,255,255,0.9);">공천 심사 직전의 활동은 이미 늦습니다. 선제적 데이터 전략으로 압도적 우위를 확보하세요.</p>
                 <a href="#demo" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">공천 전략 상담 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Election Vehicle Section -->
+    <section id="election-vehicle" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">AI 선거 차량</h2>
+            <p class="section-subtitle">
+                2026 지방선거 필승 전략 - 데이터와 AI가 선거의 승패를 가르는 핵심 무기입니다
+            </p>
+
+            <!-- 이미지 갤러리 -->
+            <div style="margin-bottom: 80px;">
+
+                <!-- 슬라이드 4 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드4.JPG" alt="전통 선거 방식 vs AI 선거 솔루션" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 5 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드5.JPG" alt="AI 선거 올인원 솔루션" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 6 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드6.JPG" alt="전략 기획 및 분석" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 7 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드7.JPG" alt="소통 및 관계 관리" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 8 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드8.JPG" alt="콘텐츠 및 홍보 마케팅" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 9 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드9.JPG" alt="AI 톡허브 사전운영" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 13 -->
+                <div style="margin-bottom: 60px; background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <img src="AI선거차량 (1)/슬라이드13.JPG" alt="가격 패키지" style="width: 100%; height: auto; display: block;">
+                </div>
+
+                <!-- 슬라이드 14 - 1톤 차량 샘플 -->
+                <div style="margin-bottom: 60px;">
+                    <h3 class="section-title" style="margin-bottom: 40px; text-align: center;">AI 선거 차량 샘플 이미지</h3>
+                    <div style="background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); margin-bottom: 30px;">
+                        <img src="AI선거차량 (1)/슬라이드14.JPG" alt="1톤 차량 샘플" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div style="text-align: center; padding: 20px; background: rgba(218, 165, 32, 0.1); border-radius: 10px; border: 1px solid rgba(218, 165, 32, 0.3);">
+                        <p style="font-size: 1.2rem; color: var(--gold); font-weight: 600; margin: 0;">1톤 일반 차량</p>
+                    </div>
+                </div>
+
+                <!-- 슬라이드 16 - 3.5톤 차량 샘플 -->
+                <div style="margin-bottom: 60px;">
+                    <div style="background: rgba(15, 52, 96, 0.3); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); margin-bottom: 30px;">
+                        <img src="AI선거차량 (1)/슬라이드16.JPG" alt="3.5톤 차량 샘플" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div style="text-align: center; padding: 20px; background: rgba(218, 165, 32, 0.1); border-radius: 10px; border: 1px solid rgba(218, 165, 32, 0.3);">
+                        <p style="font-size: 1.2rem; color: var(--gold); font-weight: 600; margin: 0;">3.5톤 차량</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, rgba(218, 165, 32, 0.2) 0%, rgba(15, 52, 96, 0.3) 100%); border-radius: 20px; border: 2px solid var(--gold);">
+                <h3 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--gold);">AI 선거 차량으로 승리를 설계하세요</h3>
+                <p style="font-size: 1.3rem; margin-bottom: 40px; color: rgba(255,255,255,0.9);">
+                    데이터와 AI 없는 선거는 더 이상 승리할 수 없습니다.<br>
+                    지금 바로 AI 선거 차량으로 압도적 우위를 확보하세요.
+                </p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#demo" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">무료 상담 신청</a>
+                    <a href="#pricing" class="btn btn-secondary" style="font-size: 1.2rem; padding: 20px 50px;">가격 확인하기</a>
+                </div>
+            </div>
+
+            <!-- 예약서 다운로드 섹션 -->
+            <div style="margin-top: 80px; padding: 50px 40px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); border-radius: 20px; border: 2px solid rgba(218, 165, 32, 0.5);">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 4rem; margin-bottom: 15px;">📄</div>
+                    <h3 style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;">AI 선거차량 예약서 다운로드</h3>
+                    <p style="font-size: 1.1rem; color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        AI 선거차량 예약을 원하시면 아래 예약서 양식을 다운로드하여 작성 후 제출해주세요.<br>
+                        작성하신 예약서는 이메일 또는 담당자에게 직접 전달하실 수 있습니다.
+                    </p>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="예약서.hwp" download class="btn btn-primary" style="font-size: 1.3rem; padding: 20px 60px; display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #000; border: none; box-shadow: 0 5px 20px rgba(218, 165, 32, 0.4);">
+                        <span style="font-size: 1.5rem;">📥</span>
+                        예약서 다운로드 (HWP)
+                    </a>
+                    <p style="margin-top: 20px; font-size: 0.95rem; color: rgba(255,255,255,0.6);">
+                        ✉️ 작성 후 제출: <a href="mailto:callingcnd@naver.com" style="color: var(--gold); text-decoration: underline;">callingcnd@naver.com</a> | 📞 문의: 010-8296-6534
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -4541,12 +5026,12 @@ function toggleMenu() {
             <!-- Reseller Application Form -->
             <div id="reseller-form" class="reseller-form-section">
                 <h3 class="section-title">리셀러 지원서</h3>
-                <p class="form-subtitle">아래 정보를 입력해주시면 영업일 기준 3일 이내 담당자가 연락드립니다.</p>
+                <p class="form-subtitle">Word 양식을 다운로드하여 작성 후 이메일로 제출해주시면 영업일 기준 3일 이내 담당자가 연락드립니다.</p>
 
                 <div class="form-download-section">
                     <p class="download-text">
-                        <strong>💾 오프라인 작성을 원하시나요?</strong><br>
-                        Word 양식을 다운로드하여 작성 후 이메일로 제출하실 수 있습니다.
+                        <strong>📄 리셀러 지원서 다운로드</strong><br>
+                        아래 버튼을 클릭하여 Word 양식을 다운로드하고 작성해주세요.
                     </p>
                     <a href="리셀러지원서.docx" download class="btn btn-primary btn-large">
                         📄 Word 양식 다운로드
@@ -4554,246 +5039,6 @@ function toggleMenu() {
                     <p class="download-note">
                         작성 후 <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5a7b0a6b0b9b9b0a795b4bcf8b0b9b0b6a1bcbabbfbb6bab8">[email&#160;protected]</a></strong>으로 제출해주세요.
                     </p>
-                </div>
-
-                <div class="form-divider">
-                    <span>또는 온라인으로 바로 제출</span>
-                </div>
-
-                <form class="reseller-application-form" id="resellerApplicationForm">
-                    <!-- 기본 정보 -->
-                    <div class="form-section">
-                        <h4 class="form-section-title">
-                            <span class="section-number">1</span>
-                            기본 정보
-                        </h4>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">성명 <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" required placeholder="홍길동">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">연락처 <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">이메일 <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" required placeholder="example@email.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="region">희망 영업 지역 <span class="required">*</span></label>
-                                <select id="region" name="region" required>
-                                    <option value="">선택하세요</option>
-                                    <option value="서울">서울특별시</option>
-                                    <option value="부산">부산광역시</option>
-                                    <option value="대구">대구광역시</option>
-                                    <option value="인천">인천광역시</option>
-                                    <option value="광주">광주광역시</option>
-                                    <option value="대전">대전광역시</option>
-                                    <option value="울산">울산광역시</option>
-                                    <option value="세종">세종특별자치시</option>
-                                    <option value="경기">경기도</option>
-                                    <option value="강원">강원특별자치도</option>
-                                    <option value="충북">충청북도</option>
-                                    <option value="충남">충청남도</option>
-                                    <option value="전북">전북특별자치도</option>
-                                    <option value="전남">전라남도</option>
-                                    <option value="경북">경상북도</option>
-                                    <option value="경남">경상남도</option>
-                                    <option value="제주">제주특별자치도</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 사업자 정보 -->
-                    <div class="form-section">
-                        <h4 class="form-section-title">
-                            <span class="section-number">2</span>
-                            사업자 정보
-                        </h4>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="company-name">회사명/상호 <span class="required">*</span></label>
-                                <input type="text" id="company-name" name="company-name" required placeholder="(주)○○○ 또는 ○○○컨설팅">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="business-number">사업자등록번호 <span class="required">*</span></label>
-                                <input type="text" id="business-number" name="business-number" required placeholder="123-45-67890">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="business-type">업종 <span class="required">*</span></label>
-                                <select id="business-type" name="business-type" required>
-                                    <option value="">선택하세요</option>
-                                    <option value="IT/소프트웨어">IT/소프트웨어</option>
-                                    <option value="컨설팅">컨설팅</option>
-                                    <option value="마케팅/광고">마케팅/광고</option>
-                                    <option value="정치/선거 컨설팅">정치/선거 컨설팅</option>
-                                    <option value="데이터 분석">데이터 분석</option>
-                                    <option value="기타">기타</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="business-years">사업 연수</label>
-                                <select id="business-years" name="business-years">
-                                    <option value="">선택하세요</option>
-                                    <option value="1년 미만">1년 미만</option>
-                                    <option value="1-3년">1-3년</option>
-                                    <option value="3-5년">3-5년</option>
-                                    <option value="5-10년">5-10년</option>
-                                    <option value="10년 이상">10년 이상</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 경력 및 역량 -->
-                    <div class="form-section">
-                        <h4 class="form-section-title">
-                            <span class="section-number">3</span>
-                            경력 및 역량
-                        </h4>
-                        
-                        <div class="form-group">
-                            <label>선거 관련 경험 <span class="required">*</span></label>
-                            <div class="checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="experience" value="선거 캠프 참여">
-                                    <span>선거 캠프 참여</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="experience" value="선거 컨설팅">
-                                    <span>선거 컨설팅</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="experience" value="정치권 네트워크">
-                                    <span>정치권 네트워크 보유</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="experience" value="당직 경험">
-                                    <span>당직 경험</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="experience" value="없음">
-                                    <span>해당 없음</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>영업 경험 <span class="required">*</span></label>
-                            <div class="checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="sales-experience" value="B2B 솔루션 영업">
-                                    <span>B2B 솔루션 영업</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="sales-experience" value="서비스 영업">
-                                    <span>서비스 영업</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="sales-experience" value="컨설팅 영업">
-                                    <span>컨설팅 영업</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="sales-experience" value="IT 제품 영업">
-                                    <span>IT 제품 영업</span>
-                                </label>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="sales-experience" value="없음">
-                                    <span>해당 없음</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="network-level">정치권 네트워크 수준</label>
-                                <select id="network-level" name="network-level">
-                                    <option value="">선택하세요</option>
-                                    <option value="국회의원급">국회의원급 (직접 연결)</option>
-                                    <option value="지방의원급">지방의원급 (직접 연결)</option>
-                                    <option value="당직자급">당직자급 (직접 연결)</option>
-                                    <option value="간접 연결">간접 연결 가능</option>
-                                    <option value="없음">없음</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="expected-sales">연간 예상 계약 건수</label>
-                                <select id="expected-sales" name="expected-sales">
-                                    <option value="">선택하세요</option>
-                                    <option value="3-5건">3-5건</option>
-                                    <option value="6-10건">6-10건</option>
-                                    <option value="11-20건">11-20건</option>
-                                    <option value="20건 이상">20건 이상</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 추가 정보 -->
-                    <div class="form-section">
-                        <h4 class="form-section-title">
-                            <span class="section-number">4</span>
-                            추가 정보
-                        </h4>
-                        
-                        <div class="form-group">
-                            <label for="motivation">지원 동기 및 강점</label>
-                            <textarea id="motivation" name="motivation" rows="5" placeholder="리셀러로 지원하게 된 동기와 본인의 강점을 자유롭게 작성해주세요."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="questions">문의사항</label>
-                            <textarea id="questions" name="questions" rows="3" placeholder="리셀러 프로그램에 대해 궁금한 점이 있으시면 작성해주세요."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="referral">추천인 (선택사항)</label>
-                            <input type="text" id="referral" name="referral" placeholder="추천인 성함 또는 회사명">
-                        </div>
-                    </div>
-
-                    <!-- 동의 사항 -->
-                    <div class="form-section">
-                        <div class="form-group">
-                            <label class="checkbox-label agreement">
-                                <input type="checkbox" name="agreement" id="agreement" required>
-                                <span>개인정보 수집 및 이용에 동의합니다. <span class="required">*</span></span>
-                            </label>
-                            <p class="agreement-text">
-                                수집항목: 성명, 연락처, 이메일, 사업자 정보 등<br>
-                                이용목적: 리셀러 등록 심사 및 계약 진행<br>
-                                보유기간: 심사 완료 후 3년
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- 제출 버튼 -->
-                    <div class="form-submit">
-                        <button type="submit" class="btn btn-primary btn-large">지원서 제출하기</button>
-                        <button type="reset" class="btn btn-secondary btn-large">다시 작성</button>
-                    </div>
-                </form>
-
-                <div class="form-success-message" id="successMessage" style="display: none;">
-                    <div class="success-icon">✅</div>
-                    <h3>지원서가 성공적으로 접수되었습니다!</h3>
-                    <p>영업일 기준 3일 이내 담당자가 연락드리겠습니다.<br>
-                    감사합니다.</p>
                 </div>
             </div>
         </div>
@@ -5081,61 +5326,7 @@ function toggleMenu() {
         });
 
         // Video thumbnail to iframe conversion
-        // Reseller Application Form Handler
-        document.getElementById('resellerApplicationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // 폼 데이터 수집
-            const formData = new FormData(this);
-            const data = {};
-            
-            // 체크박스 그룹 처리
-            const experiences = [];
-            const salesExperiences = [];
-            
-            formData.forEach((value, key) => {
-                if (key === 'experience') {
-                    experiences.push(value);
-                } else if (key === 'sales-experience') {
-                    salesExperiences.push(value);
-                } else if (key !== 'agreement') {
-                    data[key] = value;
-                }
-            });
-            
-            data['experience'] = experiences.join(', ');
-            data['sales-experience'] = salesExperiences.join(', ');
-            
-            // 콘솔에 데이터 출력 (실제로는 서버로 전송)
-            console.log('리셀러 지원서 데이터:', data);
-            
-            // 폼 숨기고 성공 메시지 표시
-            document.getElementById('resellerApplicationForm').style.display = 'none';
-            document.querySelector('.form-subtitle').style.display = 'none';
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // 성공 메시지로 스크롤
-            document.getElementById('successMessage').scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-            
-            // 실제 구현 시에는 여기서 서버로 데이터 전송
-            // fetch('/api/reseller-application', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify(data)
-            //})
-            // .then(response => response.json())
-            // .then(result => {
-            //     // 성공 처리
-            // })
-            // .catch(error => {
-            //     // 에러 처리
-            // });
-        });
+        // Reseller Application Form Handler (온라인 폼 제거됨)
 
         // Election Type Pricing Data
         const pricingData = {
