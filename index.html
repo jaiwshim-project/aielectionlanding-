@@ -5419,4 +5419,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             } else if (pricing.recommended === 'packageD' && cards[3]) {
                 cards[3].classList.add('recommended');
-                if (!cards[3].querySelector('.recommended-badge')
+                if (!cards[3].querySelector('.recommended-badge')) {
+                    const badge = document.createElement('div');
+                    badge.className = 'recommended-badge';
+                    badge.textContent = '추천';
+                    cards[3].appendChild(badge);
+                }
+            }
+        }
+    </script>
+
+    <!-- TalkerSDK 챗봇 팝업 -->
+    <script src="https://chatbot-sdk.aitalker.co.kr/talker-sdk.umd.js"></script>
+    <script>
+        TalkerSDK.initializeTalkerSDK({ code: "biz011", position: "right" });
+    </script>
+
+</body>
+</html>
