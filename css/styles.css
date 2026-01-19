@@ -149,6 +149,22 @@
             width: 100%;
         }
 
+        /* Active Menu State */
+        .nav-button.active,
+        a.nav-button.active {
+            color: var(--gold) !important;
+        }
+
+        .nav-button.active::after,
+        a.nav-button.active::after {
+            width: 100%;
+            background: var(--gold);
+        }
+
+        .nav-item.has-dropdown.active-parent > .nav-button {
+            color: var(--gold);
+        }
+
         /* Dropdown Menu Styles */
         .nav-item {
             position: relative;

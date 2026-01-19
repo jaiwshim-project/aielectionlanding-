@@ -157,10 +157,40 @@
                         document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
                             if (item !== navItem) item.classList.remove('active');
                         });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes(currentPage) && currentPage !== "") {
+                    link.classList.add("active");
+                    const parentDropdown = link.closest(".nav-item.has-dropdown");
+                    if (parentDropdown) {
+                        parentDropdown.classList.add("active-parent");
+                    }
+                }
+            });
                         navItem.classList.toggle('active');
                         event.preventDefault();
                     }
                 });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes(currentPage) && currentPage !== "") {
+                    link.classList.add("active");
+                    const parentDropdown = link.closest(".nav-item.has-dropdown");
+                    if (parentDropdown) {
+                        parentDropdown.classList.add("active-parent");
+                    }
+                }
+            });
             });
         });
     </script>
