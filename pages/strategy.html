@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공천 전략 - AI 선거 솔루션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="../index.html#comparison" class="nav-button">비교분석</a></li>
+                        <li><a href="../index.html#results" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown"><button class="nav-button">자료 보기</button><ul class="dropdown-menu"><li><a href="resources-video.html" class="nav-button">영상자료</a></li><li><a href="resources-articles.html" class="nav-button">기사 자료</a></li><li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li><li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li></ul></li>
+                <li class="nav-item"><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                <li class="nav-item"><a href="../index.html#demo" class="nav-button nav-cta">무료 데모</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">STRATEGY</div>
+            <h1>2026 공천 경쟁력 극대화 전략</h1>
+            <p class="hero-subtitle">당심(黨心)과 민심(民心) 데이터 통합 활용으로 공천 승리 확보</p>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="section section-dark">
+        <div class="container">
+            <!-- YouTube Video Section -->
+            <div class="video-container">
+                <div class="video-header">
+                    <div class="video-icon">🎥</div>
+                    <h3>공천을 받기 위한 사전준비 전략</h3>
+                </div>
+                <a href="https://youtu.be/NpK76bKELSs" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+                    <div class="video-wrapper" style="position: relative; cursor: pointer; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                        <img src="https://img.youtube.com/vi/NpK76bKELSs/sddefault.jpg" alt="공천을 받기 위한 사전준비 전략" onerror="this.src='https://img.youtube.com/vi/NpK76bKELSs/hqdefault.jpg'" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 12px;">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none;">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="40" fill="rgba(255, 0, 0, 0.95)" stroke="white" stroke-width="3"/>
+                                <polygon points="40,32 40,68 70,50" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <p class="video-description">당심 70% vs 민심 30%, 정량적 데이터로 승부하는 공천 전략을 영상으로 확인하세요</p>
+            </div>
+
+            <div class="strategy-intro">
+                <div class="strategy-card highlight-card">
+                    <div class="strategy-icon">⚡</div>
+                    <h3>공천이 곧 승리의 80%</h3>
+                    <p>2026년 6월 3일 지방선거, 공천 심사는 2026년 1~3월 집중 진행됩니다. 공천 확보는 선거 승리의 전제조건입니다.</p>
+                </div>
+
+                <div class="strategy-grid">
+                    <div class="strategy-item">
+                        <div class="party-badge knp">국민의힘</div>
+                        <div class="ratio-display">
+                            <div class="ratio-bar">
+                                <div class="ratio-fill knp-fill" style="width: 70%"><span>당심 70%</span></div>
+                                <div class="ratio-fill" style="width: 30%; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);"><span>민심 30%</span></div>
+                            </div>
+                        </div>
+                        <ul class="strategy-points">
+                            <li><strong>청년 가산점:</strong> 34세 이하 20%p, 35-44세 15%p</li>
+                            <li><strong>당원 충성도 극대화</strong> 전략 필수</li>
+                            <li><strong>당내 조직력</strong> 정량적 입증 요구</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <div class="party-badge dpk">더불어민주당</div>
+                        <div class="ratio-display">
+                            <div class="ratio-bar">
+                                <div class="ratio-fill dpk-fill" style="width: 50%"><span>당심 50%</span></div>
+                                <div class="ratio-fill" style="width: 50%; background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);"><span>민심 50%</span></div>
+                            </div>
+                        </div>
+                        <ul class="strategy-points">
+                            <li><strong>균형 전략:</strong> 당심과 민심 동시 공략</li>
+                            <li><strong>윤리 기준:</strong> 투기성 다주택자 배제</li>
+                            <li><strong>여론조사 대비</strong> 사전 인지도 구축</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-solution">
+                <h3 class="section-title" style="margin-top: 80px; font-size: 2.5rem;">AI 솔루션 핵심 기능</h3>
+                <div class="solution-features-grid">
+                    <div class="feature-box">
+                        <div class="feature-number">01</div>
+                        <h4>당원 로열티 분석</h4>
+                        <p>당원 활동 데이터 마이닝으로 충성도 점수화, 이탈 당원 자동 식별 및 맞춤형 메시징 생성</p>
+                        <div class="feature-tag">당심 극대화</div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-number">02</div>
+                        <h4>여론조사 시뮬레이션</h4>
+                        <p>타겟 유권자 세분화, A/B 테스트 기반 최적 메시지 발굴, 인지도 변화 실시간 모니터링</p>
+                        <div class="feature-tag">민심 확보</div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-number">03</div>
+                        <h4>가산점 획득 로드맵</h4>
+                        <p>후보자 경력 및 나이 분석으로 가산점 획득 가능성 진단 및 전략 제시</p>
+                        <div class="feature-tag">경쟁력 강화</div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-number">04</div>
+                        <h4>정책 개발 자동화</h4>
+                        <p>지역 민원 빅데이터 분석, 공약 우선순위 설정 및 예산 효율성 시뮬레이션</p>
+                        <div class="feature-tag">능력 입증</div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-number">05</div>
+                        <h4>리스크 관리 시스템</h4>
+                        <p>윤리적 컷오프 기준 사전 스크리닝, 소명 자료 자동 준비, 부정적 이슈 실시간 대응</p>
+                        <div class="feature-tag">리스크 최소화</div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-number">06</div>
+                        <h4>경선 시나리오 모델링</h4>
+                        <p>경쟁 후보 지지율 분석, 최소 목표 득표율 제시, 자원 배분 최적화</p>
+                        <div class="feature-tag">전략 수립</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box" style="margin-top: 80px; text-align: center; padding: 60px 40px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(233, 69, 96, 0.2) 100%); border-radius: 20px; border: 2px solid var(--gold);">
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--gold);">지금이 공천 경쟁력을 확보할 마지막 골든 타임입니다</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; color: rgba(255,255,255,0.9);">공천 심사 직전의 활동은 이미 늦습니다. 선제적 데이터 전략으로 압도적 우위를 확보하세요.</p>
+                <a href="../index.html#demo" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">공천 전략 상담 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">솔루션</a>
+                <a href="../index.html#demo">데모 신청</a>
+                <a href="../index.html#demo">문의하기</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

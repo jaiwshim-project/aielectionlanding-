@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기사 자료 - AI 선거 솔루션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="../index.html#comparison" class="nav-button">비교분석</a></li>
+                        <li><a href="../index.html#results" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">자료 보기</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">영상자료</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">기사 자료</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                <li class="nav-item"><a href="../index.html#demo" class="nav-button nav-cta">무료 데모</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">ARTICLES</div>
+            <h1>기사 자료</h1>
+            <p class="hero-subtitle">AI 선거 솔루션 관련 기사 및 보도자료를 확인하세요</p>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <!-- PDF 자료 섹션 -->
+            <h2 class="section-title" style="margin-bottom: 20px;">📚 AI 선거 전략 PDF 자료</h2>
+
+            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(15, 52, 96, 0.3) 100%); border-radius: 12px; padding: 15px; border: 2px solid var(--gold); margin-bottom: 20px;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                    AI 선거 솔루션의 핵심 전략 자료를 PDF로 확인하세요.<br>
+                    각 자료는 공천 전략, 선거 승리 전략, 캠페인 운영 등 실전에 바로 적용 가능한 내용을 담고 있습니다.
+                </p>
+            </div>
+
+            <!-- PDF 선택 탭 -->
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center;">
+                <button class="pdf-tab-btn active" onclick="showPDF('pdf1', this)" style="padding: 8px 14px; background: var(--gold); color: var(--primary); border: none; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI 캠페인 승리 전략</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf2', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI 공천 전략</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf3', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">전략적 듀얼 플레이북</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf4', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">승리를 위한 AI 전략</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf5', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI 경선 승리</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf6', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI 선거 승리 공식</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf7', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI 유세 효과 극대화</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf8', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">경선에서 AI가 필요한 이유</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf10', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">공천 전쟁 데이터 전략</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf11', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">데이터 승리 AI 전략</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf12', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">무소속 승리 전략</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf13', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">문자 발송은 불법</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf14', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">불법 크롤링 문자 위험</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf15', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">클린 캠페인 설계도</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf16', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI 선거전략</button>
+            </div>
+
+            <!-- PDF 뷰어 컨테이너 -->
+            <div style="background: #1a1a2e; border-radius: 15px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3);">
+                <!-- PDF 1: AI Campaign Victory -->
+                <div id="pdf1" class="pdf-container" style="display: block;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI Campaign Victory (AI 캠페인 승리 전략)</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">AI 기반 선거 캠페인의 승리 전략과 실행 방법을 상세히 다룹니다.</p>
+                    </div>
+                    <iframe src="../AI_Campaign_Victory.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI_Campaign_Victory.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 2: AI Nomination Strategy -->
+                <div id="pdf2" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI Nomination Strategy (AI 공천 전략)</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">정당 공천 획득을 위한 AI 기반 전략 수립 가이드입니다.</p>
+                    </div>
+                    <iframe src="../AI_Nomination_Strategy.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI_Nomination_Strategy.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 3: AI Strategic Dual Playbook -->
+                <div id="pdf3" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI Strategic Dual Playbook (전략적 듀얼 플레이북)</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">온라인과 오프라인을 아우르는 듀얼 선거 전략 플레이북입니다.</p>
+                    </div>
+                    <iframe src="../AI_Strategic_Dual_Playbook.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI_Strategic_Dual_Playbook.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 4: AI Strategy For Victory -->
+                <div id="pdf4" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI Strategy For Victory (승리를 위한 AI 전략)</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">선거 승리를 위한 종합적인 AI 전략 가이드입니다.</p>
+                    </div>
+                    <iframe src="../AI_Strategy_For_Victory.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI_Strategy_For_Victory.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 5: AI 경선 승리 -->
+                <div id="pdf5" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI 경선 승리</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">당내 경선에서 승리하기 위한 AI 기반 전략과 실행 방안을 제시합니다.</p>
+                    </div>
+                    <iframe src="../AI_경선_승리.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI_경선_승리.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 6: AI 선거 승리 공식 -->
+                <div id="pdf6" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI 선거 승리 공식</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">데이터와 AI를 활용한 선거 승리의 핵심 공식을 분석합니다.</p>
+                    </div>
+                    <iframe src="../AI_선거_승리_공식.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI_선거_승리_공식.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 7: AI 유세 효과 극대화 -->
+                <div id="pdf7" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI선거 솔루션 - 인력은 줄이고, 비용은 낮추고, 유세 효과는 최대로</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">효율적인 선거 운영을 위한 AI 솔루션의 비용 절감과 효과 극대화 전략입니다.</p>
+                    </div>
+                    <iframe src="../AI선거 솔루션 - 인력은 줄이고, 비용은 낮추고, 유세 효과는 최대로.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI선거 솔루션 - 인력은 줄이고, 비용은 낮추고, 유세 효과는 최대로.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 8: 경선에서 AI선거 솔루션이 필요한 이유 -->
+                <div id="pdf8" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 경선에서 AI선거 솔루션이 필요한 이유</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">당내 경선에서 AI 솔루션이 왜 필수적인지 분석합니다.</p>
+                    </div>
+                    <iframe src="../경선에서 AI선거 솔루션이 필요한 이유.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../경선에서 AI선거 솔루션이 필요한 이유.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 10: 공천 전쟁 데이터 전략 -->
+                <div id="pdf10" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 공천 전쟁 데이터 전략</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">공천 경쟁에서 승리하기 위한 데이터 기반 전략을 제시합니다.</p>
+                    </div>
+                    <iframe src="../공천_전쟁_데이터_전략.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../공천_전쟁_데이터_전략.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 11: 데이터 승리 AI 전략 -->
+                <div id="pdf11" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 데이터 승리 AI 전략</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">데이터 분석과 AI를 결합한 선거 승리 전략입니다.</p>
+                    </div>
+                    <iframe src="../데이터_승리_AI_전략.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../데이터_승리_AI_전략.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 12: 무소속 승리 전략 -->
+                <div id="pdf12" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 무소속 승리 전략</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">무소속 후보가 선거에서 승리하기 위한 AI 기반 전략입니다.</p>
+                    </div>
+                    <iframe src="../무소속_승리_전략.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../무소속_승리_전략.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 13: 문자 메세지 발송은 불법 -->
+                <div id="pdf13" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 문자 메세지 발송은 불법</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">선거 문자 발송의 법적 위험성과 주의사항을 안내합니다.</p>
+                    </div>
+                    <iframe src="../문자 메세지 발송은 불법.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../문자 메세지 발송은 불법.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 14: 불법 크롤링 문자 선거 캠페인 붕괴 -->
+                <div id="pdf14" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 불법 크롤링 문자 선거 캠페인 붕괴</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">불법 크롤링과 문자 발송이 선거 캠페인에 미치는 치명적 영향을 분석합니다.</p>
+                    </div>
+                    <iframe src="../불법_크롤링_문자_선거_캠페인_붕괴.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../불법_크롤링_문자_선거_캠페인_붕괴.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 15: 클린 캠페인 설계도 -->
+                <div id="pdf15" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 클린 캠페인 설계도</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">합법적이고 윤리적인 선거 캠페인 운영을 위한 설계도입니다.</p>
+                    </div>
+                    <iframe src="../클린_캠페인_설계도.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../클린_캠페인_설계도.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+
+                <!-- PDF 16: AI선거전략 -->
+                <div id="pdf16" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(15, 52, 96, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI선거전략</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">AI를 활용한 종합적인 선거 전략 가이드입니다.</p>
+                    </div>
+                    <iframe src="../AI선거전략.pdf" style="width: 100%; height: 450px; border: none;"></iframe>
+                    <div style="padding: 15px; text-align: center; background: rgba(0,0,0,0.3);">
+                        <a href="../AI선거전략.pdf" download class="btn btn-primary" style="padding: 10px 25px;">⬇ PDF 다운로드</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 60px; padding: 30px; background: rgba(212, 175, 55, 0.1); border-radius: 15px; border: 1px solid var(--gold); text-align: center;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">💡 추가 자료가 필요하시면 문의해 주세요.</p>
+                <a href="../index.html#demo" class="btn btn-primary" style="margin-top: 20px;">문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">솔루션</a>
+                <a href="../index.html#demo">데모 신청</a>
+                <a href="../index.html#demo">문의하기</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+            });
+        });
+
+        // PDF 탭 전환 함수
+        function showPDF(pdfId, clickedBtn) {
+            // 모든 PDF 컨테이너 숨기기
+            document.querySelectorAll('.pdf-container').forEach(container => {
+                container.style.display = 'none';
+            });
+
+            // 선택된 PDF 컨테이너 표시
+            document.getElementById(pdfId).style.display = 'block';
+
+            // 모든 탭 버튼 스타일 초기화
+            document.querySelectorAll('.pdf-tab-btn').forEach(btn => {
+                btn.style.background = 'rgba(212, 175, 55, 0.2)';
+                btn.style.color = 'var(--gold)';
+                btn.style.border = '2px solid var(--gold)';
+                btn.classList.remove('active');
+            });
+
+            // 클릭된 버튼 활성화 스타일
+            clickedBtn.style.background = 'var(--gold)';
+            clickedBtn.style.color = 'var(--primary)';
+            clickedBtn.style.border = 'none';
+            clickedBtn.classList.add('active');
+        }
+    </script>
+</body>
+</html>

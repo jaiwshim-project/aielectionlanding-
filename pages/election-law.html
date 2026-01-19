@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선거법 안내 - AI 선거 솔루션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="../index.html#comparison" class="nav-button">비교분석</a></li>
+                        <li><a href="../index.html#results" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown"><button class="nav-button">자료 보기</button><ul class="dropdown-menu"><li><a href="resources-video.html" class="nav-button">영상자료</a></li><li><a href="resources-articles.html" class="nav-button">기사 자료</a></li><li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li><li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li></ul></li>
+                <li class="nav-item"><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                <li class="nav-item"><a href="../index.html#demo" class="nav-button nav-cta">무료 데모</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">ELECTION LAW</div>
+            <h1>선거법 핵심 안내</h1>
+            <p class="hero-subtitle">공직선거법의 주요 내용을 알기 쉽게 정리했습니다</p>
+        </div>
+    </section>
+
+    <!-- Election Law Section -->
+    <section id="election-law" class="section section-dark">
+        <div class="container">
+            <div class="law-intro-box" style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(15, 52, 96, 0.3) 100%); padding: 40px; border-radius: 20px; border: 2px solid var(--gold); margin-bottom: 25px; text-align: center;">
+                <h3 style="color: var(--gold); font-size: 1.8rem; margin-bottom: 15px;">📚 공직선거법 핵심 3원칙</h3>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">공정한 선거를 위한 기본 원칙을 이해하고 준수해야 합니다.</p>
+            </div>
+
+            <div class="law-pillars" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 25px;">
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">⚖️</div>
+                    <h4 style="color: var(--gold); font-size: 1.3rem; margin-bottom: 10px;">공정성</h4>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">모든 후보에게 동등한 기회 보장</p>
+                </div>
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🔍</div>
+                    <h4 style="color: var(--gold); font-size: 1.3rem; margin-bottom: 10px;">투명성</h4>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">선거 자금 및 운동의 투명한 공개</p>
+                </div>
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🛡️</div>
+                    <h4 style="color: var(--gold); font-size: 1.3rem; margin-bottom: 10px;">준법성</h4>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">선거법 규정의 철저한 준수</p>
+                </div>
+            </div>
+
+            <div style="display: grid; gap: 30px;">
+                <!-- 선거운동 기간 -->
+                <div style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 35px; border-radius: 15px; border-left: 5px solid var(--gold);">
+                    <h4 style="color: var(--gold); font-size: 1.4rem; margin-bottom: 15px;">📅 선거운동 기간</h4>
+                    <p style="color: rgba(255,255,255,0.9); line-height: 1.8;">
+                        선거운동은 <strong style="color: var(--accent);">선거일 전 22일부터 선거일 전일까지</strong> 가능합니다.<br>
+                        단, 예비후보자는 등록 후 일정한 범위 내에서 선거운동이 허용됩니다.
+                    </p>
+                </div>
+
+                <!-- 선거비용 제한 -->
+                <div style="background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 35px; border-radius: 15px; border-left: 5px solid var(--accent);">
+                    <h4 style="color: var(--accent); font-size: 1.4rem; margin-bottom: 15px;">💰 선거비용 제한</h4>
+                    <p style="color: rgba(255,255,255,0.9); line-height: 1.8;">
+                        선거별로 <strong style="color: var(--gold);">법정 선거비용 제한액</strong>이 정해져 있습니다.<br>
+                        모든 선거비용은 선거관리위원회에 신고해야 하며, 제한액 초과 시 당선무효가 될 수 있습니다.
+                    </p>
+                </div>
+
+                <!-- 온라인 선거운동 -->
+                <div style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 35px; border-radius: 15px; border-left: 5px solid var(--gold);">
+                    <h4 style="color: var(--gold); font-size: 1.4rem; margin-bottom: 15px;">💻 온라인 선거운동</h4>
+                    <p style="color: rgba(255,255,255,0.9); line-height: 1.8;">
+                        인터넷을 이용한 선거운동은 <strong style="color: var(--accent);">상시 허용</strong>되지만,<br>
+                        허위사실 유포, 비방, 흑색선전은 엄격히 금지됩니다.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; padding: 40px; background: rgba(233, 69, 96, 0.1); border-radius: 15px; border: 2px solid var(--accent);">
+                <h4 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 20px; text-align: center;">⚠️ 주요 위반 사항 및 처벌</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px;">
+                        <h5 style="color: var(--gold); margin-bottom: 10px;">금품 제공</h5>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">5년 이하 징역 또는 1천만원 이하 벌금</p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px;">
+                        <h5 style="color: var(--gold); margin-bottom: 10px;">허위사실 공표</h5>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">7년 이하 징역 또는 500~3천만원 벌금</p>
+                    </div>
+                    <div style="background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px;">
+                        <h5 style="color: var(--gold); margin-bottom: 10px;">비용 제한 초과</h5>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">당선무효 및 벌금형</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box" style="margin-top: 50px; text-align: center; padding: 40px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(233, 69, 96, 0.2) 100%); border-radius: 20px; border: 2px solid var(--gold);">
+                <h3 style="font-size: 1.6rem; margin-bottom: 15px; color: var(--gold);">선거법 준수, AI가 도와드립니다</h3>
+                <p style="font-size: 1rem; margin-bottom: 25px; color: rgba(255,255,255,0.9);">AI 선거 솔루션은 모든 활동이 선거법을 준수하도록 자동 검증합니다.</p>
+                <a href="../index.html#demo" class="btn btn-primary">무료 상담 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">솔루션</a>
+                <a href="../index.html#demo">데모 신청</a>
+                <a href="../index.html#demo">문의하기</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
