@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성과 - AI 선거 솔루션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="comparison.html" class="nav-button">비교분석</a></li>
+                        <li><a href="results.html" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">자료 보기</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">영상자료</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">기사 자료</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                <li class="nav-item"><a href="demo.html" class="nav-button nav-cta">무료 데모</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">RESULTS</div>
+            <h1>압도적인 성과</h1>
+            <p class="hero-subtitle">데이터로 증명된 AI 선거 솔루션의 효과</p>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section">
+        <div class="container">
+            <!-- 주요 성과 지표 -->
+            <div class="stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 80px;">
+                <div class="stat-card" style="background: linear-gradient(135deg, rgba(233, 69, 96, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%); padding: 40px; border-radius: 20px; text-align: center; border: 2px solid var(--gold);">
+                    <div class="stat-value" style="font-size: 4rem; font-weight: 900; color: var(--accent); margin-bottom: 10px;">90%</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">승리 확률 예측 정확도</div>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 40px; border-radius: 20px; text-align: center; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div class="stat-value" style="font-size: 4rem; font-weight: 900; color: var(--gold); margin-bottom: 10px;">20%</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">선거 비용 절감</div>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 40px; border-radius: 20px; text-align: center; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div class="stat-value" style="font-size: 4rem; font-weight: 900; color: var(--gold); margin-bottom: 10px;">15%</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">타깃 유권자 투표율 증가</div>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 40px; border-radius: 20px; text-align: center; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div class="stat-value" style="font-size: 4rem; font-weight: 900; color: var(--gold); margin-bottom: 10px;">100%</div>
+                    <div class="stat-label" style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">자원 활용 효율</div>
+                </div>
+            </div>
+
+            <!-- 세부 성과 설명 -->
+            <h3 class="section-title" style="margin-bottom: 40px;">성과 상세</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 60px;">
+                <div style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">📊</div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 15px;">정확한 예측 분석</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7;">
+                        빅데이터와 AI 알고리즘을 활용하여 90% 이상의 정확도로 선거 결과를 예측합니다.
+                        실시간 여론 변화를 감지하고 전략을 즉시 수정할 수 있습니다.
+                    </p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">💰</div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 15px;">비용 효율화</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7;">
+                        불필요한 인력과 광고비를 절감하고, 효과가 검증된 채널에만 집중 투자합니다.
+                        평균 20% 이상의 선거 비용 절감 효과를 제공합니다.
+                    </p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🎯</div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 15px;">투표율 향상</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7;">
+                        타깃 유권자를 정밀하게 분석하고 맞춤형 메시지를 전달하여
+                        실제 투표 참여율을 15% 이상 높입니다.
+                    </p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">⚡</div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 15px;">자원 최적 배분</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.7;">
+                        선거 자금, 인력, 시간 등 모든 자원을 AI가 최적으로 배분합니다.
+                        낭비 없이 100% 효율로 캠페인을 운영할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; padding: 50px; background: linear-gradient(135deg, var(--accent) 0%, #c9184a 100%); border-radius: 20px;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: white;">이 성과를 직접 경험해보세요</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; color: rgba(255,255,255,0.95);">무료 데모를 통해 AI 선거 솔루션의 실력을 확인하세요</p>
+                <a href="demo.html" class="btn" style="background: white; color: var(--accent); font-size: 1.2rem; padding: 20px 50px;">지금 무료 데모 신청하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">솔루션</a>
+                <a href="demo.html">데모 신청</a>
+                <a href="demo.html">문의하기</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
