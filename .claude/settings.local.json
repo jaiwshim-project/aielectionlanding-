@@ -10,7 +10,8 @@
       "WebFetch(domain:jaiwshim-project.github.io)",
       "Bash(git push)",
       "WebFetch(domain:www.ibrandnews.com)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(ls:*)"
     ]
   }
 }
