@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자 소개 - AI 선거 솔루션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="comparison.html" class="nav-button">비교분석</a></li>
+                        <li><a href="results.html" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">자료 보기</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">영상자료</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">기사 자료</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">파트너</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                        <li><a href="developer.html" class="nav-button">개발자 소개</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="demo.html" class="nav-button nav-cta">무료 데모</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 30vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">DEVELOPER</div>
+            <h1>개발자 소개</h1>
+            <p class="hero-subtitle">AI 선거 솔루션을 만든 사람</p>
+        </div>
+    </section>
+
+    <!-- Developer Profile Section -->
+    <section class="section" style="background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Profile Card -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 50px; border: 2px solid rgba(212, 175, 55, 0.3); margin-bottom: 40px;">
+                    <div style="text-align: center; margin-bottom: 40px;">
+                        <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--gold), var(--accent)); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 4rem;">👨‍💼</span>
+                        </div>
+                        <h2 style="color: var(--gold); font-size: 2.5rem; margin-bottom: 10px;">심재우</h2>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem;">AI 선거 솔루션 연구소 대표</p>
+                    </div>
+
+                    <div style="background: rgba(212, 175, 55, 0.1); padding: 25px; border-radius: 15px; border-left: 4px solid var(--gold); margin-bottom: 30px;">
+                        <h3 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 15px;">AI 응용 리더십과 과학 커뮤니케이션 전문가</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.8;">
+                            30년간 혁신, 리더십, AI 전략 분야에서 활동해온 전문가로서,<br>
+                            데이터 기반의 스마트 선거 캠페인 시스템을 개발했습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Career Section -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; border: 2px solid rgba(212, 175, 55, 0.3); margin-bottom: 40px;">
+                    <h3 style="color: var(--gold); font-size: 1.8rem; margin-bottom: 30px; text-align: center;">주요 경력</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                        <div style="background: rgba(15, 52, 96, 0.5); padding: 25px; border-radius: 15px; text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">🏢</div>
+                            <h4 style="color: var(--gold); margin-bottom: 10px;">현대자동차</h4>
+                            <p style="color: rgba(255,255,255,0.8);">엔지니어</p>
+                        </div>
+
+                        <div style="background: rgba(15, 52, 96, 0.5); padding: 25px; border-radius: 15px; text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">🌐</div>
+                            <h4 style="color: var(--gold); margin-bottom: 10px;">GE</h4>
+                            <p style="color: rgba(255,255,255,0.8);">글로벌 리더</p>
+                        </div>
+
+                        <div style="background: rgba(15, 52, 96, 0.5); padding: 25px; border-radius: 15px; text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 15px;">🇺🇸</div>
+                            <h4 style="color: var(--gold); margin-bottom: 10px;">다국적 기업</h4>
+                            <p style="color: rgba(255,255,255,0.8);">컨설팅</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements Section -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; border: 2px solid rgba(212, 175, 55, 0.3); margin-bottom: 40px;">
+                    <h3 style="color: var(--gold); font-size: 1.8rem; margin-bottom: 30px; text-align: center;">주요 성과</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="font-size: 3rem; font-weight: 900; color: var(--accent); margin-bottom: 10px;">50권</div>
+                            <p style="color: rgba(255,255,255,0.8);">저서 집필</p>
+                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">AI, 리더십, 조직 변화 등</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="font-size: 3rem; font-weight: 900; color: var(--accent); margin-bottom: 10px;">30년</div>
+                            <p style="color: rgba(255,255,255,0.8);">전문 경력</p>
+                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">혁신·리더십·AI 전략</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="font-size: 3rem; font-weight: 900; color: var(--accent); margin-bottom: 10px;">14+2</div>
+                            <p style="color: rgba(255,255,255,0.8);">AI 솔루션</p>
+                            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">세계 최초 개발</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Solutions Section -->
+                <div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 40px; border: 2px solid rgba(212, 175, 55, 0.3); margin-bottom: 40px;">
+                    <h3 style="color: var(--gold); font-size: 1.8rem; margin-bottom: 30px; text-align: center;">핵심 프로젝트: AI 선거 올인원 솔루션</h3>
+
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📊</div>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">데이터 기반 정책 설계</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📝</div>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">바이럴 콘텐츠 자동 생성</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">⏰</div>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">실시간 위기 관리</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">📱</div>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">정밀 유권자 타겟팅</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🌐</div>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">24시간 자동 소통</p>
+                        </div>
+
+                        <div style="text-align: center; padding: 15px;">
+                            <div style="font-size: 2rem; margin-bottom: 10px;">🎯</div>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">지지층 결집 최적화</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision Section -->
+                <div style="background: linear-gradient(135deg, rgba(233, 69, 96, 0.2), rgba(212, 175, 55, 0.2)); border-radius: 20px; padding: 50px; text-align: center;">
+                    <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 20px;">비전</h3>
+                    <p style="color: #fff; font-size: 1.3rem; line-height: 1.8; margin-bottom: 30px;">
+                        "데이터 기반 스마트 캠페인으로<br>
+                        선거의 효율성과 효과성을 극대화합니다"
+                    </p>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+                        AI를 아는가, 모르는가에 따라<br>
+                        당선과 낙선이 결정되는 시대가 시작되었습니다.
+                    </p>
+                </div>
+
+                <!-- Contact CTA -->
+                <div style="margin-top: 40px; text-align: center;">
+                    <a href="demo.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 50px;">
+                        무료 상담 신청하기
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">솔루션</a>
+                <a href="demo.html">데모 신청</a>
+                <a href="demo.html">문의하기</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+            });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split('/').pop();
+            const menuLinks = document.querySelectorAll('.nav-links a.nav-button');
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.includes(currentPage) && currentPage !== '') {
+                    link.classList.add('active');
+                    const parentDropdown = link.closest('.nav-item.has-dropdown');
+                    if (parentDropdown) {
+                        parentDropdown.classList.add('active-parent');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
