@@ -21,19 +21,19 @@
         @media (max-width: 768px) {
             .dev-section { padding: 20px 10px; }
             .dev-card { padding: 20px 15px; margin-bottom: 15px; }
-            .dev-title { font-size: 1.2rem; margin-bottom: 15px; }
-            .dev-grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .dev-title { font-size: 1.1rem; margin-bottom: 15px; }
+            .dev-grid-3 { grid-template-columns: repeat(3, 1fr); }
             .dev-grid-auto { grid-template-columns: repeat(3, 1fr); }
             .dev-item { padding: 12px 8px; }
             .dev-icon { font-size: 1.5rem; margin-bottom: 5px; }
-            .dev-stat { font-size: 1.6rem; }
-            .dev-text { font-size: 0.85rem; }
+            .dev-stat { font-size: 1.5rem; }
+            .dev-text { font-size: 0.8rem; }
             .dev-subtext { font-size: 0.75rem; }
             .profile-img { max-width: 280px !important; }
             .profile-name { font-size: 1.8rem !important; }
-            .profile-title { font-size: 1rem !important; }
-            .career-logo { max-height: 45px !important; }
-            .career-title { font-size: 0.9rem !important; }
+            .profile-title { font-size: 0.9rem !important; }
+            .career-logo { max-height: 40px !important; }
+            .career-title { font-size: 0.85rem !important; }
             .vision-text { font-size: 1.1rem !important; }
             .vision-sub { font-size: 0.95rem !important; }
         }
@@ -41,11 +41,12 @@
         @media (max-width: 480px) {
             .dev-grid-3 { grid-template-columns: repeat(3, 1fr); }
             .dev-grid-auto { grid-template-columns: repeat(3, 1fr); }
-            .dev-item { padding: 10px 5px; }
+            .dev-item { padding: 8px 5px; }
             .dev-icon { font-size: 1.3rem; }
-            .dev-stat { font-size: 1.4rem; }
-            .dev-text { font-size: 0.8rem; }
+            .dev-stat { font-size: 1.3rem; }
+            .dev-text { font-size: 0.75rem; }
             .profile-img { max-width: 240px !important; }
+            .dev-title { font-size: 1rem; }
         }
     </style>
 </head>
@@ -122,13 +123,21 @@
                     <img src="../images/developer-shimjaewoo.png" alt="심재우 대표" style="width: 100%; height: auto; display: block;">
                 </div>
                 <h2 class="profile-name" style="color: var(--gold); font-size: 2rem; margin-bottom: 5px;">심재우</h2>
-                <p class="profile-title" style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 15px;">AI 선거 솔루션 연구소 대표</p>
+                <p class="profile-title" style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 10px;">에스비컨설팅 대표 | AI 선거 솔루션 연구소</p>
+
+                <!-- Marquis Who's Who Badge -->
+                <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(233, 69, 96, 0.2)); padding: 10px 15px; border-radius: 8px; margin-bottom: 15px; display: inline-block;">
+                    <p style="color: var(--gold); font-size: 0.9rem; font-weight: 700; margin: 0;">🏆 Marquis Who's Who 세계인명사전 등재 (2016 & 2020)</p>
+                </div>
 
                 <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 10px; border-left: 3px solid var(--gold); text-align: left;">
-                    <p style="color: var(--gold); font-size: 1rem; font-weight: 600; margin-bottom: 8px;">AI 응용 리더십과 과학 커뮤니케이션 전문가</p>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 1.6;">
-                        30년간 혁신, 리더십, AI 전략 분야에서 활동해온 전문가로서 데이터 기반의 스마트 선거 캠페인 시스템을 개발했습니다.
-                    </p>
+                    <p style="color: var(--gold); font-size: 0.95rem; font-weight: 600; margin-bottom: 10px;">전문 분야</p>
+                    <ul style="color: rgba(255,255,255,0.85); font-size: 0.85rem; line-height: 1.8; padding-left: 20px; margin: 0;">
+                        <li>메타버스 디지털트윈 전문가</li>
+                        <li>글로벌 인재육성 및 리더십 파이프라인 전문가</li>
+                        <li>인셀랩 비즈니스 능력 진단 솔루션 개발자</li>
+                        <li>인사이트 셀링/제안전략/코칭/협상 프로그램 개발자</li>
+                    </ul>
                 </div>
             </div>
 
@@ -141,21 +150,21 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hyundai_Motor_Company_logo.svg/200px-Hyundai_Motor_Company_logo.svg.png" alt="현대자동차" class="career-logo" style="max-height: 40px; max-width: 100px; filter: brightness(0) invert(1);">
                         </div>
                         <p class="career-title" style="color: var(--gold); font-weight: 600; font-size: 0.95rem;">현대자동차 (5년)</p>
-                        <p class="dev-text" style="color: rgba(255,255,255,0.7);">엔지니어</p>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.7);">기술연구소</p>
                     </div>
                     <div class="dev-item" style="background: rgba(15, 52, 96, 0.5);">
                         <div style="height: 50px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
                             <img src="../images/ge-logo.png" alt="GE" class="career-logo" style="max-height: 50px; max-width: 50px;">
                         </div>
-                        <p class="career-title" style="color: var(--gold); font-weight: 600; font-size: 0.95rem;">GE (8년)</p>
-                        <p class="dev-text" style="color: rgba(255,255,255,0.7);">글로벌 리더</p>
+                        <p class="career-title" style="color: var(--gold); font-weight: 600; font-size: 0.95rem;">GE USA (8년)</p>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.7);">B2B 세일즈 & 마케팅</p>
                     </div>
                     <div class="dev-item" style="background: rgba(15, 52, 96, 0.5);">
                         <div style="height: 50px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-                            <span style="font-size: 2rem;">🌐</span>
+                            <span style="font-size: 2rem;">🏢</span>
                         </div>
-                        <p class="career-title" style="color: var(--gold); font-weight: 600; font-size: 0.95rem;">다국적 기업 (30년)</p>
-                        <p class="dev-text" style="color: rgba(255,255,255,0.7);">컨설팅</p>
+                        <p class="career-title" style="color: var(--gold); font-weight: 600; font-size: 0.95rem;">에스비컨설팅 (25년)</p>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.7);">대표</p>
                     </div>
                 </div>
             </div>
@@ -163,21 +172,57 @@
             <!-- Achievements Section -->
             <div class="dev-card" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(212, 175, 55, 0.3);">
                 <h3 class="dev-title" style="color: var(--gold); text-align: center;">주요 성과</h3>
-                <div class="dev-grid dev-grid-3">
+                <div class="dev-grid" style="grid-template-columns: repeat(4, 1fr);">
                     <div class="dev-item">
                         <div class="dev-stat" style="color: var(--accent);">50권</div>
-                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">저서 집필</p>
-                        <p class="dev-subtext" style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">AI, 리더십 등</p>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">저서</p>
                     </div>
                     <div class="dev-item">
-                        <div class="dev-stat" style="color: var(--accent);">30년</div>
-                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">전문 경력</p>
-                        <p class="dev-subtext" style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">혁신·AI 전략</p>
+                        <div class="dev-stat" style="color: var(--accent);">17권</div>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">전자책</p>
                     </div>
                     <div class="dev-item">
-                        <div class="dev-stat" style="color: var(--accent);">14+2</div>
-                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">AI 솔루션</p>
-                        <p class="dev-subtext" style="color: rgba(255,255,255,0.5); font-size: 0.8rem;">세계 최초</p>
+                        <div class="dev-stat" style="color: var(--accent);">70개</div>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">다국적기업</p>
+                    </div>
+                    <div class="dev-item">
+                        <div class="dev-stat" style="color: var(--accent);">400개</div>
+                        <p class="dev-text" style="color: rgba(255,255,255,0.8);">대기업</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Certifications -->
+            <div class="dev-card" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(212, 175, 55, 0.3);">
+                <h3 class="dev-title" style="color: var(--gold); text-align: center;">글로벌 8개 과정 국제공인 마스터트레이너 (ICF)</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; font-size: 0.85rem;">
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px;">
+                        <p style="color: var(--gold); margin: 0;">Huthwaite (미국/영국)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">스핀셀링 마스터 트레이너</p>
+                    </div>
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px;">
+                        <p style="color: var(--gold); margin: 0;">CEB (미국)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">챌린저 세일</p>
+                    </div>
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px;">
+                        <p style="color: var(--gold); margin: 0;">Miller-Heiman (미국)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">리더십</p>
+                    </div>
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px;">
+                        <p style="color: var(--gold); margin: 0;">Leverage People (독일)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">고객관리/기회관리</p>
+                    </div>
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px;">
+                        <p style="color: var(--gold); margin: 0;">Cevey Consulting (독일)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">Ideal Sales Discussion</p>
+                    </div>
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px;">
+                        <p style="color: var(--gold); margin: 0;">ActitudPro (스페인)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">세일즈, 협상, 코칭</p>
+                    </div>
+                    <div style="background: rgba(15, 52, 96, 0.3); padding: 10px; border-radius: 8px; grid-column: span 2;">
+                        <p style="color: var(--gold); margin: 0;">PEAK Performance Consulting (영국)</p>
+                        <p style="color: rgba(255,255,255,0.7); margin: 3px 0 0 0;">세일즈, 코칭, 협상</p>
                     </div>
                 </div>
             </div>
@@ -210,6 +255,18 @@
                         <div class="dev-icon">🎯</div>
                         <p class="dev-text" style="color: rgba(255,255,255,0.9);">지지층 결집</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Links Section -->
+            <div class="dev-card" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(212, 175, 55, 0.3);">
+                <h3 class="dev-title" style="color: var(--gold); text-align: center;">Links</h3>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                    <a href="http://www.sbconsulting.co.kr" target="_blank" style="background: rgba(15, 52, 96, 0.5); color: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">🏢 에스비컨설팅</a>
+                    <a href="https://blog.naver.com/jaiwooshim" target="_blank" style="background: rgba(15, 52, 96, 0.5); color: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">📝 블로그</a>
+                    <a href="https://brunch.co.kr/@brunchjwshim" target="_blank" style="background: rgba(15, 52, 96, 0.5); color: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">📖 브런치</a>
+                    <a href="https://www.linkedin.com/in/jaiwshim/" target="_blank" style="background: rgba(15, 52, 96, 0.5); color: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">💼 LinkedIn</a>
+                    <a href="https://www.facebook.com/jaiwshim/" target="_blank" style="background: rgba(15, 52, 96, 0.5); color: rgba(255,255,255,0.9); padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.85rem;">📘 Facebook</a>
                 </div>
             </div>
 
