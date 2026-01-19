@@ -48,6 +48,34 @@
             .profile-img { max-width: 240px !important; }
             .dev-title { font-size: 1rem; }
         }
+
+        /* Counter Animation Styles */
+        .counter {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .achievements-card .dev-item {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .achievements-card .dev-item:nth-child(1) { animation-delay: 0.1s; }
+        .achievements-card .dev-item:nth-child(2) { animation-delay: 0.2s; }
+        .achievements-card .dev-item:nth-child(3) { animation-delay: 0.3s; }
+        .achievements-card .dev-item:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dev-stat {
+            text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -161,7 +189,7 @@
                     </div>
                     <div class="dev-item" style="background: rgba(15, 52, 96, 0.5);">
                         <div style="height: 50px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px;">
-                            <span style="font-size: 2rem;">🏢</span>
+                            <img src="../images/sb-consulting-logo.jpg" alt="SB Consulting" class="career-logo" style="max-height: 50px; max-width: 120px;">
                         </div>
                         <p class="career-title" style="color: var(--gold); font-weight: 600; font-size: 0.95rem;">에스비컨설팅 (25년)</p>
                         <p class="dev-text" style="color: rgba(255,255,255,0.7);">대표</p>
@@ -170,23 +198,23 @@
             </div>
 
             <!-- Achievements Section -->
-            <div class="dev-card" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(212, 175, 55, 0.3);">
+            <div class="dev-card achievements-card" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(212, 175, 55, 0.3);">
                 <h3 class="dev-title" style="color: var(--gold); text-align: center;">주요 성과</h3>
                 <div class="dev-grid" style="grid-template-columns: repeat(4, 1fr);">
                     <div class="dev-item">
-                        <div class="dev-stat" style="color: var(--accent);">50권</div>
+                        <div class="dev-stat" style="color: var(--accent);"><span class="counter" data-target="50">0</span>권</div>
                         <p class="dev-text" style="color: rgba(255,255,255,0.8);">저서</p>
                     </div>
                     <div class="dev-item">
-                        <div class="dev-stat" style="color: var(--accent);">17권</div>
+                        <div class="dev-stat" style="color: var(--accent);"><span class="counter" data-target="17">0</span>권</div>
                         <p class="dev-text" style="color: rgba(255,255,255,0.8);">전자책</p>
                     </div>
                     <div class="dev-item">
-                        <div class="dev-stat" style="color: var(--accent);">70개</div>
+                        <div class="dev-stat" style="color: var(--accent);"><span class="counter" data-target="70">0</span>개</div>
                         <p class="dev-text" style="color: rgba(255,255,255,0.8);">다국적기업</p>
                     </div>
                     <div class="dev-item">
-                        <div class="dev-stat" style="color: var(--accent);">400개</div>
+                        <div class="dev-stat" style="color: var(--accent);"><span class="counter" data-target="400">0</span>개</div>
                         <p class="dev-text" style="color: rgba(255,255,255,0.8);">대기업</p>
                     </div>
                 </div>
@@ -350,6 +378,46 @@
                     }
                 }
             });
+
+            // Counter Animation
+            const counters = document.querySelectorAll('.counter');
+            let animated = false;
+
+            function animateCounters() {
+                if (animated) return;
+
+                const achievementsCard = document.querySelector('.achievements-card');
+                if (!achievementsCard) return;
+
+                const cardTop = achievementsCard.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (cardTop < windowHeight - 100) {
+                    animated = true;
+
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000; // 2초
+                        const increment = target / (duration / 16);
+                        let current = 0;
+
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target;
+                            }
+                        };
+
+                        updateCounter();
+                    });
+                }
+            }
+
+            window.addEventListener('scroll', animateCounters);
+            animateCounters(); // 페이지 로드 시 체크
         });
     </script>
 </body>
