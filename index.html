@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a2e;
+            --primary: #0a1f14;
             --accent: #e94560;
             --gold: #d4af37;
             --light: #f8f9fa;
             --gray: #6c757d;
-            --dark-blue: #0f3460;
+            --dark-blue: #0a2e1a;
         }
 
         * {
@@ -47,7 +47,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(26, 26, 46, 0.95);
+            background: rgba(10, 30, 60, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             padding: 20px 0;
@@ -188,7 +188,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: rgba(15, 52, 96, 0.98);
+            background: rgba(8, 25, 55, 0.98);
             min-width: 200px;
             border-radius: 8px;
             padding: 10px 0;
@@ -241,7 +241,7 @@
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(15, 52, 96, 0.3);
+            background: rgba(10, 40, 25, 0.3);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -260,7 +260,7 @@
 
         .comparison-table thead th:first-child {
             color: var(--gold);
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 52, 96, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(10, 31, 20, 0.8) 0%, rgba(10, 40, 25, 0.8) 100%);
         }
 
         .comparison-table thead th.header-old {
@@ -313,7 +313,7 @@
         }
 
         .comparison-table tbody td:first-child {
-            background: rgba(26, 26, 46, 0.5);
+            background: rgba(10, 31, 20, 0.5);
             font-weight: 700;
             font-size: 1.15rem;
             color: var(--gold);
@@ -457,7 +457,7 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background: rgba(26, 26, 46, 0.98);
+                background: rgba(10, 31, 20, 0.98);
                 flex-direction: column;
                 justify-content: flex-start;
                 padding: 40px 20px;
@@ -488,7 +488,7 @@
                 text-align: left;
                 font-size: 1.1rem;
                 padding: 15px 20px;
-                background: rgba(15, 52, 96, 0.5);
+                background: rgba(10, 40, 25, 0.5);
                 border-radius: 8px;
             }
 
@@ -507,7 +507,7 @@
                 padding: 0;
                 transform: none;
                 transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-                background: rgba(15, 52, 96, 0.3);
+                background: rgba(10, 40, 25, 0.3);
                 border: none;
                 border-radius: 0 0 8px 8px;
             }
@@ -538,7 +538,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0a2a50 0%, #0e3468 50%, #0a2a50 100%);
             overflow: hidden;
             padding-top: 70px;
         }
@@ -673,7 +673,7 @@
         }
 
         .section-dark {
-            background: #0d1117;
+            background: linear-gradient(180deg, #0a1a12 0%, #0e2418 100%);
         }
 
         .section-title {
@@ -701,7 +701,7 @@
         }
 
         .problem-card {
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(10, 40, 25, 0.1) 100%);
             padding: 25px;
             border-radius: 15px;
             border: 1px solid rgba(233, 69, 96, 0.2);
@@ -806,7 +806,7 @@
         }
 
         .solution-visual {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             padding: 60px;
             border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.3);
@@ -868,7 +868,7 @@
 
         /* Comparison Table */
         .comparison {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.3) 0%, rgba(26, 26, 46, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.3) 0%, rgba(10, 31, 20, 0.3) 100%);
             padding: 80px 40px;
             border-radius: 20px;
             margin-top: 80px;
@@ -897,7 +897,7 @@
         }
 
         .comparison-cell.highlight {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 52, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(10, 40, 25, 0.2) 100%);
             border: 2px solid var(--gold);
         }
 
@@ -912,7 +912,7 @@
         .stat-card {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(10, 40, 25, 0.1) 100%);
             border-radius: 20px;
             border: 1px solid rgba(233, 69, 96, 0.2);
             transition: all 0.3s ease;
@@ -1042,7 +1042,7 @@
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--navy) 0%, #0a1628 100%);
+            background: linear-gradient(135deg, #0a2a50 0%, #0e3468 100%);
             padding: 60px 20px 40px;
             text-align: center;
             border-top: 3px solid var(--gold);
@@ -2193,7 +2193,7 @@
         }
 
         .strategy-item {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             padding: 40px;
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.3);
@@ -2298,7 +2298,7 @@
         }
 
         .feature-box {
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(10, 40, 25, 0.1) 100%);
             padding: 35px;
             border-radius: 20px;
             border: 2px solid rgba(233, 69, 96, 0.2);
@@ -2355,7 +2355,7 @@
 
         /* Legal Section Styles */
         .video-container {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -2454,7 +2454,7 @@
         }
 
         .legal-risk-card {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border-radius: 20px;
             padding: 35px;
             border: 2px solid;
@@ -2527,7 +2527,7 @@
         }
 
         .flowchart-box {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.3) 0%, rgba(26, 26, 46, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.3) 0%, rgba(10, 31, 20, 0.3) 100%);
             border-radius: 20px;
             padding: 50px;
             margin-top: 40px;
@@ -2648,7 +2648,7 @@
         }
 
         .myth-list li, .fact-list li {
-            background: rgba(15, 52, 96, 0.3);
+            background: rgba(10, 40, 25, 0.3);
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 12px;
@@ -2677,7 +2677,7 @@
         }
 
         .legal-solution-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 52, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(10, 40, 25, 0.2) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -2737,7 +2737,7 @@
         }
 
         .benefit-card {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             padding: 40px;
@@ -2793,7 +2793,7 @@
         }
 
         .requirements-column {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.4) 0%, rgba(26, 26, 46, 0.4) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.4) 0%, rgba(10, 31, 20, 0.4) 100%);
             border-radius: 20px;
             padding: 40px;
             border: 2px solid;
@@ -2983,7 +2983,7 @@
 
         /* Election Law Section Styles */
         .law-intro-box {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.6) 0%, rgba(26, 26, 46, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.6) 0%, rgba(10, 31, 20, 0.6) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -3011,7 +3011,7 @@
         }
 
         .pillar-card {
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(15, 52, 96, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(10, 40, 25, 0.15) 100%);
             border: 2px solid rgba(212, 175, 55, 0.4);
             border-radius: 20px;
             padding: 35px;
@@ -3053,7 +3053,7 @@
         .timeline-phase {
             flex: 1;
             min-width: 150px;
-            background: rgba(15, 52, 96, 0.5);
+            background: rgba(10, 40, 25, 0.5);
             border: 2px solid var(--gold);
             border-radius: 15px;
             padding: 25px;
@@ -3158,7 +3158,7 @@
         }
 
         .online-rule-card {
-            background: rgba(15, 52, 96, 0.4);
+            background: rgba(10, 40, 25, 0.4);
             border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             padding: 35px;
@@ -3264,7 +3264,7 @@
         }
 
         .offline-rule-box {
-            background: rgba(15, 52, 96, 0.4);
+            background: rgba(10, 40, 25, 0.4);
             border: 2px solid var(--gold);
             border-radius: 15px;
             padding: 30px;
@@ -3421,7 +3421,7 @@
         }
 
         .contact-method {
-            background: rgba(15, 52, 96, 0.5);
+            background: rgba(10, 40, 25, 0.5);
             border-radius: 12px;
             padding: 25px;
             margin-top: 30px;
@@ -3434,7 +3434,7 @@
         }
 
         .law-summary-box {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.6) 0%, rgba(233, 69, 96, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.6) 0%, rgba(233, 69, 96, 0.3) 100%);
             border: 3px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -3494,7 +3494,7 @@
         .reseller-form-section {
             margin-top: 100px;
             padding: 60px;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
         }
@@ -3758,7 +3758,7 @@
         }
 
         .form-divider span {
-            background: rgba(26, 26, 46, 0.9);
+            background: rgba(10, 31, 20, 0.9);
             padding: 0 20px;
             color: var(--gold);
             font-size: 1.1rem;
@@ -3814,7 +3814,7 @@
         }
 
         .pricing-card {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             overflow: hidden;
@@ -4108,6 +4108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <button class="nav-button">솔루션</button>
                     <ul class="dropdown-menu">
                         <li><a href="pages/solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="pages/solution-overview.html" class="nav-button">AI 선거솔루션 소개</a></li>
                         <li><a href="pages/strategy.html" class="nav-button">공천 전략</a></li>
                         <li><a href="pages/election-vehicle.html" class="nav-button">AI 선거차량</a></li>
                     </ul>
@@ -4149,12 +4150,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <ul class="dropdown-menu">
                         <li><a href="pages/reseller.html" class="nav-button">리셀러 모집</a></li>
                         <li><a href="pages/developer.html" class="nav-button">개발자 소개</a></li>
+                        <li><a href="pages/demo.html" class="nav-button nav-cta">무료 데모</a></li>
                     </ul>
-                </li>
-
-                <!-- 무료 데모 CTA -->
-                <li class="nav-item">
-                    <a href="pages/demo.html" class="nav-button nav-cta">무료 데모</a>
                 </li>
             </ul>
         </div>
@@ -4166,8 +4163,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="hero-badge">AI 선거 혁명</div>
             <h1>사람을 줄여도,<br><span class="stat-highlight">표는 더 나옵니다</span></h1>
             <p class="hero-subtitle">
-                당신의 선거 캠프를 AI가 지휘하게 하십시오.<br>
-                감(感)으로 하는 선거는 끝났습니다. 데이터 기반의 정확한 전략으로 승리하세요.
+                공약 개발부터 홍보, 자금 모금, 위기 관리까지 — 승리를 위한 12가지 필수 전략의 자동화.<br>
+                감(感)의 시대는 끝났습니다. 이제 '정확성의 시대'입니다.
             </p>
             <div class="cta-buttons">
                 <a href="pages/demo.html" class="btn btn-primary">무료 데모 신청</a>
@@ -4186,7 +4183,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
     <!-- Book Cover Section -->
-    <section class="section" style="background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%); padding: 80px 0;">
+    <!-- Book Cover Section -->
+    <section class="section" style="background: linear-gradient(160deg, #081e12 0%, #0d2a1a 50%, #091c10 100%); padding: 80px 0;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
                 <h2 class="section-title" style="color: var(--gold); margin-bottom: 20px;">AI 선거 솔루션 완벽 가이드</h2>
@@ -4275,12 +4273,12 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
     <!-- Why AI Section -->
-    <section id="why-ai" class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+    <section id="why-ai" class="section" style="background: linear-gradient(160deg, #0a2012 0%, #10301a 50%, #0c2214 100%);">
         <div class="container">
-            <h2 class="section-title" style="color: var(--gold);">이제는 선거가 아닙니다. 전략 게임입니다.</h2>
+            <h2 class="section-title" style="color: var(--gold);">지금은 속도와 효율의 싸움입니다</h2>
             <p class="section-subtitle" style="color: #fff; font-size: 1.3rem; margin-bottom: 4rem;">
-                이 게임은 더 이상 사람의 감이나 노력만으로 이길 수 있는 구조가 아닙니다.<br>
-                승패는 누가 더 정밀한 데이터를 가지고, 더 빠른 의사결정을 내리느냐에 따라 결정됩니다.
+                현대 선거는 24시간 대응과 데이터 기반의 의사결정을 요구합니다.<br>
+                한정된 예산과 인력으로 최대의 효과를 내기 위해, AI 기술은 선택이 아닌 필수입니다.
             </p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 4rem;">
@@ -4315,8 +4313,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
             <div style="margin-top: 5rem; padding: 3rem; background: rgba(212, 175, 55, 0.1); border-radius: 20px; border: 2px solid var(--gold); text-align: center;">
-                <p style="font-size: 1.5rem; color: var(--gold); font-weight: 700; margin-bottom: 1rem;">이 모든 인건비, 감당하고 계십니까?</p>
-                <p style="font-size: 1.2rem; color: #fff;">AI 선거 솔루션은, 이 모든 것을 자동화합니다.</p>
+                <p style="font-size: 1.5rem; color: var(--gold); font-weight: 700; margin-bottom: 1rem;">단순 반복 업무는 AI에게 맡기고, 후보자는 유권자와의 스킨십에 집중하십시오.</p>
+                <p style="font-size: 1.2rem; color: #fff;">AI 선거 솔루션은 이 모든 것을 자동화합니다. 비용 절감 · 효율 극대화 · 정밀 타겟팅</p>
             </div>
         </div>
     </section>
@@ -4356,7 +4354,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
     <!-- Old School vs AI Comparison -->
-    <section class="section" style="background: #f8f9fa;">
+    <section class="section" style="background: linear-gradient(160deg, #0c2416 0%, #12321e 50%, #0e2818 100%);">
         <div class="container">
             <h2 class="section-title">무기 자체가 다릅니다. 그리고 그 차이는 '표차'로 드러납니다.</h2>
             
@@ -4448,33 +4446,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- Results Highlight -->
             <div style="margin-top: 5rem; text-align: center;">
-                <h3 style="font-size: 2.5rem; margin-bottom: 3rem; color: #1a1a2e;">감이 아니라, 수치로 결과를 증명합니다.</h3>
-                
+                <h3 style="font-size: 2.5rem; margin-bottom: 3rem; color: #0a1f14;">데이터가 증명하는 압도적 효율</h3>
+
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 15px; color: white;">
-                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">30~50%</div>
-                        <div style="font-size: 1rem; opacity: 0.9;">인건비 절감</div>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">90%+</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">예측 정확도</div>
+                        <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 5px;">실제 개표 결과와 AI 예측의 일치율</div>
                     </div>
-                    
+
                     <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 2.5rem; border-radius: 15px; color: white;">
-                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">1.5배~2배</div>
-                        <div style="font-size: 1rem; opacity: 0.9;">선거 효과 (득표율) 상승</div>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">-20%</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">선거 비용 절감</div>
+                        <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 5px;">불필요한 홍보물 및 저효율 유세 제거</div>
                     </div>
-                    
+
                     <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 2.5rem; border-radius: 15px; color: white;">
-                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">20~40%</div>
-                        <div style="font-size: 1rem; opacity: 0.9;">광고·홍보비 절감</div>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">+15%</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">타겟 투표율 증가</div>
+                        <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 5px;">정밀 타겟팅을 통한 실제 투표 전환</div>
                     </div>
-                    
+
                     <div style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 2.5rem; border-radius: 15px; color: white;">
-                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">최대 15%</div>
-                        <div style="font-size: 1rem; opacity: 0.9;">핵심 유권자 전환율 증가</div>
+                        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">500+</div>
+                        <div style="font-size: 1rem; opacity: 0.9;">일일 콘텐츠 생산</div>
+                        <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 5px;">수동 대비 50배 이상의 콘텐츠 생산량</div>
                     </div>
                 </div>
             </div>
 
             <!-- Value Proposition -->
-            <div style="margin-top: 5rem; padding: 3rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 20px; text-align: center;">
+            <div style="margin-top: 5rem; padding: 3rem; background: linear-gradient(135deg, #0a1f14 0%, #0c2a18 100%); border-radius: 20px; text-align: center;">
                 <p style="font-size: 1.8rem; color: var(--gold); font-weight: 700; margin-bottom: 1.5rem;">
                     비용은 줄이고, 표는 더 얻는 공식이 실제로 작동합니다.
                 </p>
@@ -4491,7 +4493,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
     <!-- Final Proposal Section -->
-    <section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%); padding: 6rem 0;">
+    <section class="section" style="background: linear-gradient(160deg, #081a0e 0%, #0e2a18 50%, #0a1e12 100%); padding: 6rem 0;">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto; text-align: center;">
                 <h2 style="font-size: 3rem; color: var(--gold); margin-bottom: 2rem; font-weight: 800;">마지막 제안</h2>

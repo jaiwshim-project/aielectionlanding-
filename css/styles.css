@@ -1,10 +1,10 @@
         :root {
-            --primary: #1a1a2e;
+            --primary: #0a1f14;
             --accent: #e94560;
             --gold: #d4af37;
             --light: #f8f9fa;
             --gray: #6c757d;
-            --dark-blue: #0f3460;
+            --dark-blue: #0a2e1a;
         }
 
         * {
@@ -39,7 +39,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(26, 26, 46, 0.95);
+            background: rgba(10, 30, 60, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             padding: 20px 0;
@@ -196,7 +196,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: rgba(15, 52, 96, 0.98);
+            background: rgba(8, 25, 55, 0.98);
             min-width: 200px;
             border-radius: 8px;
             padding: 10px 0;
@@ -249,7 +249,7 @@
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(15, 52, 96, 0.3);
+            background: rgba(10, 40, 25, 0.3);
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
@@ -268,7 +268,7 @@
 
         .comparison-table thead th:first-child {
             color: var(--gold);
-            background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(15, 52, 96, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(10, 31, 20, 0.8) 0%, rgba(10, 40, 25, 0.8) 100%);
         }
 
         .comparison-table thead th.header-old {
@@ -321,7 +321,7 @@
         }
 
         .comparison-table tbody td:first-child {
-            background: rgba(26, 26, 46, 0.5);
+            background: rgba(10, 31, 20, 0.5);
             font-weight: 700;
             font-size: 1.15rem;
             color: var(--gold);
@@ -465,7 +465,7 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background: rgba(26, 26, 46, 0.98);
+                background: rgba(10, 31, 20, 0.98);
                 flex-direction: column;
                 justify-content: flex-start;
                 padding: 40px 20px;
@@ -496,7 +496,7 @@
                 text-align: left;
                 font-size: 1.1rem;
                 padding: 15px 20px;
-                background: rgba(15, 52, 96, 0.5);
+                background: rgba(10, 40, 25, 0.5);
                 border-radius: 8px;
             }
 
@@ -515,7 +515,7 @@
                 padding: 0;
                 transform: none;
                 transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-                background: rgba(15, 52, 96, 0.3);
+                background: rgba(10, 40, 25, 0.3);
                 border: none;
                 border-radius: 0 0 8px 8px;
             }
@@ -546,7 +546,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 50%, #16213e 100%);
+            background: linear-gradient(135deg, #0a2a50 0%, #0e3468 50%, #0a2a50 100%);
             overflow: hidden;
             padding-top: 70px;
         }
@@ -681,7 +681,7 @@
         }
 
         .section-dark {
-            background: #0d1117;
+            background: linear-gradient(180deg, #0a1a12 0%, #0e2418 100%);
         }
 
         .section-title {
@@ -709,7 +709,7 @@
         }
 
         .problem-card {
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(10, 40, 25, 0.1) 100%);
             padding: 25px;
             border-radius: 15px;
             border: 1px solid rgba(233, 69, 96, 0.2);
@@ -814,7 +814,7 @@
         }
 
         .solution-visual {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             padding: 60px;
             border-radius: 20px;
             border: 1px solid rgba(212, 175, 55, 0.3);
@@ -876,7 +876,7 @@
 
         /* Comparison Table */
         .comparison {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.3) 0%, rgba(26, 26, 46, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.3) 0%, rgba(10, 31, 20, 0.3) 100%);
             padding: 80px 40px;
             border-radius: 20px;
             margin-top: 80px;
@@ -905,7 +905,7 @@
         }
 
         .comparison-cell.highlight {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 52, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(10, 40, 25, 0.2) 100%);
             border: 2px solid var(--gold);
         }
 
@@ -920,7 +920,7 @@
         .stat-card {
             text-align: center;
             padding: 40px;
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(10, 40, 25, 0.1) 100%);
             border-radius: 20px;
             border: 1px solid rgba(233, 69, 96, 0.2);
             transition: all 0.3s ease;
@@ -1050,7 +1050,7 @@
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--navy) 0%, #0a1628 100%);
+            background: linear-gradient(135deg, #0a2a50 0%, #0e3468 100%);
             padding: 60px 20px 40px;
             text-align: center;
             border-top: 3px solid var(--gold);
@@ -2201,7 +2201,7 @@
         }
 
         .strategy-item {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             padding: 40px;
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.3);
@@ -2306,7 +2306,7 @@
         }
 
         .feature-box {
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(10, 40, 25, 0.1) 100%);
             padding: 35px;
             border-radius: 20px;
             border: 2px solid rgba(233, 69, 96, 0.2);
@@ -2363,7 +2363,7 @@
 
         /* Legal Section Styles */
         .video-container {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -2462,7 +2462,7 @@
         }
 
         .legal-risk-card {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border-radius: 20px;
             padding: 35px;
             border: 2px solid;
@@ -2535,7 +2535,7 @@
         }
 
         .flowchart-box {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.3) 0%, rgba(26, 26, 46, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.3) 0%, rgba(10, 31, 20, 0.3) 100%);
             border-radius: 20px;
             padding: 50px;
             margin-top: 40px;
@@ -2656,7 +2656,7 @@
         }
 
         .myth-list li, .fact-list li {
-            background: rgba(15, 52, 96, 0.3);
+            background: rgba(10, 40, 25, 0.3);
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 12px;
@@ -2685,7 +2685,7 @@
         }
 
         .legal-solution-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 52, 96, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(10, 40, 25, 0.2) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -2745,7 +2745,7 @@
         }
 
         .benefit-card {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             padding: 40px;
@@ -2801,7 +2801,7 @@
         }
 
         .requirements-column {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.4) 0%, rgba(26, 26, 46, 0.4) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.4) 0%, rgba(10, 31, 20, 0.4) 100%);
             border-radius: 20px;
             padding: 40px;
             border: 2px solid;
@@ -2991,7 +2991,7 @@
 
         /* Election Law Section Styles */
         .law-intro-box {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.6) 0%, rgba(26, 26, 46, 0.6) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.6) 0%, rgba(10, 31, 20, 0.6) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -3019,7 +3019,7 @@
         }
 
         .pillar-card {
-            background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(15, 52, 96, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(10, 40, 25, 0.15) 100%);
             border: 2px solid rgba(212, 175, 55, 0.4);
             border-radius: 20px;
             padding: 35px;
@@ -3061,7 +3061,7 @@
         .timeline-phase {
             flex: 1;
             min-width: 150px;
-            background: rgba(15, 52, 96, 0.5);
+            background: rgba(10, 40, 25, 0.5);
             border: 2px solid var(--gold);
             border-radius: 15px;
             padding: 25px;
@@ -3166,7 +3166,7 @@
         }
 
         .online-rule-card {
-            background: rgba(15, 52, 96, 0.4);
+            background: rgba(10, 40, 25, 0.4);
             border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             padding: 35px;
@@ -3272,7 +3272,7 @@
         }
 
         .offline-rule-box {
-            background: rgba(15, 52, 96, 0.4);
+            background: rgba(10, 40, 25, 0.4);
             border: 2px solid var(--gold);
             border-radius: 15px;
             padding: 30px;
@@ -3429,7 +3429,7 @@
         }
 
         .contact-method {
-            background: rgba(15, 52, 96, 0.5);
+            background: rgba(10, 40, 25, 0.5);
             border-radius: 12px;
             padding: 25px;
             margin-top: 30px;
@@ -3442,7 +3442,7 @@
         }
 
         .law-summary-box {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.6) 0%, rgba(233, 69, 96, 0.3) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.6) 0%, rgba(233, 69, 96, 0.3) 100%);
             border: 3px solid var(--gold);
             border-radius: 20px;
             padding: 50px;
@@ -3502,7 +3502,7 @@
         .reseller-form-section {
             margin-top: 100px;
             padding: 60px;
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid var(--gold);
             border-radius: 20px;
         }
@@ -3766,7 +3766,7 @@
         }
 
         .form-divider span {
-            background: rgba(26, 26, 46, 0.9);
+            background: rgba(10, 31, 20, 0.9);
             padding: 0 20px;
             color: var(--gold);
             font-size: 1.1rem;
@@ -3822,7 +3822,7 @@
         }
 
         .pricing-card {
-            background: linear-gradient(135deg, rgba(15, 52, 96, 0.5) 0%, rgba(26, 26, 46, 0.5) 100%);
+            background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%);
             border: 2px solid rgba(212, 175, 55, 0.3);
             border-radius: 20px;
             overflow: hidden;
