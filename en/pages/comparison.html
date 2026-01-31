@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison - AI Election Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI Election Lab</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Solutions</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI Election System</a></li>
+                        <li><a href="solution-overview.html" class="nav-button">AI Solution Overview</a></li>
+                        <li><a href="strategy.html" class="nav-button">Nomination Strategy</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI Campaign Vehicle</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Legal Guide</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">Illegal SMS</a></li>
+                        <li><a href="election-law.html" class="nav-button">Election Law Guide</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Pricing</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">Pricing</a></li>
+                        <li><a href="comparison.html" class="nav-button">Comparison</a></li>
+                        <li><a href="results.html" class="nav-button">Results</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Resources</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">Videos</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">Articles</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">Candidate Samples</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">AI Talk & Homepage</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown"><button class="nav-button">Partners</button><ul class="dropdown-menu"><li><a href="reseller.html" class="nav-button">Reseller Program</a></li><li><a href="developer.html" class="nav-button">Developer</a></li><li><a href="demo.html" class="nav-button nav-cta">Free Demo</a></li></ul></li>
+                <li class="nav-item"><a href="../../pages/comparison.html" class="nav-button" style="color: var(--gold);">KR</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">COMPARISON</div>
+            <h1>Relying on Intuition vs. Winning with Data</h1>
+            <p class="hero-subtitle">Stop leaving it to chance. Victory is a science.</p>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section" style="background: linear-gradient(160deg, #0a1810 0%, #10281a 50%, #0a1810 100%);">
+        <div class="container">
+            <div class="comparison" style="margin-bottom: 60px;">
+                <div class="comparison-table" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: rgba(212, 175, 55, 0.3); border-radius: 15px; overflow: hidden;">
+                    <div class="comparison-cell header" style="background: var(--gold); color: var(--primary); padding: 20px; text-align: center; font-weight: 700;">Category</div>
+                    <div class="comparison-cell header" style="background: rgba(100, 100, 100, 0.8); color: white; padding: 20px; text-align: center; font-weight: 700;">Traditional Method</div>
+                    <div class="comparison-cell header highlight" style="background: var(--accent); color: white; padding: 20px; text-align: center; font-weight: 700;">AI Solution</div>
+
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.9); padding: 20px; text-align: center;"><strong style="color: var(--gold);">Analysis Unit</strong></div>
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.7); padding: 20px; text-align: center; color: rgba(255,255,255,0.8);">Large Groups<br>(Region/Age)</div>
+                    <div class="comparison-cell highlight" style="background: rgba(233, 69, 96, 0.2); padding: 20px; text-align: center; color: var(--gold); font-weight: 600;">Individual Voters<br>(1:1 Hyper-Personalization)</div>
+
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.9); padding: 20px; text-align: center;"><strong style="color: var(--gold);">Strategy Development</strong></div>
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.7); padding: 20px; text-align: center; color: rgba(255,255,255,0.8);">Post-hoc Analysis<br>Intuition-Based</div>
+                    <div class="comparison-cell highlight" style="background: rgba(233, 69, 96, 0.2); padding: 20px; text-align: center; color: var(--gold); font-weight: 600;">Real-Time Prediction<br>Auto-Optimization</div>
+
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.9); padding: 20px; text-align: center;"><strong style="color: var(--gold);">Resource Utilization</strong></div>
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.7); padding: 20px; text-align: center; color: rgba(255,255,255,0.8);">50% Efficiency<br>Wasted Resources</div>
+                    <div class="comparison-cell highlight" style="background: rgba(233, 69, 96, 0.2); padding: 20px; text-align: center; color: var(--gold); font-weight: 600;">100% Efficiency<br>Optimal Allocation</div>
+
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.9); padding: 20px; text-align: center;"><strong style="color: var(--gold);">Outcome</strong></div>
+                    <div class="comparison-cell" style="background: rgba(10, 31, 20, 0.7); padding: 20px; text-align: center; color: rgba(255,255,255,0.8);">'Probabilistic' Victory</div>
+                    <div class="comparison-cell highlight" style="background: rgba(233, 69, 96, 0.2); padding: 20px; text-align: center; color: var(--gold); font-weight: 600;">'Engineered' Victory</div>
+                </div>
+            </div>
+
+            <!-- PAST vs FUTURE -->
+            <h3 class="section-title" style="margin-bottom: 40px;">100 Years of Tradition vs. The AI Revolution</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
+                <div style="background: linear-gradient(135deg, rgba(100, 100, 100, 0.3) 0%, rgba(10, 31, 20, 0.5) 100%); padding: 30px; border-radius: 15px; border: 2px solid rgba(100, 100, 100, 0.3);">
+                    <h4 style="color: rgba(255,255,255,0.6); font-size: 1.2rem; margin-bottom: 20px;">PAST: Intuition-Based Campaigns</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Who campaigns harder?</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Phone polls, advice from local influencers</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; High cost, low efficiency</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Unreliable voter data</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Slow, manpower-driven response</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.7);">&#8226; Result: Vague anxiety and waste</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(233, 69, 96, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%); padding: 30px; border-radius: 15px; border: 2px solid var(--gold);">
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 20px;">FUTURE: Data-Driven Victory</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Who knows voters more precisely?</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Real-time data learning & hyper-personalized targeting</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; AI automation & 24/7 non-stop campaign</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; 85,000+ data points analyzed in real-time</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,0.1);">&#8226; Precision targeting by voter profile (92% accuracy)</li>
+                        <li style="padding: 10px 0; color: rgba(255,255,255,0.9);">&#8226; Result: Predictable victory</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3 Core Values -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 60px;">
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">💰</div>
+                    <h4 style="color: var(--gold); font-size: 1.3rem; margin-bottom: 10px;">Cost Reduction</h4>
+                    <p style="color: rgba(255,255,255,0.8);">A 24/7 campaign headquarters without a massive workforce</p>
+                </div>
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">🎯</div>
+                    <h4 style="color: var(--gold); font-size: 1.3rem; margin-bottom: 10px;">Precision Targeting</h4>
+                    <p style="color: rgba(255,255,255,0.8);">Data-driven supporter expansion, not intuition-based canvassing</p>
+                </div>
+                <div style="background: rgba(212, 175, 55, 0.1); padding: 30px; border-radius: 15px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <div style="font-size: 2.5rem; margin-bottom: 10px;">⚡</div>
+                    <h4 style="color: var(--gold); font-size: 1.3rem; margin-bottom: 10px;">Overwhelming Speed</h4>
+                    <p style="color: rgba(255,255,255,0.8);">Automated content and risk management that responds instantly to issues</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; padding: 40px; background: rgba(212, 175, 55, 0.1); border-radius: 15px; border: 1px solid var(--gold);">
+                <p style="color: var(--gold); font-size: 1.4rem; font-weight: 700; margin-bottom: 15px;">Elections are a battle of time and information.</p>
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 20px;">AI Election Solution analyzes, promotes, and spreads your message even while the candidate sleeps.</p>
+                <a href="results.html" class="btn btn-primary">See Actual Results</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>CEO Jaiwoo Shim</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>&copy; 2024 AI Election Solution. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">Solutions</a>
+                <a href="demo.html">Request Demo</a>
+                <a href="demo.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes(currentPage) && currentPage !== "") {
+                    link.classList.add("active");
+                    const parentDropdown = link.closest(".nav-item.has-dropdown");
+                    if (parentDropdown) {
+                        parentDropdown.classList.add("active-parent");
+                    }
+                }
+            });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes(currentPage) && currentPage !== "") {
+                    link.classList.add("active");
+                    const parentDropdown = link.closest(".nav-item.has-dropdown");
+                    if (parentDropdown) {
+                        parentDropdown.classList.add("active-parent");
+                    }
+                }
+            });
+            });
+        });
+    </script>
+    <div id="chatbot-label" style="position: fixed; bottom: 90px; left: 20px; background: linear-gradient(135deg, #1a5c3a, #2e8b57); color: white; padding: 8px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; white-space: nowrap;">Election AI Talk</div>
+    <script src="https://chatbot-sdk.aitalker.co.kr/talker-sdk.umd.js"></script>
+    <script>
+        TalkerSDK.initializeTalkerSDK({ code: "biz011", position: "left" });
+    </script>
+</body>
+</html>

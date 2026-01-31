@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - AI Election Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI Election Lab</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Solutions</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI Election System</a></li>
+                        <li><a href="solution-overview.html" class="nav-button">AI Solution Overview</a></li>
+                        <li><a href="strategy.html" class="nav-button">Nomination Strategy</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI Campaign Vehicle</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Legal Guide</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">Illegal SMS</a></li>
+                        <li><a href="election-law.html" class="nav-button">Election Law Guide</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Pricing</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">Pricing</a></li>
+                        <li><a href="comparison.html" class="nav-button">Comparison</a></li>
+                        <li><a href="results.html" class="nav-button">Results</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">Resources</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">Videos</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">Articles</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">Candidate Samples</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">AI Talk & Homepage</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown"><button class="nav-button">Partners</button><ul class="dropdown-menu"><li><a href="reseller.html" class="nav-button">Reseller Program</a></li><li><a href="developer.html" class="nav-button">Developer</a></li><li><a href="demo.html" class="nav-button nav-cta">Free Demo</a></li></ul></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+        <div class="hero-content">
+            <div class="hero-badge">ARTICLES</div>
+            <h1>Articles</h1>
+            <p class="hero-subtitle">Read articles and press releases about AI Election Solutions</p>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="section" style="background: linear-gradient(160deg, #0e1e0c 0%, #182e14 50%, #0e1e0c 100%);">
+        <div class="container">
+            <!-- PDF Resources Section -->
+            <h2 class="section-title" style="margin-bottom: 20px;">AI Election Strategy PDF Resources</h2>
+
+            <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(10, 40, 25, 0.3) 100%); border-radius: 12px; padding: 15px; border: 2px solid var(--gold); margin-bottom: 20px;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                    Explore the core strategy materials of AI Election Solution in PDF format.<br>
+                    Each document covers practical content on nomination strategy, election victory strategy, and campaign operations.
+                </p>
+            </div>
+
+            <!-- PDF Selection Tabs -->
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center;">
+                <button class="pdf-tab-btn active" onclick="showPDF('pdf1', this)" style="padding: 8px 14px; background: var(--gold); color: var(--primary); border: none; border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI Campaign Victory Strategy</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf2', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI Nomination Strategy</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf3', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Strategic Dual Playbook</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf4', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI Strategy for Victory</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf5', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI Primary Victory</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf6', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI Election Winning Formula</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf7', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Maximizing AI Campaign Effect</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf8', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Why AI is Needed in Primaries</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf10', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Nomination War Data Strategy</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf11', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Data Victory AI Strategy</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf12', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Independent Candidate Victory Strategy</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf13', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">SMS Sending is Illegal</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf14', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Illegal Crawling SMS Risk</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf15', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">Clean Campaign Blueprint</button>
+                <button class="pdf-tab-btn" onclick="showPDF('pdf16', this)" style="padding: 8px 14px; background: rgba(212, 175, 55, 0.2); color: var(--gold); border: 2px solid var(--gold); border-radius: 10px; cursor: pointer; font-weight: 600; transition: all 0.3s;">AI Election Strategy</button>
+            </div>
+
+            <!-- PDF Viewer Container -->
+            <div style="background: #0a1f14; border-radius: 15px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3);">
+                <!-- PDF 1: AI Campaign Victory -->
+                <div id="pdf1" class="pdf-container" style="display: block;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Campaign Victory Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Detailed victory strategies and execution methods for AI-based election campaigns.</p>
+                    </div>
+                    <iframe src="../../AI_Campaign_Victory.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 2: AI Nomination Strategy -->
+                <div id="pdf2" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Nomination Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">An AI-based strategy guide for securing party nominations.</p>
+                    </div>
+                    <iframe src="../../AI_Nomination_Strategy.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 3: AI Strategic Dual Playbook -->
+                <div id="pdf3" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Strategic Dual Playbook</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">A dual election strategy playbook covering both online and offline campaigns.</p>
+                    </div>
+                    <iframe src="../../AI_Strategic_Dual_Playbook.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 4: AI Strategy For Victory -->
+                <div id="pdf4" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Strategy For Victory</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">A comprehensive AI strategy guide for winning elections.</p>
+                    </div>
+                    <iframe src="../../AI_Strategy_For_Victory.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 5: AI Primary Victory -->
+                <div id="pdf5" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Primary Victory</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">AI-based strategies and execution plans for winning party primaries.</p>
+                    </div>
+                    <iframe src="../../AI_경선_승리.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 6: AI Election Winning Formula -->
+                <div id="pdf6" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Election Winning Formula</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Analyzing the core formula for election victory using data and AI.</p>
+                    </div>
+                    <iframe src="../../AI_선거_승리_공식.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 7: Maximizing AI Campaign Effect -->
+                <div id="pdf7" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Election Solution - Reduce Manpower, Lower Costs, Maximize Campaign Effect</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Cost reduction and effect maximization strategies through AI solutions for efficient election operations.</p>
+                    </div>
+                    <iframe src="../../AI선거 솔루션 - 인력은 줄이고, 비용은 낮추고, 유세 효과는 최대로.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 8: Why AI is Needed in Primaries -->
+                <div id="pdf8" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Why AI Election Solution is Needed in Primaries</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Analyzing why AI solutions are essential in party primaries.</p>
+                    </div>
+                    <iframe src="../../경선에서 AI선거 솔루션이 필요한 이유.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 10: Nomination War Data Strategy -->
+                <div id="pdf10" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Nomination War Data Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Data-driven strategies for winning nomination competitions.</p>
+                    </div>
+                    <iframe src="../../공천_전쟁_데이터_전략.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 11: Data Victory AI Strategy -->
+                <div id="pdf11" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Data Victory AI Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">An election victory strategy combining data analysis and AI.</p>
+                    </div>
+                    <iframe src="../../데이터_승리_AI_전략.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 12: Independent Candidate Victory Strategy -->
+                <div id="pdf12" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Independent Candidate Victory Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">AI-based strategies for independent candidates to win elections.</p>
+                    </div>
+                    <iframe src="../../무소속_승리_전략.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 13: SMS Sending is Illegal -->
+                <div id="pdf13" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Sending Text Messages is Illegal</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Information on legal risks and precautions for election SMS sending.</p>
+                    </div>
+                    <iframe src="../../문자 메세지 발송은 불법.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 14: Illegal Crawling SMS Campaign Collapse -->
+                <div id="pdf14" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Illegal Crawling SMS Campaign Collapse</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Analyzing the devastating impact of illegal crawling and SMS sending on election campaigns.</p>
+                    </div>
+                    <iframe src="../../불법_크롤링_문자_선거_캠페인_붕괴.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 15: Clean Campaign Blueprint -->
+                <div id="pdf15" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">Clean Campaign Blueprint</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">A blueprint for running legal and ethical election campaigns.</p>
+                    </div>
+                    <iframe src="../../클린_캠페인_설계도.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+
+                <!-- PDF 16: AI Election Strategy -->
+                <div id="pdf16" class="pdf-container" style="display: none;">
+                    <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
+                        <h4 style="color: var(--gold); margin-bottom: 8px;">AI Election Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">A comprehensive election strategy guide utilizing AI.</p>
+                    </div>
+                    <iframe src="../../AI선거전략.pdf#toolbar=0" style="width: 100%; height: 450px; border: none;"></iframe>
+                </div>
+            </div>
+
+            <!-- Press Coverage Section -->
+            <h2 class="section-title" style="margin-top: 60px; margin-bottom: 20px;">Press Coverage</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; margin-bottom: 40px;">
+                <!-- Article 1: iBrandNews -->
+                <div style="background: linear-gradient(135deg, rgba(10, 40, 25, 0.5) 0%, rgba(10, 31, 20, 0.5) 100%); border-radius: 15px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(212, 175, 55, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    <div style="height: 220px; overflow: hidden; position: relative;">
+                        <img src="../../images/article-ibrandnews.png" alt="14 AI Technologies That Change the Game in Elections" style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+                        <div style="position: absolute; top: 10px; left: 10px;">
+                            <span style="background: var(--accent); color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.75rem; font-weight: 600;">PRESS</span>
+                        </div>
+                        <div style="position: absolute; top: 10px; right: 10px;">
+                            <span style="background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 15px; font-size: 0.75rem;">2025.12.10</span>
+                        </div>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="margin-bottom: 8px;">
+                            <span style="color: var(--gold); font-size: 0.8rem; font-weight: 600;">iBrandNews</span>
+                        </div>
+                        <h4 style="color: var(--light); font-size: 1.15rem; margin-bottom: 10px; line-height: 1.4; font-weight: 700;">14 AI Technologies That Change the Game in Elections: A Complete Guide for Winning Campaigns</h4>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 15px; line-height: 1.6;">
+                            AI Election Solutions will determine victory in the 2026 local elections. Introducing 14 core AI technologies including data-driven winning strategies, hyper-personalized voter communication, and smart camp operations.
+                        </p>
+                        <a href="https://www.ibrandnews.com/news/articleView.html?idxno=11309" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 12px;">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 30px; background: rgba(212, 175, 55, 0.1); border-radius: 15px; border: 1px solid var(--gold); text-align: center;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">Need additional resources? Please contact us.</p>
+                <a href="demo.html" class="btn btn-primary" style="margin-top: 20px;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <p class="footer-ceo" style="color: #fff;"><strong>CEO Jaiwoo Shim</strong></p>
+                <p class="footer-info" style="color: #fff;">
+                    <span class="contact-item">📱 010-2397-5734</span>
+                    <span class="contact-divider">|</span>
+                    <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
+                </p>
+            </div>
+            <p>© 2024 AI Election Solution. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="solution.html">Solutions</a>
+                <a href="demo.html">Request Demo</a>
+                <a href="demo.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks) navLinks.classList.toggle('active');
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes(currentPage) && currentPage !== "") {
+                    link.classList.add("active");
+                    const parentDropdown = link.closest(".nav-item.has-dropdown");
+                    if (parentDropdown) {
+                        parentDropdown.classList.add("active-parent");
+                    }
+                }
+            });
+                        navItem.classList.toggle('active');
+                        event.preventDefault();
+                    }
+                });
+
+            // Highlight active menu based on current page
+            const currentPage = window.location.pathname.split("/").pop();
+            const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
+
+            menuLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href && href.includes(currentPage) && currentPage !== "") {
+                    link.classList.add("active");
+                    const parentDropdown = link.closest(".nav-item.has-dropdown");
+                    if (parentDropdown) {
+                        parentDropdown.classList.add("active-parent");
+                    }
+                }
+            });
+            });
+        });
+
+        // PDF tab switching function
+        function showPDF(pdfId, clickedBtn) {
+            // Hide all PDF containers
+            document.querySelectorAll('.pdf-container').forEach(container => {
+                container.style.display = 'none';
+            });
+
+            // Show selected PDF container
+            document.getElementById(pdfId).style.display = 'block';
+
+            // Reset all tab button styles
+            document.querySelectorAll('.pdf-tab-btn').forEach(btn => {
+                btn.style.background = 'rgba(212, 175, 55, 0.2)';
+                btn.style.color = 'var(--gold)';
+                btn.style.border = '2px solid var(--gold)';
+                btn.classList.remove('active');
+            });
+
+            // Activate clicked button style
+            clickedBtn.style.background = 'var(--gold)';
+            clickedBtn.style.color = 'var(--primary)';
+            clickedBtn.style.border = 'none';
+            clickedBtn.classList.add('active');
+        }
+    </script>
+    <div id="chatbot-label" style="position: fixed; bottom: 90px; left: 20px; background: linear-gradient(135deg, #1a5c3a, #2e8b57); color: white; padding: 8px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; white-space: nowrap;">Election AI Talk</div>
+    <script src="https://chatbot-sdk.aitalker.co.kr/talker-sdk.umd.js"></script>
+    <script>
+        TalkerSDK.initializeTalkerSDK({ code: "biz011", position: "left" });
+    </script>
+</body>
+</html>

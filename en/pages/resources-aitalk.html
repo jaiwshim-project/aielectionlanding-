@@ -1,56 +1,55 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>후보자 AI 톡&홈피 - AI 선거 솔루션</title>
+    <title>AI Talk & Homepage - AI Election Solution</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
-                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI Election Lab</span>
             </a>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">솔루션</button>
+                    <button class="nav-button">Solutions</button>
                     <ul class="dropdown-menu">
-                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
-                        <li><a href="solution-overview.html" class="nav-button">AI 선거솔루션 소개</a></li>
-                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
-                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                        <li><a href="solution.html" class="nav-button">AI Election System</a></li>
+                        <li><a href="solution-overview.html" class="nav-button">AI Solution Overview</a></li>
+                        <li><a href="strategy.html" class="nav-button">Nomination Strategy</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI Campaign Vehicle</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">법률 가이드</button>
+                    <button class="nav-button">Legal Guide</button>
                     <ul class="dropdown-menu">
-                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
-                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                        <li><a href="legal.html" class="nav-button">Illegal SMS</a></li>
+                        <li><a href="election-law.html" class="nav-button">Election Law Guide</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">가격/비교</button>
+                    <button class="nav-button">Pricing</button>
                     <ul class="dropdown-menu">
-                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
-                        <li><a href="comparison.html" class="nav-button">비교분석</a></li>
-                        <li><a href="results.html" class="nav-button">성과</a></li>
+                        <li><a href="pricing.html" class="nav-button">Pricing</a></li>
+                        <li><a href="comparison.html" class="nav-button">Comparison</a></li>
+                        <li><a href="results.html" class="nav-button">Results</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">자료 보기</button>
+                    <button class="nav-button">Resources</button>
                     <ul class="dropdown-menu">
-                        <li><a href="resources-video.html" class="nav-button">영상자료</a></li>
-                        <li><a href="resources-articles.html" class="nav-button">기사 자료</a></li>
-                        <li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li>
-                        <li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li>
+                        <li><a href="resources-video.html" class="nav-button">Videos</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">Articles</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">Candidate Samples</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">AI Talk & Homepage</a></li>
                     </ul>
                 </li>
-                <li class="nav-item has-dropdown"><button class="nav-button">파트너</button><ul class="dropdown-menu"><li><a href="reseller.html" class="nav-button">리셀러 모집</a></li><li><a href="developer.html" class="nav-button">개발자 소개</a></li><li><a href="demo.html" class="nav-button nav-cta">무료 데모</a></li></ul></li>
-                <li class="nav-item"><a href="../en/pages/resources-aitalk.html" class="nav-button" style="font-weight: 700; border: 1px solid var(--gold); border-radius: 5px; padding: 6px 12px;">EN</a></li>
+                <li class="nav-item has-dropdown"><button class="nav-button">Partners</button><ul class="dropdown-menu"><li><a href="reseller.html" class="nav-button">Reseller Program</a></li><li><a href="developer.html" class="nav-button">Developer</a></li><li><a href="demo.html" class="nav-button nav-cta">Free Demo</a></li></ul></li>
             </ul>
         </div>
     </nav>
@@ -59,17 +58,17 @@
     <section class="hero" style="min-height: 25vh; padding-top: 70px;">
         <div class="hero-content">
             <div class="hero-badge">AI TALK</div>
-            <h1>후보자 AI 톡&홈피</h1>
-            <p class="hero-subtitle">AI 챗봇과 대화하며 선거 전략과 공약을 알아보세요</p>
+            <h1>AI Talk & Homepage</h1>
+            <p class="hero-subtitle">Chat with AI chatbots to learn about election strategies and pledges</p>
         </div>
     </section>
 
     <!-- AI Talk Section -->
     <section class="section" style="background: linear-gradient(160deg, #081c0e 0%, #102616 50%, #081c0e 100%);">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 25px;">AI 톡 체험하기</h2>
+            <h2 class="section-title" style="margin-bottom: 25px;">Try AI Talk</h2>
             <p style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 40px;">
-                AI 챗봇을 통해 실시간으로 선거 전략, 공약, 정책에 대해 질문하고 대화할 수 있습니다.
+                Ask questions and chat in real-time about election strategies, pledges, and policies through AI chatbots.
             </p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
@@ -83,16 +82,16 @@
                         </div>
                     </div>
                     <div style="padding: 20px;">
-                        <h4 style="color: var(--gold); font-size: 1.1rem; margin-bottom: 10px;">버락 오바마 미국대통령의 AI선거 솔루션</h4>
+                        <h4 style="color: var(--gold); font-size: 1.1rem; margin-bottom: 10px;">Barack Obama's AI Election Solution</h4>
                         <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 15px; line-height: 1.6;">
-                            오바마 대통령의 선거 전략과 10대 선거 공약에 대해 AI와 대화하세요. 풀뿌리 운동, 디지털 캠페인, 유권자 타겟팅 기법을 배울 수 있습니다.
+                            Chat with AI about President Obama's election strategies and top 10 campaign pledges. Learn about grassroots movement, digital campaigns, and voter targeting techniques.
                         </p>
                         <ul style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.6);">
-                            <li style="padding: 5px 0;">• 소액 기부자 동원 전략</li>
-                            <li style="padding: 5px 0;">• 소셜미디어 활용법</li>
-                            <li style="padding: 5px 0;">• 청년/소수자 타겟팅</li>
+                            <li style="padding: 5px 0;">• Small donor mobilization strategy</li>
+                            <li style="padding: 5px 0;">• Social media utilization</li>
+                            <li style="padding: 5px 0;">• Youth/minority targeting</li>
                         </ul>
-                        <a href="https://aitalker.co.kr/work007/1670" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 15px;">💬 AI 톡 시작하기</a>
+                        <a href="https://aitalker.co.kr/work007/1670" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 15px;">Start AI Talk</a>
                     </div>
                 </div>
 
@@ -106,23 +105,23 @@
                         </div>
                     </div>
                     <div style="padding: 20px;">
-                        <h4 style="color: var(--gold); font-size: 1.1rem; margin-bottom: 10px;">[데모] 홍길동 창녕군수 후보자 AI 홍보</h4>
+                        <h4 style="color: var(--gold); font-size: 1.1rem; margin-bottom: 10px;">[Demo] Hong Gildong Changnyeong County Head Candidate AI Promotion</h4>
                         <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 15px; line-height: 1.6;">
-                            지역 후보자의 AI 챗봇 데모입니다. 공약, 정책 제안, 민원 상담을 실시간으로 체험해보세요.
+                            An AI chatbot demo for a local candidate. Experience real-time pledge information, policy proposals, and citizen consultation.
                         </p>
                         <ul style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.6);">
-                            <li style="padding: 5px 0;">• 10대 개혁 공약 안내</li>
-                            <li style="padding: 5px 0;">• 스마트 농업/AI 교육</li>
-                            <li style="padding: 5px 0;">• 실시간 시민 소통</li>
+                            <li style="padding: 5px 0;">• Top 10 reform pledges</li>
+                            <li style="padding: 5px 0;">• Smart agriculture/AI education</li>
+                            <li style="padding: 5px 0;">• Real-time citizen communication</li>
                         </ul>
-                        <a href="https://aitalker.co.kr/biz011/2021" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 15px;">💬 AI 톡 시작하기</a>
+                        <a href="https://aitalker.co.kr/biz011/2021" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 15px;">Start AI Talk</a>
                     </div>
                 </div>
             </div>
 
             <div style="margin-top: 40px; padding: 25px; background: rgba(212, 175, 55, 0.1); border-radius: 12px; border: 1px solid var(--gold); text-align: center;">
-                <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">💡 나만의 AI 톡 챗봇을 만들어 유권자와 소통하세요!</p>
-                <a href="demo.html" class="btn btn-primary" style="margin-top: 15px;">AI 톡 제작 문의</a>
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">Create your own AI Talk chatbot and communicate with voters!</p>
+                <a href="demo.html" class="btn btn-primary" style="margin-top: 15px;">Inquire About AI Talk</a>
             </div>
         </div>
     </section>
@@ -130,9 +129,9 @@
     <!-- Campaign Homepage Section -->
     <section class="section" style="background: linear-gradient(135deg, #0a2e1a 0%, #0a1f14 100%);">
         <div class="container">
-            <h2 class="section-title" style="margin-bottom: 25px;">후보자 홈페이지 샘플</h2>
+            <h2 class="section-title" style="margin-bottom: 25px;">Candidate Homepage Samples</h2>
             <p style="text-align: center; color: rgba(255,255,255,0.8); margin-bottom: 40px;">
-                AI 기반 선거 캠페인 홈페이지 샘플입니다. 전문적인 디자인과 AI 기능이 통합된 홈페이지를 확인하세요.
+                AI-based election campaign homepage samples. Check out homepages with professional design and integrated AI features.
             </p>
 
             <div style="max-width: 800px; margin: 0 auto;">
@@ -151,36 +150,36 @@
                             <span style="font-size: 1.5rem;">🇺🇸</span>
                             <h4 style="color: var(--gold); font-size: 1.2rem; margin: 0;">BJ Attao for Governor 2026</h4>
                         </div>
-                        <p style="color: var(--light); font-size: 1rem; margin-bottom: 10px; font-weight: 500;">검증된 행정가, 준비된 주지사</p>
+                        <p style="color: var(--light); font-size: 1rem; margin-bottom: 10px; font-weight: 500;">Proven Administrator, Ready Governor</p>
                         <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">
-                            북마리아나 제도 주지사 후보 BJ Attao의 공식 캠페인 웹사이트입니다. AI 대시보드, 다국어 지원, 5대 핵심 공약 등 최신 선거 기술이 적용되었습니다.
+                            The official campaign website for BJ Attao, gubernatorial candidate for the Northern Mariana Islands. Features the latest election technology including AI dashboard, multi-language support, and 5 core pledges.
                         </p>
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
                             <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
                                 <span style="color: var(--gold); font-size: 0.8rem;">🌊 Blue Economy</span>
-                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">경제 다각화 전략</p>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">Economic diversification strategy</p>
                             </div>
                             <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
                                 <span style="color: var(--gold); font-size: 0.8rem;">💼 Marianas Jobs</span>
-                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">일자리 창출 정책</p>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">Job creation policy</p>
                             </div>
                             <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
                                 <span style="color: var(--gold); font-size: 0.8rem;">⚡ Energy Independence</span>
-                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">에너지 자립 계획</p>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">Energy independence plan</p>
                             </div>
                             <div style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px;">
                                 <span style="color: var(--gold); font-size: 0.8rem;">🤖 AI Dashboard</span>
-                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">투명한 거버넌스</p>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 0.75rem; margin-top: 5px;">Transparent governance</p>
                             </div>
                         </div>
-                        <a href="https://jaiwshim-project.github.io/BJAttao/index.html" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 15px;">🌐 홈페이지 방문하기</a>
+                        <a href="https://jaiwshim-project.github.io/BJAttao/index.html" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; padding: 15px;">Visit Homepage</a>
                     </div>
                 </div>
             </div>
 
             <div style="margin-top: 40px; padding: 25px; background: rgba(233, 69, 96, 0.1); border-radius: 12px; border: 1px solid var(--accent); text-align: center;">
-                <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">🏛️ AI 기반 선거 캠페인 홈페이지를 제작해 드립니다!</p>
-                <a href="demo.html" class="btn btn-primary" style="margin-top: 15px;">홈페이지 제작 문의</a>
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem;">We build AI-based election campaign homepages!</p>
+                <a href="demo.html" class="btn btn-primary" style="margin-top: 15px;">Inquire About Homepage</a>
             </div>
         </div>
     </section>
@@ -189,18 +188,18 @@
     <footer>
         <div class="footer-content">
             <div class="footer-contact">
-                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
+                <p class="footer-ceo" style="color: #fff;"><strong>CEO Jaiwoo Shim</strong></p>
                 <p class="footer-info" style="color: #fff;">
                     <span class="contact-item">📱 010-2397-5734</span>
                     <span class="contact-divider">|</span>
                     <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
                 </p>
             </div>
-            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
+            <p>© 2024 AI Election Solution. All rights reserved.</p>
             <div class="footer-links">
-                <a href="solution.html">솔루션</a>
-                <a href="demo.html">데모 신청</a>
-                <a href="demo.html">문의하기</a>
+                <a href="solution.html">Solutions</a>
+                <a href="demo.html">Request Demo</a>
+                <a href="demo.html">Contact Us</a>
             </div>
         </div>
     </footer>
@@ -262,7 +261,7 @@
             });
         });
     </script>
-    <div id="chatbot-label" style="position: fixed; bottom: 90px; left: 20px; background: linear-gradient(135deg, #1a5c3a, #2e8b57); color: white; padding: 8px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; white-space: nowrap;">선거솔루션 AI 톡</div>
+    <div id="chatbot-label" style="position: fixed; bottom: 90px; left: 20px; background: linear-gradient(135deg, #1a5c3a, #2e8b57); color: white; padding: 8px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 9999; white-space: nowrap;">Election AI Talk</div>
     <script src="https://chatbot-sdk.aitalker.co.kr/talker-sdk.umd.js"></script>
     <script>
         TalkerSDK.initializeTalkerSDK({ code: "biz011", position: "left" });
