@@ -221,6 +221,115 @@
             transform: rotate(45deg);
         }
 
+        .pdf-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold), #b8962e);
+            color: #0a1f14;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: 'Noto Sans KR', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .pdf-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+        .pdf-download-btn:active {
+            transform: translateY(0);
+        }
+        .pdf-download-btn .dl-icon {
+            font-size: 1.1rem;
+        }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .manual-card {
+            position: relative;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            font-size: 10pt;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 500;
+        }
+        .manual-toc {
+            position: relative;
+        }
+        .contact-section {
+            background: rgba(10, 40, 25, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 40px 35px;
+            margin-bottom: 35px;
+        }
+        .contact-section h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .contact-card-item {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .contact-card-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .contact-card-item .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .contact-card-item h5 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .contact-card-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .contact-card-item a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .contact-card-item a:hover {
+            text-decoration: underline;
+        }
+        .contact-footer-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
         @media (max-width: 768px) {
             .toc-list {
                 grid-template-columns: 1fr;
@@ -234,11 +343,20 @@
             .step-flow {
                 grid-template-columns: 1fr 1fr;
             }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 480px) {
             .step-flow {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* PDF 다운로드 시 숨길 요소 */
+        @media print {
+            nav, .pdf-download-btn, .hero-actions, #ai-talk-btn, #chatbot-label, footer { display: none !important; }
+            .manual-card { break-inside: avoid; }
         }
     </style>
 </head>
@@ -310,6 +428,11 @@
             <div class="hero-badge">USER MANUAL</div>
             <h1>사용자 매뉴얼</h1>
             <p class="hero-subtitle">AI 선거 솔루션의 모든 기능을 단계별로 안내합니다</p>
+            <div class="hero-actions">
+                <button class="pdf-download-btn" onclick="downloadPDF()">
+                    <span class="dl-icon">📥</span> PDF 다운로드
+                </button>
+            </div>
         </div>
     </section>
 
@@ -331,6 +454,7 @@
                     <li><a href="#section9"><span class="toc-num">09</span> 선거법 준수 가이드</a></li>
                     <li><a href="#section10"><span class="toc-num">10</span> 자주 묻는 질문 (FAQ)</a></li>
                 </ul>
+                <span class="page-number">- 1 -</span>
             </div>
 
             <!-- Section 1 -->
@@ -364,6 +488,7 @@
                 <div class="info-box">
                     <p><strong>💡 TIP:</strong> 무료 데모는 <a href="demo.html" style="color: var(--gold); text-decoration: underline;">데모 신청 페이지</a>에서 바로 신청할 수 있습니다. 선거 90일 전 가입 시 조기 등록 할인 혜택이 적용됩니다.</p>
                 </div>
+                <span class="page-number">- 2 -</span>
             </div>
 
             <!-- Section 2 -->
@@ -383,6 +508,7 @@
                 <div class="info-box">
                     <p><strong>💡 TIP:</strong> 대시보드의 위젯은 드래그 앤 드롭으로 자유롭게 배치를 변경할 수 있습니다. 자주 확인하는 지표를 상단에 배치하세요.</p>
                 </div>
+                <span class="page-number">- 3 -</span>
             </div>
 
             <!-- Section 3 -->
@@ -425,6 +551,7 @@
                 <div class="warning-box">
                     <p><strong>⚠️ 주의:</strong> AI가 생성한 공약은 반드시 후보자가 직접 검토하고 확인해야 합니다. 실현 가능성과 선거법 준수 여부를 최종 점검하세요.</p>
                 </div>
+                <span class="page-number">- 4 -</span>
             </div>
 
             <!-- Section 4 -->
@@ -446,6 +573,7 @@
                 <div class="info-box">
                     <p><strong>💡 TIP:</strong> 유권자 세그먼트는 선거 상황에 따라 자동으로 업데이트됩니다. 주 1회 이상 데이터 분석 결과를 확인하고 전략을 조정하세요.</p>
                 </div>
+                <span class="page-number">- 5 -</span>
             </div>
 
             <!-- Section 5 -->
@@ -469,6 +597,7 @@
                 <div class="info-box">
                     <p><strong>💡 TIP:</strong> 일일 콘텐츠 생산량은 500건 이상 가능합니다. 자동 배포 스케줄을 설정하면 최적의 시간에 콘텐츠가 게시됩니다.</p>
                 </div>
+                <span class="page-number">- 6 -</span>
             </div>
 
             <!-- Section 6 -->
@@ -511,6 +640,7 @@
                 <div class="info-box">
                     <p><strong>💡 TIP:</strong> AI 톡허브 체험은 좌측 하단의 'AI 톡 체험' 버튼을 클릭하여 바로 경험해보실 수 있습니다.</p>
                 </div>
+                <span class="page-number">- 7 -</span>
             </div>
 
             <!-- Section 7 -->
@@ -529,6 +659,7 @@
                 <div class="info-box">
                     <p><strong>💡 TIP:</strong> 자세한 선거차량 AI 시스템 안내는 <a href="election-vehicle.html" style="color: var(--gold); text-decoration: underline;">AI 선거차량 페이지</a>에서 확인하세요.</p>
                 </div>
+                <span class="page-number">- 8 -</span>
             </div>
 
             <!-- Section 8 -->
@@ -547,6 +678,7 @@
 
                 <h4>보고서 다운로드</h4>
                 <p>대시보드의 '보고서' 탭에서 기간별, 채널별, 캠페인별 상세 보고서를 PDF 또는 Excel 형식으로 다운로드할 수 있습니다. 자동 보고서 발송을 설정하면 매주 정해진 시간에 이메일로 보고서를 수신할 수 있습니다.</p>
+                <span class="page-number">- 9 -</span>
             </div>
 
             <!-- Section 9 -->
@@ -565,6 +697,7 @@
                 <div class="warning-box">
                     <p><strong>⚠️ 중요:</strong> 공직선거법 위반 시 처벌 대상이 될 수 있습니다. 반드시 <a href="election-law.html" style="color: var(--accent); text-decoration: underline;">선거법 안내 페이지</a>를 숙지하시고, 의문 사항은 선거관리위원회에 확인하세요.</p>
                 </div>
+                <span class="page-number">- 10 -</span>
             </div>
 
             <!-- Section 10: FAQ -->
@@ -630,6 +763,57 @@
                         <p>전화(010-2397-5734), 이메일(jaiwshim@gmail.com), AI 챗봇을 통해 문의할 수 있습니다. 선거 기간 중에는 24시간 긴급 지원 핫라인이 운영됩니다.</p>
                     </div>
                 </div>
+                <span class="page-number">- 11 -</span>
+            </div>
+
+            <!-- Section 11: Contact Info -->
+            <div id="section11" class="contact-section">
+                <h3>📞 연락처 및 고객 지원 안내</h3>
+                <div class="contact-grid">
+                    <div class="contact-card-item">
+                        <div class="contact-icon">👤</div>
+                        <h5>대표 연락처</h5>
+                        <p><strong>심재우 대표</strong><br>
+                        AI 선거솔루션 연구소</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">📱</div>
+                        <h5>전화 상담</h5>
+                        <p><a href="tel:010-2397-5734">010-2397-5734</a><br>
+                        평일 09:00 ~ 18:00<br>
+                        선거 기간: 24시간 운영</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">✉️</div>
+                        <h5>이메일 문의</h5>
+                        <p><a href="mailto:jaiwshim@gmail.com">jaiwshim@gmail.com</a><br>
+                        24시간 접수 가능<br>
+                        영업일 기준 1일 내 회신</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">💬</div>
+                        <h5>AI 챗봇 상담</h5>
+                        <p>화면 우측 하단 챗봇 아이콘<br>
+                        또는 좌측 하단 'AI 톡 체험'<br>
+                        24시간 실시간 응답</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">🌐</div>
+                        <h5>홈페이지</h5>
+                        <p>AI 선거 솔루션<br>
+                        최신 소식 및 업데이트<br>
+                        <a href="../index.html">메인 페이지 바로가기</a></p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">📋</div>
+                        <h5>무료 데모 신청</h5>
+                        <p>지금 바로 체험해 보세요<br>
+                        맞춤형 패키지 상담 포함<br>
+                        <a href="demo.html">데모 신청 바로가기</a></p>
+                    </div>
+                </div>
+                <p class="contact-footer-note">© 2024 AI 선거 솔루션 연구소. 본 매뉴얼의 내용은 서비스 업데이트에 따라 변경될 수 있습니다.<br>최신 버전은 홈페이지 매뉴얼 페이지에서 확인하세요.</p>
+                <span class="page-number" style="position: absolute; bottom: 12px; right: 20px;">- 12 -</span>
             </div>
 
         </div>
@@ -664,7 +848,27 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
     <script>
+        function downloadPDF() {
+            var btn = document.querySelector('.pdf-download-btn');
+            btn.innerHTML = '<span class="dl-icon">⏳</span> 생성 중...';
+            btn.style.pointerEvents = 'none';
+
+            var content = document.querySelector('.manual-container');
+            var opt = {
+                margin: [10, 10, 15, 10],
+                filename: 'AI_선거솔루션_사용자매뉴얼.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a1f14' },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            html2pdf().set(opt).from(content).save().then(function() {
+                btn.innerHTML = '<span class="dl-icon">📥</span> PDF 다운로드';
+                btn.style.pointerEvents = 'auto';
+            });
+        }
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             if (navLinks) navLinks.classList.toggle('active');
