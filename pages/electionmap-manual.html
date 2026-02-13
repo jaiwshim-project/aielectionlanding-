@@ -1,59 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Solution Overview - AI Election Solution</title>
+    <title>일렉션맵AI 매뉴얼 - AI 선거 솔루션</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .pdf-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold), #b8962e);
+            color: #0a1f14;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: 'Noto Sans KR', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .pdf-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+        .pdf-download-btn:active {
+            transform: translateY(0);
+        }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo" style="background: none; border: none; cursor: pointer; padding: 0; text-decoration: none;">
-                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI Election Lab</span>
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
             </a>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">Solutions</button>
+                    <button class="nav-button">서비스</button>
                     <ul class="dropdown-menu">
-                        <li><a href="solution.html" class="nav-button">AI Election System</a></li>
-                        <li><a href="solution-overview.html" class="nav-button">AI Solution Overview</a></li>
-                        <li><a href="strategy.html" class="nav-button">Nomination Strategy</a></li>
-                        <li><a href="election-vehicle.html" class="nav-button">AI Campaign Vehicle</a></li>
+                        <li><a href="candidate-report.html" class="nav-button">정치인 평가 보고서</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">Legal Guide</button>
+                    <button class="nav-button">솔루션</button>
                     <ul class="dropdown-menu">
-                        <li><a href="legal.html" class="nav-button">Illegal SMS</a></li>
-                        <li><a href="election-law.html" class="nav-button">Election Law Guide</a></li>
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="solution-overview.html" class="nav-button">AI 선거솔루션 소개</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
-                    <button class="nav-button">Pricing</button>
+                    <button class="nav-button">법률 가이드</button>
                     <ul class="dropdown-menu">
-                        <li><a href="pricing.html" class="nav-button">Pricing</a></li>
-                        <li><a href="comparison.html" class="nav-button">Comparison</a></li>
-                        <li><a href="results.html" class="nav-button">Results</a></li>
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
                     </ul>
                 </li>
-                <li class="nav-item has-dropdown"><button class="nav-button">Resources</button><ul class="dropdown-menu"><li><a href="resources-video.html" class="nav-button">Videos</a></li><li><a href="resources-articles.html" class="nav-button">Articles</a></li><li><a href="resources-samples.html" class="nav-button">Candidate Samples</a></li><li><a href="resources-aitalk.html" class="nav-button">AI Talk & Homepage</a></li></ul></li>
-                <li class="nav-item has-dropdown"><button class="nav-button">Partners</button><ul class="dropdown-menu"><li><a href="reseller.html" class="nav-button">Reseller Program</a></li><li><a href="developer.html" class="nav-button">Developer</a></li><li><a href="demo.html" class="nav-button nav-cta">Free Demo</a></li></ul></li>
-                <li class="nav-item has-dropdown"><button class="nav-button" style="color: var(--gold); font-weight: 700;">Manual</button><ul class="dropdown-menu"><li><a href="user-manual.html" class="nav-button">User Manual</a></li><li><a href="electionmap-manual.html" class="nav-button">ElectionMap AI Manual</a></li></ul></li>
-                <li class="nav-item"><a href="../../pages/solution-overview.html" class="nav-button" style="font-weight: 700; border: 1px solid var(--gold); border-radius: 5px; padding: 6px 12px;">KR</a></li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="comparison.html" class="nav-button">비교분석</a></li>
+                        <li><a href="results.html" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">자료 보기</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">영상자료</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">기사 자료</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">파트너</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                        <li><a href="developer.html" class="nav-button">개발자 소개</a></li>
+                        <li><a href="demo.html" class="nav-button nav-cta">무료 데모</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown"><button class="nav-button" style="color: var(--gold); font-weight: 700;">매뉴얼</button><ul class="dropdown-menu"><li><a href="user-manual.html" class="nav-button">사용자 매뉴얼</a></li><li><a href="electionmap-manual.html" class="nav-button">일렉션맵AI 매뉴얼</a></li></ul></li>
+                <li class="nav-item"><a href="../en/pages/electionmap-manual.html" class="nav-button" style="font-weight: 700; border: 1px solid var(--gold); border-radius: 5px; padding: 6px 12px;">EN</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="hero" style="min-height: 25vh; padding-top: 70px;">
+    <section class="hero" style="min-height: 30vh; padding-top: 70px;">
         <div class="hero-content">
-            <div class="hero-badge">OVERVIEW</div>
-            <h1>AI Solution Overview</h1>
-            <p class="hero-subtitle">Explore the complete AI Election Solution services at a glance</p>
+            <div class="hero-badge">ELECTIONMAP AI</div>
+            <h1>일렉션맵AI 매뉴얼</h1>
+            <p class="hero-subtitle">일렉션맵AI 플랫폼의 모든 기능을 안내하는 사용자 매뉴얼입니다</p>
+            <div class="hero-actions">
+                <a href="../일렉션맵AI_사용자매뉴얼.pdf" download class="pdf-download-btn">
+                    <span style="font-size: 1.1rem;">📥</span> PDF 다운로드
+                </a>
+            </div>
         </div>
     </section>
 
@@ -62,10 +119,10 @@
         <div class="container">
             <div style="background: #0a1f14; border-radius: 15px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3);">
                 <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
-                    <h4 style="color: var(--gold); margin-bottom: 8px;">📄 AI Election Solution Comprehensive Brochure</h4>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Discover everything about AI Election Solution: 4 core engines, 12 services, package pricing, and more.</p>
+                    <h4 style="color: var(--gold); margin-bottom: 8px;">📄 일렉션맵AI 사용자 매뉴얼</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">유권자 지도, 지역 분석, 실시간 선거 데이터, 캠페인 최적화 도구 등 일렉션맵AI의 모든 기능을 확인하세요.</p>
                 </div>
-                <iframe src="../../AI선거솔루션-en.pdf#toolbar=0&navpanes=0&scrollbar=1" style="width: 100%; height: 80vh; border: none;"></iframe>
+                <iframe src="../일렉션맵AI_사용자매뉴얼.pdf#toolbar=0&navpanes=0&scrollbar=1" style="width: 100%; height: 85vh; border: none;"></iframe>
             </div>
         </div>
     </section>
@@ -73,9 +130,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
-            <h2>Experience AI Election Solution Now</h2>
-            <p>See how AI leads to election victory through a free demo</p>
-            <a href="demo.html" class="btn">Request Free Demo</a>
+            <h2>지금 바로 일렉션맵AI를 경험하세요</h2>
+            <p>무료 데모를 통해 AI 기반 선거 매핑이 어떻게 승리를 이끄는지 확인하세요</p>
+            <a href="demo.html" class="btn">무료 데모 신청</a>
         </div>
     </section>
 
@@ -83,18 +140,18 @@
     <footer>
         <div class="footer-content">
             <div class="footer-contact">
-                <p class="footer-ceo" style="color: #fff;"><strong>CEO Jaiwoo Shim</strong></p>
+                <p class="footer-ceo" style="color: #fff;"><strong>심재우 대표</strong></p>
                 <p class="footer-info" style="color: #fff;">
                     <span class="contact-item">📱 010-2397-5734</span>
                     <span class="contact-divider">|</span>
                     <span class="contact-item">✉️ <a href="mailto:jaiwshim@gmail.com" style="color: #fff; text-decoration: none;">jaiwshim@gmail.com</a></span>
                 </p>
             </div>
-            <p>© 2024 AI Election Solution. All rights reserved.</p>
+            <p>© 2024 AI 선거 솔루션. All rights reserved.</p>
             <div class="footer-links">
-                <a href="solution.html">Solutions</a>
-                <a href="demo.html">Request Demo</a>
-                <a href="demo.html">Contact Us</a>
+                <a href="solution.html">솔루션</a>
+                <a href="demo.html">데모 신청</a>
+                <a href="demo.html">문의하기</a>
             </div>
         </div>
     </footer>
@@ -124,8 +181,6 @@
                     }
                 });
             });
-
-            // Highlight active menu based on current page
             const currentPage = window.location.pathname.split("/").pop();
             const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
             menuLinks.forEach(link => {
@@ -141,7 +196,7 @@
         });
     </script>
     <a id="ai-talk-btn" href="https://aitalker.co.kr/biz011" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 30px; left: 20px; z-index: 9999; display: flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #1a5c3a, #2e8b57); color: white; padding: 10px 18px; border-radius: 25px; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s ease; white-space: nowrap;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.3)'">💬 AI 톡 체험</a>
-    <div id="chatbot-label" style="position: fixed; bottom: 90px; right: 20px; z-index: 9999; cursor: pointer;"><img src="../../로고-선거.png" alt="AI Election Tutor" style="width: 70px; height: 70px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div id="chatbot-label" style="position: fixed; bottom: 90px; right: 20px; z-index: 9999; cursor: pointer;"><img src="../로고-선거.png" alt="AI Election Tutor" style="width: 70px; height: 70px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></div>
     <script>
         (function() {
             var _attachShadow = Element.prototype.attachShadow;
