@@ -7,6 +7,222 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <style>
+        .manual-section {
+            padding: 60px 0;
+        }
+        .manual-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .manual-toc {
+            background: rgba(10, 40, 25, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 30px 35px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .manual-toc h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .toc-list li a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 8px 15px;
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .toc-list li a:hover {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+        .toc-list li a .toc-num {
+            color: var(--gold);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .manual-card {
+            background: rgba(10, 40, 25, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .manual-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .manual-card h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .manual-card h3 .card-icon {
+            font-size: 1.6rem;
+        }
+        .manual-card h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 25px 0 12px;
+            padding-left: 15px;
+            border-left: 3px solid var(--gold);
+        }
+        .manual-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .manual-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .manual-card ul li {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 8px 0 8px 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        .manual-card ul li::before {
+            content: '✓';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+        .step-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .step-item {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .step-item .step-num {
+            background: linear-gradient(135deg, var(--gold), #b8962e);
+            color: #0a1f14;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+            margin: 0 auto 12px;
+        }
+        .step-item h5 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .step-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        .info-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+        .info-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .info-box strong {
+            color: var(--gold);
+        }
+        .warning-box {
+            background: rgba(233, 69, 96, 0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+        .warning-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .warning-box strong {
+            color: var(--accent);
+        }
+        .faq-item {
+            background: rgba(10, 31, 20, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.08);
+        }
+        .faq-question h5 {
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .faq-question .faq-toggle {
+            color: var(--gold);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+        }
+        .faq-answer p {
+            padding: 0 25px 18px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin: 0;
+        }
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
         .pdf-download-btn {
             display: inline-flex;
             align-items: center;
@@ -31,10 +247,147 @@
         .pdf-download-btn:active {
             transform: translateY(0);
         }
+        .pdf-download-btn .dl-icon {
+            font-size: 1.1rem;
+        }
         .hero-actions {
             display: flex;
             justify-content: center;
             margin-top: 20px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            font-size: 10pt;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 500;
+        }
+        .contact-section {
+            background: rgba(10, 40, 25, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 40px 35px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+        .contact-section h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .contact-card-item {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .contact-card-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .contact-card-item .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .contact-card-item h5 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .contact-card-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .contact-card-item a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .contact-card-item a:hover {
+            text-decoration: underline;
+        }
+        .contact-footer-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: rgba(212, 175, 55, 0.35);
+            transform: translateY(-2px);
+        }
+        .feature-card .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .feature-card h5 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+            .manual-card {
+                padding: 25px 20px;
+            }
+            .manual-card h3 {
+                font-size: 1.2rem;
+            }
+            .step-flow {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .step-flow {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            nav, .pdf-download-btn, .hero-actions, #ai-talk-btn, #chatbot-label, footer { display: none !important; }
+            .manual-card { break-inside: avoid; }
         }
     </style>
 </head>
@@ -105,25 +458,483 @@
         <div class="hero-content">
             <div class="hero-badge">ELECTIONMAP AI</div>
             <h1>일렉션맵AI 매뉴얼</h1>
-            <p class="hero-subtitle">일렉션맵AI 플랫폼의 모든 기능을 안내하는 사용자 매뉴얼입니다</p>
+            <p class="hero-subtitle">일렉션맵AI 플랫폼의 모든 기능을 단계별로 안내하는 사용자 매뉴얼입니다</p>
             <div class="hero-actions">
-                <a href="../일렉션맵AI_사용자매뉴얼.pdf" download class="pdf-download-btn">
-                    <span style="font-size: 1.1rem;">📥</span> PDF 다운로드
-                </a>
+                <button class="pdf-download-btn" onclick="downloadPDF()">
+                    <span class="dl-icon">📥</span> PDF 다운로드
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- PDF Viewer Section -->
-    <section class="section" style="background: linear-gradient(160deg, #0a1e12 0%, #102c18 50%, #0a1e12 100%);">
-        <div class="container">
-            <div style="background: #0a1f14; border-radius: 15px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3);">
-                <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
-                    <h4 style="color: var(--gold); margin-bottom: 8px;">📄 일렉션맵AI 사용자 매뉴얼</h4>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">유권자 지도, 지역 분석, 실시간 선거 데이터, 캠페인 최적화 도구 등 일렉션맵AI의 모든 기능을 확인하세요.</p>
-                </div>
-                <iframe src="../일렉션맵AI_사용자매뉴얼.pdf#toolbar=0&navpanes=0&scrollbar=1" style="width: 100%; height: 85vh; border: none;"></iframe>
+    <!-- Table of Contents & Manual Content -->
+    <section class="manual-section" style="background: linear-gradient(160deg, #081e12 0%, #0d2a1a 50%, #081e12 100%);">
+        <div class="manual-container">
+
+            <div class="manual-toc">
+                <h3>목차</h3>
+                <ul class="toc-list">
+                    <li><a href="#section1"><span class="toc-num">01</span> 플랫폼 개요 및 시작하기</a></li>
+                    <li><a href="#section2"><span class="toc-num">02</span> 인터랙티브 유권자 지도</a></li>
+                    <li><a href="#section3"><span class="toc-num">03</span> 지역 분석 대시보드</a></li>
+                    <li><a href="#section4"><span class="toc-num">04</span> 실시간 선거 데이터</a></li>
+                    <li><a href="#section5"><span class="toc-num">05</span> 유권자 인구통계 분석</a></li>
+                    <li><a href="#section6"><span class="toc-num">06</span> 캠페인 경로 최적화</a></li>
+                    <li><a href="#section7"><span class="toc-num">07</span> 여론조사 및 감성 분석</a></li>
+                    <li><a href="#section8"><span class="toc-num">08</span> AI 전략 추천 시스템</a></li>
+                    <li><a href="#section9"><span class="toc-num">09</span> 보고서 및 데이터 내보내기</a></li>
+                    <li><a href="#section10"><span class="toc-num">10</span> 자주 묻는 질문</a></li>
+                </ul>
+                <span class="page-number">- 1 -</span>
             </div>
+
+            <!-- Section 1: 플랫폼 개요 -->
+            <div id="section1" class="manual-card">
+                <h3><span class="card-icon">🗺️</span> 01. 플랫폼 개요 및 시작하기</h3>
+                <p>일렉션맵AI는 차세대 선거 매핑 및 분석 플랫폼으로, 후보자와 선거 캠프에 강력한 지리공간 인텔리전스를 제공합니다. 실시간 선거 데이터, 유권자 인구통계, AI 기반 인사이트를 결합하여 캠페인 전략을 최적화합니다.</p>
+
+                <h4>시작하기</h4>
+                <div class="step-flow">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>플랫폼 접속</h5>
+                        <p>AI 선거 솔루션 계정으로 일렉션맵AI에 로그인합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>지역 선택</h5>
+                        <p>선거구 또는 지역을 선택하여 인터랙티브 지도를 로드합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>데이터 레이어 설정</h5>
+                        <p>인구통계, 투표소, 유권자 밀도 등 데이터 레이어를 활성화합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>분석 및 실행</h5>
+                        <p>AI 인사이트와 지도 데이터를 활용하여 캠페인 전략을 최적화합니다</p>
+                    </div>
+                </div>
+
+                <h4>핵심 플랫폼 기능</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h5>인터랙티브 지도</h5>
+                        <p>확대/축소 가능한 다중 레이어 선거 지도로 모든 선거구와 투표구의 실시간 데이터를 오버레이합니다</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h5>데이터 분석</h5>
+                        <p>포괄적인 유권자 분석, 트렌드 분석 및 AI 기반 예측을 한눈에 확인할 수 있습니다</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h5>AI 인텔리전스</h5>
+                        <p>과거 선거 데이터로 학습된 머신러닝 모델이 실행 가능한 전략을 추천합니다</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h5>모바일 지원</h5>
+                        <p>완전 반응형 플랫폼으로 태블릿과 스마트폰에서도 캠페인 의사결정이 가능합니다</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> 일렉션맵AI는 AI 선거 솔루션 대시보드와 통합되어 있습니다. 메인 대시보드의 '지도 분석' 탭에서 바로 접속할 수 있습니다.</p>
+                </div>
+                <span class="page-number">- 2 -</span>
+            </div>
+
+            <!-- Section 2: 인터랙티브 유권자 지도 -->
+            <div id="section2" class="manual-card">
+                <h3><span class="card-icon">📍</span> 02. 인터랙티브 유권자 지도</h3>
+                <p>인터랙티브 유권자 지도는 일렉션맵AI의 핵심 기능입니다. 고해상도 확대/축소 가능 지도에 다양한 데이터 레이어를 켜고 끌 수 있어 핵심 캠페인 정보를 시각적으로 확인할 수 있습니다.</p>
+
+                <h4>지도 탐색 컨트롤</h4>
+                <ul>
+                    <li><strong>확대/축소:</strong> 마우스 휠 또는 +/- 버튼으로 전국, 광역시도, 선거구, 투표구 레벨까지 확대/축소합니다</li>
+                    <li><strong>이동 및 드래그:</strong> 클릭 후 드래그하여 지도를 탐색하거나, 방향키로 정밀 이동합니다</li>
+                    <li><strong>선거구 선택:</strong> 원하는 선거구를 클릭하면 상세 유권자 데이터, 과거 선거 결과, AI 예측을 확인합니다</li>
+                    <li><strong>전체 화면 모드:</strong> F11 키 또는 확대 아이콘을 클릭하여 몰입형 전체 화면 분석이 가능합니다</li>
+                </ul>
+
+                <h4>데이터 레이어</h4>
+                <ul>
+                    <li><strong>유권자 밀도 히트맵:</strong> 지역별 유권자 밀집도를 색상으로 표시합니다 - 진한 색상일수록 높은 유권자 밀도를 나타냅니다</li>
+                    <li><strong>정치 성향 지도:</strong> 과거 투표 패턴을 정당 색상으로 표시하여 빠른 시각적 분석이 가능합니다</li>
+                    <li><strong>투표소 위치:</strong> 모든 투표소를 핀으로 표시하며 수용 인원, 접근성, 예상 투표 인원 데이터를 제공합니다</li>
+                    <li><strong>경합 지역 하이라이트:</strong> AI가 식별한 경쟁적 선거구를 특수 마커와 승리 확률 점수로 강조합니다</li>
+                    <li><strong>인구 유동 분석:</strong> 일일 인구 이동 패턴을 애니메이션 오버레이로 보여주어 최적의 캠페인 타이밍을 파악합니다</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> 지도 오른쪽의 레이어 토글 패널에서 여러 데이터 레이어를 동시에 활성화할 수 있습니다. 유권자 밀도와 정치 성향을 결합하면 핵심 전략 타겟을 파악할 수 있습니다.</p>
+                </div>
+                <span class="page-number">- 3 -</span>
+            </div>
+
+            <!-- Section 3: 지역 분석 대시보드 -->
+            <div id="section3" class="manual-card">
+                <h3><span class="card-icon">📊</span> 03. 지역 분석 대시보드</h3>
+                <p>지역 분석 대시보드는 선거구를 세부 미시 지역으로 분류하여 각 지역에 대한 종합 데이터를 제공하며, 캠페인 메시지와 자원 배분을 맞춤화할 수 있도록 도와줍니다.</p>
+
+                <h4>대시보드 구성 요소</h4>
+                <ul>
+                    <li><strong>지역 요약 카드:</strong> 각 하위 지역의 인구, 유권자 수, 투표율 이력, 정당 성향을 한눈에 보여주는 카드</li>
+                    <li><strong>비교 차트:</strong> 여러 지역을 막대 그래프, 원형 차트, 추세선으로 나란히 비교합니다</li>
+                    <li><strong>이슈 히트맵:</strong> 소셜 미디어와 설문 데이터를 기반으로 각 하위 지역에서 가장 중요한 이슈를 색상 매트릭스로 표시합니다</li>
+                    <li><strong>자원 배분 뷰:</strong> 현재 캠페인 자원 배분을 시각화하고 최적화 방안을 제안합니다</li>
+                </ul>
+
+                <h4>지역 분석 사용 방법</h4>
+                <div class="step-flow">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>선거구 선택</h5>
+                        <p>드롭다운 메뉴에서 해당 선거구를 선택합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>하위 지역 탐색</h5>
+                        <p>지도에서 하위 지역을 클릭하거나 목록 보기를 사용합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>데이터 비교</h5>
+                        <p>여러 지역을 선택하여 인구통계, 이슈, 투표 패턴을 비교합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>인사이트 적용</h5>
+                        <p>AI 추천을 활용하여 지역별 캠페인 전략을 최적화합니다</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> 지역 점수 기능은 각 하위 지역에 0~100점의 캠페인 우선순위 점수를 부여합니다. 70점 이상 지역에 유세 노력을 집중하면 최대 효과를 얻을 수 있습니다.</p>
+                </div>
+                <span class="page-number">- 4 -</span>
+            </div>
+
+            <!-- Section 4: 실시간 선거 데이터 -->
+            <div id="section4" class="manual-card">
+                <h3><span class="card-icon">⚡</span> 04. 실시간 선거 데이터</h3>
+                <p>일렉션맵AI는 다양한 소스에서 선거 관련 데이터를 지속적으로 수집 및 처리하여 캠프에 최신 정보를 제공합니다. 선거 기간 중 데이터는 15분마다 자동으로 갱신됩니다.</p>
+
+                <h4>데이터 소스</h4>
+                <ul>
+                    <li><strong>공식 선거 데이터:</strong> 중앙선거관리위원회의 유권자 등록 수, 투표소 배정, 선거 일정 업데이트</li>
+                    <li><strong>뉴스 및 미디어 모니터링:</strong> 주요 언론사의 선거 관련 뉴스 기사, 방송, 사설을 실시간 추적</li>
+                    <li><strong>소셜 미디어 펄스:</strong> 트위터/X, 페이스북, 유튜브, 네이버, 다음 등 주요 플랫폼의 감성 분석 및 트렌드 집계</li>
+                    <li><strong>설문조사 및 여론조사:</strong> 공인 여론조사 기관의 최신 지지율 및 이슈별 설문 데이터 통합</li>
+                    <li><strong>정부 통계:</strong> 인구조사 데이터, 경제 지표, 지역 개발 지표 등 유권자 행동에 영향을 미치는 통계</li>
+                </ul>
+
+                <h4>실시간 알림 설정</h4>
+                <p>선거구에서 중요한 변화가 발생하면 알림을 받을 수 있도록 맞춤 알림을 설정하세요. 알림 트리거에는 다음이 포함됩니다:</p>
+                <ul>
+                    <li><strong>여론 변동 알림:</strong> 24시간 내 지지율이 2% 이상 변동하면 트리거됩니다</li>
+                    <li><strong>뉴스 급증 알림:</strong> 후보 이름이나 핵심 이슈가 1시간 내 50회 이상 언급되면 알림을 보냅니다</li>
+                    <li><strong>경쟁 후보 동향 알림:</strong> 경쟁 후보의 발표, 행사, 정책 공개를 실시간으로 추적합니다</li>
+                    <li><strong>유권자 등록 변동 알림:</strong> 선거구에 영향을 줄 수 있는 유권자 등록 수 변화를 모니터링합니다</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ 주의:</strong> 실시간 데이터는 최대 15분의 처리 지연이 있을 수 있습니다. 중요한 캠페인 결정 시 항상 여러 데이터 소스를 교차 확인하세요. 설문조사 데이터는 공인 여론조사 기관의 최신 결과를 반영합니다.</p>
+                </div>
+                <span class="page-number">- 5 -</span>
+            </div>
+
+            <!-- Section 5: 유권자 인구통계 분석 -->
+            <div id="section5" class="manual-card">
+                <h3><span class="card-icon">👥</span> 05. 유권자 인구통계 분석</h3>
+                <p>심층 인구통계 분석으로 유권자를 파악하세요. 일렉션맵AI는 연령, 성별, 직업, 학력, 소득 수준, 거주 패턴을 기반으로 유권자를 30개 이상의 카테고리로 세분화하여 맞춤형 메시지 작성을 도와줍니다.</p>
+
+                <h4>인구통계 카테고리</h4>
+                <ul>
+                    <li><strong>연령 분포:</strong> 5세 단위 연령대별 유권자 수와 투표 확률을 상세 분석하며 인구 피라미드로 시각화합니다</li>
+                    <li><strong>성별 분석:</strong> 지역별 남녀 유권자 비율과 과거 투표 패턴 차이를 보여줍니다</li>
+                    <li><strong>직업 클러스터:</strong> 각 지역의 주요 고용 부문을 파악하여 경제적 관심사와 정책 우선순위를 식별합니다</li>
+                    <li><strong>학력 수준:</strong> 학력 분포와 정치 참여도 및 이슈 민감도의 상관관계를 분석합니다</li>
+                    <li><strong>거주 패턴:</strong> 아파트 단지, 단독주택, 농촌 지역 등 각각에 맞는 특화된 접근 전략을 제공합니다</li>
+                </ul>
+
+                <h4>PBTI 유권자 프로파일링</h4>
+                <p>일렉션맵AI는 독자적인 PBTI(정치행동유형지표) 시스템으로 유권자를 행동 프로파일로 분류합니다. 각 프로파일에 맞는 메시지 전략을 추천합니다:</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h5>정책 중심형</h5>
+                        <p>상세한 정책 제안과 데이터 기반 논거를 중시하는 유권자입니다. 백서와 상세 계획에 가장 잘 반응합니다.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h5>가치 추구형</h5>
+                        <p>인물의 가치관과 인성을 기준으로 후보를 판단하는 유권자입니다. 인물 스토리와 지역사회 활동에 잘 반응합니다.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h5>경제 우선형</h5>
+                        <p>경제 성과와 일자리 창출이 최우선 관심사인 유권자입니다. 경제 계획과 기업 육성 제안에 잘 반응합니다.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h5>변화 지향형</h5>
+                        <p>새로운 리더십과 혁신적 접근을 원하는 유권자입니다. 개혁 의제와 새로운 비전에 잘 반응합니다.</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> PBTI 분석은 각 유권자 유형에 맞는 맞춤형 화법을 자동으로 생성합니다. 타운홀, 인터뷰, 유세 스크립트를 준비할 때 활용하세요.</p>
+                </div>
+                <span class="page-number">- 6 -</span>
+            </div>
+
+            <!-- Section 6: 캠페인 경로 최적화 -->
+            <div id="section6" class="manual-card">
+                <h3><span class="card-icon">🚗</span> 06. 캠페인 경로 최적화</h3>
+                <p>캠페인 경로 최적화는 AI를 활용하여 후보 방문, 선거 차량 운행, 유세 팀 활동에 가장 효과적인 경로를 설계합니다. 이동 시간과 유류비를 최소화하면서 유권자 노출을 극대화합니다.</p>
+
+                <h4>경로 계획 기능</h4>
+                <ul>
+                    <li><strong>AI 최적 경로:</strong> 유동 인구, 유권자 밀도, 시간대별 패턴을 분석하여 최적의 선거 차량 경로를 생성합니다</li>
+                    <li><strong>다중 경유지 플래너:</strong> 여러 장소의 후보 방문 일정을 이동 시간 예측과 최적 방문 시간으로 계획합니다</li>
+                    <li><strong>유세 구역 관리자:</strong> 선거구를 유세 구역으로 분할하고 팀별 균형 잡힌 업무량과 우선 지역을 배정합니다</li>
+                    <li><strong>GPS 추적 연동:</strong> 선거 차량의 실시간 GPS 추적으로 자동 지역 감지 및 연설 콘텐츠 전환이 가능합니다</li>
+                    <li><strong>날씨 연동 일정:</strong> 일기 예보를 반영하여 실내/실외 행사 조정을 추천합니다</li>
+                </ul>
+
+                <h4>캠페인 경로 생성 방법</h4>
+                <div class="step-flow">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>조건 설정</h5>
+                        <p>지도에서 출발/도착 지점, 시간대, 우선 지역을 설정합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>AI 최적화</h5>
+                        <p>AI가 유권자 노출 잠재력 순으로 3가지 경로 옵션을 생성합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>검토 및 수정</h5>
+                        <p>지도에서 경로를 미리보고 경유지를 조정한 후 최종 확정합니다</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>실행 및 추적</h5>
+                        <p>모바일에서 턴바이턴 내비게이션과 추적으로 경로를 실행합니다</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> '피크 시간 부스트' 기능을 활성화하면 출퇴근 시간(오전 7~9시, 오후 5~7시)에 자동으로 유동 인구가 많은 지역으로 경로를 조정합니다.</p>
+                </div>
+                <span class="page-number">- 7 -</span>
+            </div>
+
+            <!-- Section 7: 여론조사 및 감성 분석 -->
+            <div id="section7" class="manual-card">
+                <h3><span class="card-icon">📈</span> 07. 여론조사 및 감성 분석</h3>
+                <p>일렉션맵AI의 통합 여론조사 및 감성 분석 도구로 실시간 여론을 추적하세요. 캠페인이 유권자에게 어떻게 반응되고 있는지 모니터링하고, 이슈가 헤드라인이 되기 전에 미리 파악할 수 있습니다.</p>
+
+                <h4>여론조사 데이터 통합</h4>
+                <ul>
+                    <li><strong>다중 소스 집계:</strong> 여러 공인 여론조사 기관의 데이터를 방법론 가중 평균으로 집계합니다</li>
+                    <li><strong>추세 시각화:</strong> 맞춤 기간 설정이 가능한 인터랙티브 시계열 차트로 지지율 추세를 보여줍니다</li>
+                    <li><strong>교차 분석:</strong> 여론조사 결과를 인구통계(연령, 성별, 지역)별로 분해하여 강점과 약점을 파악합니다</li>
+                    <li><strong>오차범위 표시:</strong> 모든 여론조사 시각화에 정확한 해석을 위한 신뢰구간을 포함합니다</li>
+                </ul>
+
+                <h4>AI 감성 엔진</h4>
+                <ul>
+                    <li><strong>소셜 미디어 감성:</strong> NLP 기반 분석으로 소셜 미디어 게시물을 긍정/부정/중립으로 분류하고 주제를 태깅합니다</li>
+                    <li><strong>뉴스 톤 분석:</strong> 후보 관련 뉴스 기사의 논조와 프레이밍을 자동 분석합니다</li>
+                    <li><strong>댓글 마이닝:</strong> 온라인 포럼, 블로그 댓글, 커뮤니티 게시판에서 유권자 의견을 추출하고 분류합니다</li>
+                    <li><strong>감성 지도:</strong> 선거구 전역의 여론 감성을 지리적으로 시각화하여 선거 지도 위에 오버레이합니다</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> 일일 감성 요약 이메일을 설정하면 매일 아침 전날 밤 감성 변화, 인기 트렌드 주제, AI 추천 대응 전략을 브리핑으로 받을 수 있습니다.</p>
+                </div>
+                <span class="page-number">- 8 -</span>
+            </div>
+
+            <!-- Section 8: AI 전략 추천 시스템 -->
+            <div id="section8" class="manual-card">
+                <h3><span class="card-icon">🤖</span> 08. AI 전략 추천 시스템</h3>
+                <p>일렉션맵AI의 머신러닝 엔진은 모든 가용 데이터를 분석하여 실행 가능한 캠페인 전략을 추천합니다. AI는 캠페인 성과를 지속적으로 학습하며 실시간으로 제안을 조정합니다.</p>
+
+                <h4>AI 추천 유형</h4>
+                <ul>
+                    <li><strong>자원 배분:</strong> ROI 예측을 기반으로 지역, 채널, 기간별 최적의 예산 배분을 제안합니다</li>
+                    <li><strong>메시지 타겟팅:</strong> 최대 효과를 위해 어떤 메시지를 어떤 유권자 세그먼트에 어떤 채널로 전달할지 추천합니다</li>
+                    <li><strong>행사 기획:</strong> 예상 참석자 수와 미디어 보도 가능성을 기반으로 캠페인 행사의 최적 장소, 시간, 형식을 파악합니다</li>
+                    <li><strong>경쟁 분석:</strong> 경쟁 후보의 움직임을 분석하고 선제적 대응 전략을 제안합니다</li>
+                    <li><strong>투표율 예측:</strong> 지역별 투표율을 예측하고 투표 독려(GOTV) 집중 지역을 추천합니다</li>
+                </ul>
+
+                <h4>AI 신뢰도 점수</h4>
+                <p>각 추천에는 데이터 품질과 과거 정확도를 기반으로 신뢰도 점수(0~100%)가 부여됩니다. 추천은 우선순위 파악이 쉽도록 색상으로 구분됩니다:</p>
+                <ul>
+                    <li><strong style="color: #2ecc71;">높은 신뢰도 (80~100%):</strong> 강력한 데이터 뒷받침 - 즉시 실행을 권장합니다</li>
+                    <li><strong style="color: var(--gold);">중간 신뢰도 (50~79%):</strong> 보통 수준의 데이터 뒷받침 - 검토 후 실행을 고려하세요</li>
+                    <li><strong style="color: var(--accent);">낮은 신뢰도 (50% 미만):</strong> 제한적 데이터 - 참고 자료로 활용하고 추가 데이터를 수집하세요</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ 중요:</strong> AI 추천은 데이터 분석을 기반으로 한 전략적 제안이며, 결과를 보장하지 않습니다. 최상의 결과를 위해 AI 인사이트를 캠프 팀의 전문성 및 현장 지식과 항상 결합하세요.</p>
+                </div>
+                <span class="page-number">- 9 -</span>
+            </div>
+
+            <!-- Section 9: 보고서 및 데이터 내보내기 -->
+            <div id="section9" class="manual-card">
+                <h3><span class="card-icon">📋</span> 09. 보고서 및 데이터 내보내기</h3>
+                <p>프레젠테이션, 팀 브리핑, 전략 기획 세션을 위한 전문 캠페인 보고서를 생성하고 다양한 형식으로 데이터를 내보낼 수 있습니다.</p>
+
+                <h4>보고서 유형</h4>
+                <ul>
+                    <li><strong>캠페인 개요 보고서:</strong> 모든 캠페인 지표, 성과 지표, 주요 성과를 종합 요약합니다</li>
+                    <li><strong>지역 분석 보고서:</strong> 각 하위 지역의 유권자 데이터, 이슈 분석, 전략 추천을 심층 분석합니다</li>
+                    <li><strong>경쟁 후보 비교 보고서:</strong> 모든 측정 가능한 차원에서 자신의 캠페인과 경쟁자를 나란히 비교 분석합니다</li>
+                    <li><strong>감성 추세 보고서:</strong> 주요 변곡점과 원인 분석을 포함한 과거 감성 분석을 제공합니다</li>
+                    <li><strong>주간 전략 브리프:</strong> AI가 생성하는 주간 브리핑 문서로 주요 사항, 알림, 추천 조치를 포함합니다</li>
+                </ul>
+
+                <h4>내보내기 옵션</h4>
+                <ul>
+                    <li><strong>PDF 보고서:</strong> 차트, 그래프, 요약이 포함된 전문 형식의 보고서 - 인쇄 및 프레젠테이션에 적합합니다</li>
+                    <li><strong>Excel/CSV:</strong> 맞춤 분석, 피벗 테이블, 다른 도구와의 연동을 위한 원시 데이터 내보내기</li>
+                    <li><strong>PowerPoint:</strong> 주요 발견 사항과 시각화가 포함된 프레젠테이션용 슬라이드</li>
+                    <li><strong>API 접근:</strong> 고급 사용자를 위한 REST API를 통한 프로그래밍 방식의 데이터 접근으로 맞춤 연동이 가능합니다</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> 자동 주간 보고서를 설정하면 매주 월요일 아침 캠프 팀 전체에 이메일로 발송됩니다. 설정 &gt; 보고서 &gt; 예약 보고서에서 구성할 수 있습니다.</p>
+                </div>
+                <span class="page-number">- 10 -</span>
+            </div>
+
+            <!-- Section 10: FAQ -->
+            <div id="section10" class="manual-card">
+                <h3><span class="card-icon">❓</span> 10. 자주 묻는 질문</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. 일렉션맵AI는 어떤 선거 유형을 지원하나요?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>일렉션맵AI는 기초의원, 광역의원, 시장/도지사, 국회의원, 대통령 선거 등 대한민국의 모든 공직 선거를 지원합니다. 각 선거 유형에 맞는 행정 구역 경계와 인구통계 데이터가 사전 구성되어 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. AI 예측 모델의 정확도는 어느 정도인가요?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>최근 선거에서 실제 결과와 대조했을 때 AI 예측 모델은 85% 이상의 정확도를 달성했습니다. 다만 예측은 과거 데이터와 현재 트렌드에 기반한 추정치입니다. 선거일이 가까워질수록 더 많은 데이터가 확보되어 정확도가 향상됩니다. 전략 기획의 여러 참고 자료 중 하나로 활용하실 것을 권장합니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. 모바일 기기에서도 사용할 수 있나요?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>네, 일렉션맵AI는 완전 반응형으로 태블릿과 스마트폰에서 사용할 수 있습니다. 모바일 인터페이스는 간편한 탐색과 터치 친화적 지도 컨트롤로 이동 중 사용에 최적화되어 있습니다. 상세 지도 분석을 위해서는 태블릿이나 데스크톱/노트북 사용을 권장합니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. 데이터는 얼마나 자주 업데이트되나요?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>데이터 업데이트 주기는 소스별로 다릅니다: 소셜 미디어 및 뉴스 데이터는 15분마다, 여론조사 데이터는 새 조사 발표 시, 인구통계 데이터는 월간, 공식 선거 데이터는 중앙선거관리위원회 발표 시 업데이트됩니다. 실시간 알림으로 중요 변화를 즉시 통보받을 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. 캠페인 데이터는 안전한가요?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>물론입니다. 모든 데이터는 전송 중과 저장 시 모두 AES-256 암호화로 보호됩니다. 일렉션맵AI는 SOC 2 인증을 갖춘 국내 클라우드 서버에 호스팅됩니다. 각 캠페인의 데이터는 완전히 격리되며 엄격한 개인정보 보호 정책을 준수합니다. 선거 종료 후 요청 시 모든 캠페인 데이터를 영구 삭제할 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. 여러 팀원이 동시에 접속할 수 있나요?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>네, 일렉션맵AI는 역할 기반 권한으로 다중 사용자 접속을 지원합니다. 캠프 매니저, 현장 코디네이터, 데이터 분석가, 홍보팀 등에 서로 다른 접근 수준의 계정을 생성할 수 있습니다. 팀원의 변경 사항은 연결된 모든 기기에서 실시간으로 동기화됩니다.</p>
+                    </div>
+                </div>
+                <span class="page-number">- 11 -</span>
+            </div>
+
+            <!-- Section 11: 연락처 정보 -->
+            <div id="section11" class="contact-section">
+                <h3>📞 연락처 및 고객 지원</h3>
+                <div class="contact-grid">
+                    <div class="contact-card-item">
+                        <div class="contact-icon">👤</div>
+                        <h5>대표</h5>
+                        <p><strong>심재우 대표</strong><br>
+                        AI 선거솔루션 연구소</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">📱</div>
+                        <h5>전화 상담</h5>
+                        <p><a href="tel:010-2397-5734">010-2397-5734</a><br>
+                        평일 09:00 ~ 18:00<br>
+                        선거 기간: 24시간 운영</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">✉️</div>
+                        <h5>이메일 문의</h5>
+                        <p><a href="mailto:jaiwshim@gmail.com">jaiwshim@gmail.com</a><br>
+                        24시간 접수 가능<br>
+                        영업일 기준 1일 내 답변</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">💬</div>
+                        <h5>AI 챗봇 지원</h5>
+                        <p>화면 오른쪽 하단 챗봇 아이콘<br>
+                        또는 왼쪽 하단 'AI 톡'<br>
+                        24시간 실시간 응대</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">🌐</div>
+                        <h5>웹사이트</h5>
+                        <p>AI 선거솔루션 연구소<br>
+                        최신 소식 및 업데이트<br>
+                        <a href="../index.html">홈페이지 바로가기</a></p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">📋</div>
+                        <h5>무료 데모 신청</h5>
+                        <p>지금 바로 무료 체험<br>
+                        맞춤 패키지 상담<br>
+                        <a href="demo.html">데모 신청하기</a></p>
+                    </div>
+                </div>
+                <p class="contact-footer-note">© 2024 AI 선거솔루션 연구소. 매뉴얼 내용은 서비스 발전에 따라 업데이트될 수 있습니다.<br>홈페이지 매뉴얼 페이지에서 최신 버전을 확인하세요.</p>
+                <span class="page-number" style="position: absolute; bottom: 12px; right: 20px;">- 12 -</span>
+            </div>
+
         </div>
     </section>
 
@@ -156,10 +967,148 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
     <script>
+        function downloadPDF() {
+            var btn = document.querySelector('.pdf-download-btn');
+            btn.innerHTML = '<span class="dl-icon">⏳</span> 생성 중...';
+            btn.style.pointerEvents = 'none';
+
+            var pdfWrap = document.createElement('div');
+            pdfWrap.style.cssText = 'position:absolute;left:-9999px;top:0;width:210mm;font-family:"Noto Sans KR",sans-serif;color:#e8e8e8;background:#0a1f14;';
+
+            var baseStyle = 'background:#0a1f14;color:#e8e8e8;padding:20mm 15mm;box-sizing:border-box;width:100%;';
+            var pageBreak = 'page-break-after:always;';
+
+            // ── 1페이지: 표지 ──
+            pdfWrap.innerHTML = '<div style="' + baseStyle + pageBreak + 'display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:257mm;text-align:center;">' +
+                '<div style="font-size:11pt;color:#d4af37;letter-spacing:4px;margin-bottom:20px;">ELECTIONMAP AI</div>' +
+                '<div style="width:80px;height:2px;background:#d4af37;margin:0 auto 30px;"></div>' +
+                '<h1 style="font-size:28pt;font-weight:900;color:#fff;margin:0 0 25px;">일렉션맵AI 매뉴얼</h1>' +
+                '<p style="font-size:12pt;color:rgba(255,255,255,0.75);line-height:1.8;max-width:400px;">스마트 선거 매핑 및 분석 플랫폼<br>사용자 가이드</p>' +
+                '<div style="width:80px;height:2px;background:#d4af37;margin:40px auto 30px;"></div>' +
+                '<p style="font-size:9pt;color:rgba(255,255,255,0.45);">AI 선거솔루션 연구소</p>' +
+            '</div>';
+
+            // ── 2페이지: 목차 ──
+            var tocItems = [
+                ['01','플랫폼 개요 및 시작하기'],
+                ['02','인터랙티브 유권자 지도'],
+                ['03','지역 분석 대시보드'],
+                ['04','실시간 선거 데이터'],
+                ['05','유권자 인구통계 분석'],
+                ['06','캠페인 경로 최적화'],
+                ['07','여론조사 및 감성 분석'],
+                ['08','AI 전략 추천 시스템'],
+                ['09','보고서 및 데이터 내보내기'],
+                ['10','자주 묻는 질문']
+            ];
+            var tocHtml = '<div style="' + baseStyle + pageBreak + 'min-height:257mm;">' +
+                '<h2 style="font-size:18pt;color:#d4af37;border-bottom:2px solid rgba(212,175,55,0.3);padding-bottom:12px;margin:0 0 25px;">목차</h2>';
+            tocItems.forEach(function(item, i) {
+                tocHtml += '<div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(212,175,55,0.1);">' +
+                    '<span style="font-size:12pt;font-weight:700;color:#d4af37;min-width:35px;">' + item[0] + '</span>' +
+                    '<span style="font-size:11pt;color:rgba(255,255,255,0.85);flex:1;">' + item[1] + '</span>' +
+                    '<span style="font-size:9pt;color:rgba(255,255,255,0.4);">' + (i + 3) + '</span>' +
+                '</div>';
+            });
+            tocHtml += '</div>';
+            pdfWrap.innerHTML += tocHtml;
+
+            // ── 3페이지 이후: 콘텐츠 섹션 ──
+            var cards = document.querySelectorAll('.manual-card');
+            cards.forEach(function(card, idx) {
+                var clone = card.cloneNode(true);
+                var pn = clone.querySelector('.page-number');
+                if (pn) pn.remove();
+                clone.querySelectorAll('.faq-answer').forEach(function(a) { a.style.maxHeight = 'none'; a.style.overflow = 'visible'; });
+
+                clone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '11.5pt'; });
+                clone.querySelectorAll('h4').forEach(function(el) { el.style.fontSize = '10pt'; });
+                clone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                clone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.7'; });
+                clone.querySelectorAll('li').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.6'; });
+                clone.querySelectorAll('strong').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.step-item h5').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.step-item p').forEach(function(el) { el.style.fontSize = '7.5pt'; });
+                clone.querySelectorAll('.step-num').forEach(function(el) { el.style.fontSize = '9pt'; el.style.width = '28px'; el.style.height = '28px'; });
+                clone.querySelectorAll('.info-box p, .warning-box p').forEach(function(el) { el.style.fontSize = '8pt'; });
+                clone.querySelectorAll('.faq-question h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                clone.querySelectorAll('.faq-answer p').forEach(function(el) { el.style.fontSize = '8pt'; });
+                clone.querySelectorAll('.feature-card h5').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.feature-card p').forEach(function(el) { el.style.fontSize = '7.5pt'; });
+
+                clone.style.cssText = 'background:rgba(10,40,25,0.4);border:1px solid rgba(212,175,55,0.2);border-radius:10px;padding:20px 22px;margin:0;position:relative;';
+
+                var pageDiv = document.createElement('div');
+                pageDiv.style.cssText = baseStyle + pageBreak + 'min-height:257mm;';
+                pageDiv.appendChild(clone);
+                var pgNum = document.createElement('div');
+                pgNum.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
+                pgNum.textContent = '- ' + (idx + 3) + ' -';
+                pageDiv.appendChild(pgNum);
+                pdfWrap.appendChild(pageDiv);
+            });
+
+            var contactSec = document.querySelector('.contact-section');
+            if (contactSec) {
+                var cClone = contactSec.cloneNode(true);
+                var cpn = cClone.querySelector('.page-number');
+                if (cpn) cpn.remove();
+                cClone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '14pt'; });
+                cClone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                cClone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8pt'; el.style.lineHeight = '1.6'; });
+                cClone.style.cssText = 'background:rgba(10,40,25,0.5);border:2px solid rgba(212,175,55,0.3);border-radius:10px;padding:25px;';
+
+                var contactPage = document.createElement('div');
+                contactPage.style.cssText = baseStyle + 'min-height:257mm;';
+                contactPage.appendChild(cClone);
+                var lastPg = document.createElement('div');
+                lastPg.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
+                lastPg.textContent = '- ' + (cards.length + 3) + ' -';
+                contactPage.appendChild(lastPg);
+                pdfWrap.appendChild(contactPage);
+            }
+
+            document.body.appendChild(pdfWrap);
+
+            var opt = {
+                margin: [0, 0, 0, 0],
+                filename: '일렉션맵AI_매뉴얼.pdf',
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a1f14', scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['css'], before: [], after: [], avoid: [] }
+            };
+
+            html2pdf().set(opt).from(pdfWrap).save().then(function() {
+                document.body.removeChild(pdfWrap);
+                btn.innerHTML = '<span class="dl-icon">📥</span> PDF 다운로드';
+                btn.style.pointerEvents = 'auto';
+            }).catch(function() {
+                document.body.removeChild(pdfWrap);
+                btn.innerHTML = '<span class="dl-icon">📥</span> PDF 다운로드';
+                btn.style.pointerEvents = 'auto';
+            });
+        }
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             if (navLinks) navLinks.classList.toggle('active');
+        }
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isActive = faqItem.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').classList.remove('open');
+            });
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+                answer.classList.add('open');
+            }
         }
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -181,6 +1130,7 @@
                     }
                 });
             });
+
             const currentPage = window.location.pathname.split("/").pop();
             const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
             menuLinks.forEach(link => {
@@ -192,6 +1142,19 @@
                         parentDropdown.classList.add("active-parent");
                     }
                 }
+            });
+
+            document.querySelectorAll('.toc-list a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetEl = document.getElementById(targetId);
+                    if (targetEl) {
+                        const offset = 100;
+                        const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
             });
         });
     </script>
