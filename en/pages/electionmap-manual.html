@@ -7,6 +7,222 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/styles.css">
     <style>
+        .manual-section {
+            padding: 60px 0;
+        }
+        .manual-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .manual-toc {
+            background: rgba(10, 40, 25, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 30px 35px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .manual-toc h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .toc-list li a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 8px 15px;
+            display: block;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .toc-list li a:hover {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+        .toc-list li a .toc-num {
+            color: var(--gold);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .manual-card {
+            background: rgba(10, 40, 25, 0.4);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .manual-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .manual-card h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .manual-card h3 .card-icon {
+            font-size: 1.6rem;
+        }
+        .manual-card h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 25px 0 12px;
+            padding-left: 15px;
+            border-left: 3px solid var(--gold);
+        }
+        .manual-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .manual-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .manual-card ul li {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 8px 0 8px 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        .manual-card ul li::before {
+            content: '✓';
+            color: var(--gold);
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+        .step-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .step-item {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .step-item .step-num {
+            background: linear-gradient(135deg, var(--gold), #b8962e);
+            color: #0a1f14;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+            margin: 0 auto 12px;
+        }
+        .step-item h5 {
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        .step-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        .info-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+        .info-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .info-box strong {
+            color: var(--gold);
+        }
+        .warning-box {
+            background: rgba(233, 69, 96, 0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+        }
+        .warning-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .warning-box strong {
+            color: var(--accent);
+        }
+        .faq-item {
+            background: rgba(10, 31, 20, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            background: rgba(212, 175, 55, 0.08);
+        }
+        .faq-question h5 {
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .faq-question .faq-toggle {
+            color: var(--gold);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+        }
+        .faq-answer p {
+            padding: 0 25px 18px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin: 0;
+        }
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
         .pdf-download-btn {
             display: inline-flex;
             align-items: center;
@@ -31,10 +247,147 @@
         .pdf-download-btn:active {
             transform: translateY(0);
         }
+        .pdf-download-btn .dl-icon {
+            font-size: 1.1rem;
+        }
         .hero-actions {
             display: flex;
             justify-content: center;
             margin-top: 20px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+            font-size: 10pt;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 500;
+        }
+        .contact-section {
+            background: rgba(10, 40, 25, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 40px 35px;
+            margin-bottom: 35px;
+            position: relative;
+        }
+        .contact-section h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .contact-card-item {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .contact-card-item:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .contact-card-item .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .contact-card-item h5 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .contact-card-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .contact-card-item a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .contact-card-item a:hover {
+            text-decoration: underline;
+        }
+        .contact-footer-note {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: rgba(10, 31, 20, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            border-color: rgba(212, 175, 55, 0.35);
+            transform: translateY(-2px);
+        }
+        .feature-card .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .feature-card h5 {
+            color: var(--gold);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+            .manual-card {
+                padding: 25px 20px;
+            }
+            .manual-card h3 {
+                font-size: 1.2rem;
+            }
+            .step-flow {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .step-flow {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            nav, .pdf-download-btn, .hero-actions, #ai-talk-btn, #chatbot-label, footer { display: none !important; }
+            .manual-card { break-inside: avoid; }
         }
     </style>
 </head>
@@ -107,23 +460,481 @@
             <h1>ElectionMap AI Manual</h1>
             <p class="hero-subtitle">Complete guide to ElectionMap AI - Smart election mapping and analysis platform</p>
             <div class="hero-actions">
-                <a href="../../일렉션맵AI_사용자매뉴얼.pdf" download class="pdf-download-btn">
-                    <span style="font-size: 1.1rem;">📥</span> Download PDF
-                </a>
+                <button class="pdf-download-btn" onclick="downloadPDF()">
+                    <span class="dl-icon">📥</span> Download PDF
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- PDF Viewer Section -->
-    <section class="section" style="background: linear-gradient(160deg, #0a1e12 0%, #102c18 50%, #0a1e12 100%);">
-        <div class="container">
-            <div style="background: #0a1f14; border-radius: 15px; overflow: hidden; border: 2px solid rgba(212, 175, 55, 0.3);">
-                <div style="padding: 15px; background: linear-gradient(135deg, rgba(10, 40, 25, 0.8) 0%, rgba(10, 31, 20, 0.8) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.3);">
-                    <h4 style="color: var(--gold); margin-bottom: 8px;">📄 ElectionMap AI User Manual</h4>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Explore the full ElectionMap AI platform - voter mapping, regional analysis, real-time election data, and campaign optimization tools.</p>
-                </div>
-                <iframe src="../../일렉션맵AI_사용자매뉴얼.pdf#toolbar=0&navpanes=0&scrollbar=1" style="width: 100%; height: 85vh; border: none;"></iframe>
+    <!-- Table of Contents & Manual Content -->
+    <section class="manual-section" style="background: linear-gradient(160deg, #081e12 0%, #0d2a1a 50%, #081e12 100%);">
+        <div class="manual-container">
+
+            <div class="manual-toc">
+                <h3>Table of Contents</h3>
+                <ul class="toc-list">
+                    <li><a href="#section1"><span class="toc-num">01</span> Platform Overview &amp; Getting Started</a></li>
+                    <li><a href="#section2"><span class="toc-num">02</span> Interactive Voter Map</a></li>
+                    <li><a href="#section3"><span class="toc-num">03</span> Regional Analysis Dashboard</a></li>
+                    <li><a href="#section4"><span class="toc-num">04</span> Real-time Election Data</a></li>
+                    <li><a href="#section5"><span class="toc-num">05</span> Voter Demographic Insights</a></li>
+                    <li><a href="#section6"><span class="toc-num">06</span> Campaign Route Optimizer</a></li>
+                    <li><a href="#section7"><span class="toc-num">07</span> Polling &amp; Sentiment Analysis</a></li>
+                    <li><a href="#section8"><span class="toc-num">08</span> AI Strategy Recommendations</a></li>
+                    <li><a href="#section9"><span class="toc-num">09</span> Reports &amp; Data Export</a></li>
+                    <li><a href="#section10"><span class="toc-num">10</span> Frequently Asked Questions</a></li>
+                </ul>
+                <span class="page-number">- 1 -</span>
             </div>
+
+            <!-- Section 1: Platform Overview -->
+            <div id="section1" class="manual-card">
+                <h3><span class="card-icon">🗺️</span> 01. Platform Overview &amp; Getting Started</h3>
+                <p>ElectionMap AI is a next-generation election mapping and analytics platform that provides candidates and campaign teams with powerful geospatial intelligence. It combines real-time election data, voter demographics, and AI-driven insights to optimize your campaign strategy.</p>
+
+                <h4>Getting Started</h4>
+                <div class="step-flow">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>Access Platform</h5>
+                        <p>Log in to ElectionMap AI using your AI Election Solution credentials</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>Select Region</h5>
+                        <p>Choose your election district or region to load the interactive map</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>Configure Layers</h5>
+                        <p>Enable data layers such as demographics, polling stations, and voter density</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>Analyze &amp; Act</h5>
+                        <p>Use AI insights and map data to optimize your campaign strategy</p>
+                    </div>
+                </div>
+
+                <h4>Core Platform Features</h4>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h5>Interactive Map</h5>
+                        <p>Zoomable, multi-layer election map with real-time data overlays for every district and precinct</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h5>Data Analytics</h5>
+                        <p>Comprehensive voter analytics, trend analysis, and AI-powered predictions at your fingertips</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h5>AI Intelligence</h5>
+                        <p>Machine learning models trained on historical election data provide actionable recommendations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h5>Mobile Ready</h5>
+                        <p>Fully responsive platform works on tablets and smartphones for on-the-go campaign decisions</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> ElectionMap AI is integrated with the AI Election Solution dashboard. Access it directly from the 'Map Analytics' tab in your main dashboard.</p>
+                </div>
+                <span class="page-number">- 2 -</span>
+            </div>
+
+            <!-- Section 2: Interactive Voter Map -->
+            <div id="section2" class="manual-card">
+                <h3><span class="card-icon">📍</span> 02. Interactive Voter Map</h3>
+                <p>The Interactive Voter Map is the centerpiece of ElectionMap AI. It provides a high-resolution, zoomable map of your election district with multiple data layers that can be toggled on and off to visualize critical campaign information.</p>
+
+                <h4>Map Navigation Controls</h4>
+                <ul>
+                    <li><strong>Zoom In/Out:</strong> Use scroll wheel or +/- buttons to zoom between national, provincial, district, and precinct levels</li>
+                    <li><strong>Pan &amp; Drag:</strong> Click and drag to navigate across the map, or use arrow keys for precise movement</li>
+                    <li><strong>District Selection:</strong> Click on any district to view detailed voter data, historical results, and AI predictions</li>
+                    <li><strong>Full Screen Mode:</strong> Press F11 or click the expand icon for immersive full-screen map analysis</li>
+                </ul>
+
+                <h4>Data Layers</h4>
+                <ul>
+                    <li><strong>Voter Density Heatmap:</strong> Color-coded overlay showing voter concentration by area - darker shading indicates higher voter density</li>
+                    <li><strong>Political Affiliation Map:</strong> Historical voting patterns displayed with party colors for quick visual analysis</li>
+                    <li><strong>Polling Station Locations:</strong> Pins showing all polling stations with capacity, accessibility, and expected traffic data</li>
+                    <li><strong>Swing District Highlight:</strong> AI-identified competitive districts highlighted with special markers and win probability scores</li>
+                    <li><strong>Population Flow:</strong> Animated overlays showing daily population movement patterns for optimal campaign timing</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> Use the layer toggle panel on the right side of the map to enable multiple data layers simultaneously. Combining voter density with political affiliation reveals key strategic targets.</p>
+                </div>
+                <span class="page-number">- 3 -</span>
+            </div>
+
+            <!-- Section 3: Regional Analysis Dashboard -->
+            <div id="section3" class="manual-card">
+                <h3><span class="card-icon">📊</span> 03. Regional Analysis Dashboard</h3>
+                <p>The Regional Analysis Dashboard breaks down your election district into detailed micro-regions, providing comprehensive data about each area to help you tailor your campaign message and resource allocation.</p>
+
+                <h4>Dashboard Components</h4>
+                <ul>
+                    <li><strong>Region Summary Cards:</strong> Quick-view cards for each sub-region showing population, voter count, turnout history, and partisan lean</li>
+                    <li><strong>Comparative Charts:</strong> Side-by-side comparison of multiple regions with bar charts, pie charts, and trend lines</li>
+                    <li><strong>Issue Heatmap:</strong> Color-coded matrix showing which issues matter most in each sub-region based on social media and survey data</li>
+                    <li><strong>Resource Allocation View:</strong> Visualizes current campaign resource distribution and suggests optimizations</li>
+                </ul>
+
+                <h4>How to Use Regional Analysis</h4>
+                <div class="step-flow">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>Select District</h5>
+                        <p>Choose your main election district from the dropdown menu</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>View Sub-regions</h5>
+                        <p>Click sub-regions on the map or use the list view to explore each area</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>Compare Data</h5>
+                        <p>Select multiple regions to compare demographics, issues, and voting patterns</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>Apply Insights</h5>
+                        <p>Use the AI recommendations to optimize your regional campaign strategy</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> The Region Score feature assigns a 0-100 campaign priority score to each sub-region. Focus your canvassing efforts on regions scoring above 70 for maximum impact.</p>
+                </div>
+                <span class="page-number">- 4 -</span>
+            </div>
+
+            <!-- Section 4: Real-time Election Data -->
+            <div id="section4" class="manual-card">
+                <h3><span class="card-icon">⚡</span> 04. Real-time Election Data</h3>
+                <p>ElectionMap AI continuously ingests and processes election-related data from multiple sources, providing your campaign with the most up-to-date information available. Data refreshes automatically every 15 minutes during active campaign periods.</p>
+
+                <h4>Data Sources</h4>
+                <ul>
+                    <li><strong>Official Election Data:</strong> Voter registration numbers, polling station assignments, and election schedule updates from the National Election Commission</li>
+                    <li><strong>News &amp; Media Monitoring:</strong> Real-time tracking of election-related news articles, broadcasts, and editorial coverage across all major outlets</li>
+                    <li><strong>Social Media Pulse:</strong> Aggregated sentiment and trending topic analysis from major social platforms including Twitter/X, Facebook, YouTube, and Korean portals</li>
+                    <li><strong>Survey &amp; Polling Data:</strong> Integration with authorized polling organizations for the latest approval ratings and issue-based surveys</li>
+                    <li><strong>Government Statistics:</strong> Census data, economic indicators, and regional development metrics that influence voter behavior</li>
+                </ul>
+
+                <h4>Real-time Alerts</h4>
+                <p>Configure custom alerts to be notified when significant changes occur in your district. Alert triggers include:</p>
+                <ul>
+                    <li><strong>Polling Shift Alert:</strong> Triggered when your approval rating changes by more than 2% within 24 hours</li>
+                    <li><strong>News Spike Alert:</strong> Notification when your name or key issues are mentioned more than 50 times in an hour</li>
+                    <li><strong>Competitor Action Alert:</strong> Tracks competitor announcements, events, and policy releases in real-time</li>
+                    <li><strong>Voter Registration Alert:</strong> Monitors changes in voter registration numbers that could impact your district</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ Note:</strong> Real-time data may have a processing delay of up to 15 minutes. For critical campaign decisions, always cross-reference with multiple data sources. Survey data reflects the latest available results from authorized polling organizations.</p>
+                </div>
+                <span class="page-number">- 5 -</span>
+            </div>
+
+            <!-- Section 5: Voter Demographic Insights -->
+            <div id="section5" class="manual-card">
+                <h3><span class="card-icon">👥</span> 05. Voter Demographic Insights</h3>
+                <p>Understand your electorate with deep demographic analysis. ElectionMap AI segments voters into 30+ categories based on age, gender, occupation, education, income level, and residential patterns to help you craft targeted messages.</p>
+
+                <h4>Demographic Categories</h4>
+                <ul>
+                    <li><strong>Age Distribution:</strong> Detailed voter count and turnout probability broken down by 5-year age groups with visual population pyramids</li>
+                    <li><strong>Gender Analysis:</strong> Male/female voter ratios by region with historical voting pattern differences</li>
+                    <li><strong>Occupation Clusters:</strong> Major employment sectors in each region - helps identify economic concerns and policy priorities</li>
+                    <li><strong>Education Levels:</strong> Educational attainment distribution correlated with political engagement and issue sensitivity</li>
+                    <li><strong>Residential Patterns:</strong> Apartment complexes, single-family homes, rural areas - each with unique outreach strategies</li>
+                </ul>
+
+                <h4>PBTI Voter Profiling</h4>
+                <p>ElectionMap AI uses a proprietary PBTI (Political Behavior Type Indicator) system to classify voters into behavioral profiles. Each profile comes with recommended messaging strategies:</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h5>Policy-Focused</h5>
+                        <p>Voters who prioritize detailed policy proposals and data-driven arguments. Respond best to white papers and detailed plans.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h5>Values-Driven</h5>
+                        <p>Voters who align with candidates based on personal values and character. Respond best to biographical stories and community involvement.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h5>Economy-First</h5>
+                        <p>Voters whose primary concern is economic performance and job creation. Respond best to economic plans and business development proposals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h5>Change-Seekers</h5>
+                        <p>Voters looking for new leadership and innovative approaches. Respond best to reform agendas and fresh perspectives.</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> The PBTI analysis automatically generates customized talking points for each voter type. Use these when preparing for town halls, interviews, and canvassing scripts.</p>
+                </div>
+                <span class="page-number">- 6 -</span>
+            </div>
+
+            <!-- Section 6: Campaign Route Optimizer -->
+            <div id="section6" class="manual-card">
+                <h3><span class="card-icon">🚗</span> 06. Campaign Route Optimizer</h3>
+                <p>The Campaign Route Optimizer uses AI to design the most effective campaign routes for candidate visits, campaign vehicles, and canvassing teams. It maximizes voter exposure while minimizing travel time and fuel costs.</p>
+
+                <h4>Route Planning Features</h4>
+                <ul>
+                    <li><strong>AI-Optimized Routing:</strong> Algorithms analyze foot traffic, voter density, and time-of-day patterns to create optimal campaign vehicle routes</li>
+                    <li><strong>Multi-Stop Planner:</strong> Plan candidate visit schedules across multiple locations with travel time estimates and optimal visit duration</li>
+                    <li><strong>Canvassing Zone Manager:</strong> Divide your district into canvassing zones and assign teams with balanced workloads and priority areas</li>
+                    <li><strong>GPS Tracking Integration:</strong> Real-time GPS tracking of campaign vehicles with automatic area detection and speech content switching</li>
+                    <li><strong>Weather-Adjusted Scheduling:</strong> Factors in weather forecasts to recommend indoor vs. outdoor event adjustments</li>
+                </ul>
+
+                <h4>How to Create a Campaign Route</h4>
+                <div class="step-flow">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <h5>Set Parameters</h5>
+                        <p>Define start/end points, time window, and priority areas on the map</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <h5>AI Optimization</h5>
+                        <p>AI generates 3 route options ranked by voter exposure potential</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <h5>Review &amp; Edit</h5>
+                        <p>Preview routes on the map, adjust stops, and finalize the plan</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <h5>Execute &amp; Track</h5>
+                        <p>Launch the route on mobile devices with turn-by-turn navigation and tracking</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> Enable the 'Peak Hour Boost' feature to automatically route campaign vehicles through high-traffic areas during rush hours (7-9 AM, 5-7 PM).</p>
+                </div>
+                <span class="page-number">- 7 -</span>
+            </div>
+
+            <!-- Section 7: Polling & Sentiment Analysis -->
+            <div id="section7" class="manual-card">
+                <h3><span class="card-icon">📈</span> 07. Polling &amp; Sentiment Analysis</h3>
+                <p>Track public opinion in real-time with ElectionMap AI's integrated polling and sentiment analysis tools. Monitor how your campaign resonates with voters and identify emerging issues before they become headlines.</p>
+
+                <h4>Polling Data Integration</h4>
+                <ul>
+                    <li><strong>Multi-Source Aggregation:</strong> Aggregates polling data from multiple authorized survey organizations with methodology-weighted averaging</li>
+                    <li><strong>Trend Visualization:</strong> Interactive time-series charts showing approval rating trends with customizable date ranges</li>
+                    <li><strong>Cross-Tab Analysis:</strong> Break down poll results by demographics (age, gender, region) to identify strengths and weaknesses</li>
+                    <li><strong>Margin of Error Display:</strong> All poll visualizations include confidence intervals for accurate interpretation</li>
+                </ul>
+
+                <h4>AI Sentiment Engine</h4>
+                <ul>
+                    <li><strong>Social Media Sentiment:</strong> NLP-powered analysis of social media posts categorized as positive, negative, or neutral with topic tagging</li>
+                    <li><strong>News Tone Analysis:</strong> Automated analysis of news article tone and framing related to your candidacy</li>
+                    <li><strong>Comment Mining:</strong> Extracts and categorizes voter opinions from online forums, blog comments, and community boards</li>
+                    <li><strong>Sentiment Maps:</strong> Geographic visualization of public sentiment across your district, overlaid on the election map</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> Set up daily sentiment digest emails to receive a morning briefing on overnight sentiment changes, top trending topics, and AI-recommended response strategies.</p>
+                </div>
+                <span class="page-number">- 8 -</span>
+            </div>
+
+            <!-- Section 8: AI Strategy Recommendations -->
+            <div id="section8" class="manual-card">
+                <h3><span class="card-icon">🤖</span> 08. AI Strategy Recommendations</h3>
+                <p>ElectionMap AI's machine learning engine analyzes all available data to generate actionable campaign strategy recommendations. The AI continuously learns from your campaign's performance and adjusts its suggestions in real-time.</p>
+
+                <h4>Types of AI Recommendations</h4>
+                <ul>
+                    <li><strong>Resource Allocation:</strong> Suggests optimal budget distribution across regions, channels, and time periods based on ROI predictions</li>
+                    <li><strong>Message Targeting:</strong> Recommends which messages to deliver to which voter segments through which channels for maximum impact</li>
+                    <li><strong>Event Planning:</strong> Identifies the best locations, times, and formats for campaign events based on expected attendance and media coverage potential</li>
+                    <li><strong>Competitive Intelligence:</strong> Analyzes competitor movements and suggests proactive counter-strategies</li>
+                    <li><strong>Turnout Prediction:</strong> Forecasts voter turnout by region and recommends get-out-the-vote (GOTV) focus areas</li>
+                </ul>
+
+                <h4>AI Confidence Scoring</h4>
+                <p>Each recommendation comes with a confidence score (0-100%) based on data quality and historical accuracy. Recommendations are color-coded for easy prioritization:</p>
+                <ul>
+                    <li><strong style="color: #2ecc71;">High Confidence (80-100%):</strong> Strong data support - recommended for immediate implementation</li>
+                    <li><strong style="color: var(--gold);">Medium Confidence (50-79%):</strong> Moderate data support - review and consider implementing</li>
+                    <li><strong style="color: var(--accent);">Low Confidence (below 50%):</strong> Limited data - use as a reference point, gather more data before acting</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ Important:</strong> AI recommendations are strategic suggestions based on data analysis, not guarantees. Always combine AI insights with your campaign team's expertise and local knowledge for the best results.</p>
+                </div>
+                <span class="page-number">- 9 -</span>
+            </div>
+
+            <!-- Section 9: Reports & Data Export -->
+            <div id="section9" class="manual-card">
+                <h3><span class="card-icon">📋</span> 09. Reports &amp; Data Export</h3>
+                <p>Generate professional campaign reports and export data in multiple formats for presentations, team briefings, and strategic planning sessions.</p>
+
+                <h4>Available Report Types</h4>
+                <ul>
+                    <li><strong>Campaign Overview Report:</strong> Comprehensive summary of all campaign metrics, performance indicators, and key achievements</li>
+                    <li><strong>Regional Analysis Report:</strong> Deep-dive into each sub-region with voter data, issue analysis, and strategic recommendations</li>
+                    <li><strong>Competitor Comparison Report:</strong> Side-by-side analysis of your campaign vs. competitors across all measurable dimensions</li>
+                    <li><strong>Sentiment Trend Report:</strong> Historical sentiment analysis with key inflection points and causation analysis</li>
+                    <li><strong>Weekly Strategy Brief:</strong> AI-generated weekly briefing document with highlights, alerts, and recommended actions</li>
+                </ul>
+
+                <h4>Export Options</h4>
+                <ul>
+                    <li><strong>PDF Reports:</strong> Professionally formatted reports with charts, graphs, and executive summaries - ideal for printing and presentations</li>
+                    <li><strong>Excel/CSV:</strong> Raw data export for custom analysis, pivot tables, and integration with other tools</li>
+                    <li><strong>PowerPoint:</strong> Presentation-ready slides with key findings and visualizations</li>
+                    <li><strong>API Access:</strong> For advanced users - programmatic access to all data via REST API for custom integrations</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>💡 TIP:</strong> Set up automated weekly reports to be delivered every Monday morning via email to your entire campaign team. Go to Settings &gt; Reports &gt; Scheduled Reports to configure.</p>
+                </div>
+                <span class="page-number">- 10 -</span>
+            </div>
+
+            <!-- Section 10: FAQ -->
+            <div id="section10" class="manual-card">
+                <h3><span class="card-icon">❓</span> 10. Frequently Asked Questions</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. What election types does ElectionMap AI support?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ElectionMap AI supports all types of public elections in South Korea, including local council, metropolitan assembly, mayoral, gubernatorial, national assembly, and presidential elections. The platform's data layers and analysis tools are pre-configured for each election type with the appropriate geographic boundaries and demographic data.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. How accurate is the AI prediction model?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI prediction models have achieved over 85% accuracy in recent elections when tested against actual results. However, predictions are estimates based on historical data and current trends. Accuracy improves as more data becomes available closer to election day. We recommend using predictions as one input among many in your strategic planning.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. Can I use ElectionMap AI on my mobile device?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, ElectionMap AI is fully responsive and works on tablets and smartphones. The mobile interface is optimized for on-the-go use with simplified navigation and touch-friendly map controls. For the best experience with detailed map analysis, we recommend using a tablet or desktop/laptop computer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. How often is the data updated?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Data update frequency varies by source: social media and news data refreshes every 15 minutes, polling data updates as new surveys are published, demographic data updates monthly, and official election data updates as released by the National Election Commission. Real-time alerts notify you of significant changes immediately.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. Is my campaign data secure?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. All data is encrypted with AES-256 encryption both in transit and at rest. ElectionMap AI is hosted on certified domestic cloud servers with SOC 2 compliance. Each campaign's data is completely isolated, and we follow strict data privacy policies. All campaign data can be permanently deleted upon request after the election.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h5>Q. Can multiple team members access ElectionMap AI simultaneously?</h5>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, ElectionMap AI supports multi-user access with role-based permissions. You can create accounts for campaign managers, field coordinators, data analysts, and communication teams with different access levels. Changes made by any team member are synced in real-time across all connected devices.</p>
+                    </div>
+                </div>
+                <span class="page-number">- 11 -</span>
+            </div>
+
+            <!-- Section 11: Contact Info -->
+            <div id="section11" class="contact-section">
+                <h3>📞 Contact &amp; Customer Support</h3>
+                <div class="contact-grid">
+                    <div class="contact-card-item">
+                        <div class="contact-icon">👤</div>
+                        <h5>Representative</h5>
+                        <p><strong>CEO Jaiwoo Shim</strong><br>
+                        AI Election Solution Lab</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">📱</div>
+                        <h5>Phone Consultation</h5>
+                        <p><a href="tel:010-2397-5734">010-2397-5734</a><br>
+                        Weekdays 09:00 ~ 18:00<br>
+                        Election period: 24/7</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">✉️</div>
+                        <h5>Email Inquiry</h5>
+                        <p><a href="mailto:jaiwshim@gmail.com">jaiwshim@gmail.com</a><br>
+                        24/7 reception available<br>
+                        Response within 1 business day</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">💬</div>
+                        <h5>AI Chatbot Support</h5>
+                        <p>Chatbot icon at bottom right<br>
+                        or 'AI Talk' at bottom left<br>
+                        24/7 real-time response</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">🌐</div>
+                        <h5>Website</h5>
+                        <p>AI Election Solution<br>
+                        Latest news &amp; updates<br>
+                        <a href="../index.html">Go to Homepage</a></p>
+                    </div>
+                    <div class="contact-card-item">
+                        <div class="contact-icon">📋</div>
+                        <h5>Free Demo Request</h5>
+                        <p>Try it now for free<br>
+                        Custom package consultation<br>
+                        <a href="demo.html">Request Demo</a></p>
+                    </div>
+                </div>
+                <p class="contact-footer-note">© 2024 AI Election Solution Lab. Manual content may be updated as the service evolves.<br>Check the latest version on the manual page of our website.</p>
+                <span class="page-number" style="position: absolute; bottom: 12px; right: 20px;">- 12 -</span>
+            </div>
+
         </div>
     </section>
 
@@ -156,10 +967,148 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
     <script>
+        function downloadPDF() {
+            var btn = document.querySelector('.pdf-download-btn');
+            btn.innerHTML = '<span class="dl-icon">⏳</span> Generating...';
+            btn.style.pointerEvents = 'none';
+
+            var pdfWrap = document.createElement('div');
+            pdfWrap.style.cssText = 'position:absolute;left:-9999px;top:0;width:210mm;font-family:"Noto Sans KR",sans-serif;color:#e8e8e8;background:#0a1f14;';
+
+            var baseStyle = 'background:#0a1f14;color:#e8e8e8;padding:20mm 15mm;box-sizing:border-box;width:100%;';
+            var pageBreak = 'page-break-after:always;';
+
+            // ── Page 1: Cover ──
+            pdfWrap.innerHTML = '<div style="' + baseStyle + pageBreak + 'display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:257mm;text-align:center;">' +
+                '<div style="font-size:11pt;color:#d4af37;letter-spacing:4px;margin-bottom:20px;">ELECTIONMAP AI</div>' +
+                '<div style="width:80px;height:2px;background:#d4af37;margin:0 auto 30px;"></div>' +
+                '<h1 style="font-size:28pt;font-weight:900;color:#fff;margin:0 0 25px;">ElectionMap AI Manual</h1>' +
+                '<p style="font-size:12pt;color:rgba(255,255,255,0.75);line-height:1.8;max-width:400px;">Smart election mapping and analysis platform<br>Complete user guide</p>' +
+                '<div style="width:80px;height:2px;background:#d4af37;margin:40px auto 30px;"></div>' +
+                '<p style="font-size:9pt;color:rgba(255,255,255,0.45);">AI Election Solution Lab</p>' +
+            '</div>';
+
+            // ── Page 2: Table of Contents ──
+            var tocItems = [
+                ['01','Platform Overview & Getting Started'],
+                ['02','Interactive Voter Map'],
+                ['03','Regional Analysis Dashboard'],
+                ['04','Real-time Election Data'],
+                ['05','Voter Demographic Insights'],
+                ['06','Campaign Route Optimizer'],
+                ['07','Polling & Sentiment Analysis'],
+                ['08','AI Strategy Recommendations'],
+                ['09','Reports & Data Export'],
+                ['10','Frequently Asked Questions']
+            ];
+            var tocHtml = '<div style="' + baseStyle + pageBreak + 'min-height:257mm;">' +
+                '<h2 style="font-size:18pt;color:#d4af37;border-bottom:2px solid rgba(212,175,55,0.3);padding-bottom:12px;margin:0 0 25px;">Table of Contents</h2>';
+            tocItems.forEach(function(item, i) {
+                tocHtml += '<div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(212,175,55,0.1);">' +
+                    '<span style="font-size:12pt;font-weight:700;color:#d4af37;min-width:35px;">' + item[0] + '</span>' +
+                    '<span style="font-size:11pt;color:rgba(255,255,255,0.85);flex:1;">' + item[1] + '</span>' +
+                    '<span style="font-size:9pt;color:rgba(255,255,255,0.4);">' + (i + 3) + '</span>' +
+                '</div>';
+            });
+            tocHtml += '</div>';
+            pdfWrap.innerHTML += tocHtml;
+
+            // ── Page 3+: Content sections ──
+            var cards = document.querySelectorAll('.manual-card');
+            cards.forEach(function(card, idx) {
+                var clone = card.cloneNode(true);
+                var pn = clone.querySelector('.page-number');
+                if (pn) pn.remove();
+                clone.querySelectorAll('.faq-answer').forEach(function(a) { a.style.maxHeight = 'none'; a.style.overflow = 'visible'; });
+
+                clone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '11.5pt'; });
+                clone.querySelectorAll('h4').forEach(function(el) { el.style.fontSize = '10pt'; });
+                clone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                clone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.7'; });
+                clone.querySelectorAll('li').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.6'; });
+                clone.querySelectorAll('strong').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.step-item h5').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.step-item p').forEach(function(el) { el.style.fontSize = '7.5pt'; });
+                clone.querySelectorAll('.step-num').forEach(function(el) { el.style.fontSize = '9pt'; el.style.width = '28px'; el.style.height = '28px'; });
+                clone.querySelectorAll('.info-box p, .warning-box p').forEach(function(el) { el.style.fontSize = '8pt'; });
+                clone.querySelectorAll('.faq-question h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                clone.querySelectorAll('.faq-answer p').forEach(function(el) { el.style.fontSize = '8pt'; });
+                clone.querySelectorAll('.feature-card h5').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.feature-card p').forEach(function(el) { el.style.fontSize = '7.5pt'; });
+
+                clone.style.cssText = 'background:rgba(10,40,25,0.4);border:1px solid rgba(212,175,55,0.2);border-radius:10px;padding:20px 22px;margin:0;position:relative;';
+
+                var pageDiv = document.createElement('div');
+                pageDiv.style.cssText = baseStyle + pageBreak + 'min-height:257mm;';
+                pageDiv.appendChild(clone);
+                var pgNum = document.createElement('div');
+                pgNum.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
+                pgNum.textContent = '- ' + (idx + 3) + ' -';
+                pageDiv.appendChild(pgNum);
+                pdfWrap.appendChild(pageDiv);
+            });
+
+            var contactSec = document.querySelector('.contact-section');
+            if (contactSec) {
+                var cClone = contactSec.cloneNode(true);
+                var cpn = cClone.querySelector('.page-number');
+                if (cpn) cpn.remove();
+                cClone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '14pt'; });
+                cClone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                cClone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8pt'; el.style.lineHeight = '1.6'; });
+                cClone.style.cssText = 'background:rgba(10,40,25,0.5);border:2px solid rgba(212,175,55,0.3);border-radius:10px;padding:25px;';
+
+                var contactPage = document.createElement('div');
+                contactPage.style.cssText = baseStyle + 'min-height:257mm;';
+                contactPage.appendChild(cClone);
+                var lastPg = document.createElement('div');
+                lastPg.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
+                lastPg.textContent = '- ' + (cards.length + 3) + ' -';
+                contactPage.appendChild(lastPg);
+                pdfWrap.appendChild(contactPage);
+            }
+
+            document.body.appendChild(pdfWrap);
+
+            var opt = {
+                margin: [0, 0, 0, 0],
+                filename: 'ElectionMap_AI_Manual.pdf',
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a1f14', scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['css'], before: [], after: [], avoid: [] }
+            };
+
+            html2pdf().set(opt).from(pdfWrap).save().then(function() {
+                document.body.removeChild(pdfWrap);
+                btn.innerHTML = '<span class="dl-icon">📥</span> Download PDF';
+                btn.style.pointerEvents = 'auto';
+            }).catch(function() {
+                document.body.removeChild(pdfWrap);
+                btn.innerHTML = '<span class="dl-icon">📥</span> Download PDF';
+                btn.style.pointerEvents = 'auto';
+            });
+        }
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             if (navLinks) navLinks.classList.toggle('active');
+        }
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const isActive = faqItem.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').classList.remove('open');
+            });
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+                answer.classList.add('open');
+            }
         }
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
@@ -181,6 +1130,7 @@
                     }
                 });
             });
+
             const currentPage = window.location.pathname.split("/").pop();
             const menuLinks = document.querySelectorAll(".nav-links a.nav-button");
             menuLinks.forEach(link => {
@@ -192,6 +1142,19 @@
                         parentDropdown.classList.add("active-parent");
                     }
                 }
+            });
+
+            document.querySelectorAll('.toc-list a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetEl = document.getElementById(targetId);
+                    if (targetEl) {
+                        const offset = 100;
+                        const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
             });
         });
     </script>
