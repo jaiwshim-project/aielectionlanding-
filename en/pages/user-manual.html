@@ -854,16 +854,117 @@
             btn.innerHTML = '<span class="dl-icon">⏳</span> Generating...';
             btn.style.pointerEvents = 'none';
 
-            var content = document.querySelector('.manual-container');
+            var pdfWrap = document.createElement('div');
+            pdfWrap.style.cssText = 'position:absolute;left:-9999px;top:0;width:210mm;font-family:"Noto Sans KR",sans-serif;color:#e8e8e8;background:#0a1f14;';
+
+            var baseStyle = 'background:#0a1f14;color:#e8e8e8;padding:20mm 15mm;box-sizing:border-box;width:100%;';
+            var pageBreak = 'page-break-after:always;';
+
+            // ── Page 1: Cover ──
+            pdfWrap.innerHTML = '<div style="' + baseStyle + pageBreak + 'display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:257mm;text-align:center;">' +
+                '<div style="font-size:11pt;color:#d4af37;letter-spacing:4px;margin-bottom:20px;">AI ELECTION SOLUTION</div>' +
+                '<div style="width:80px;height:2px;background:#d4af37;margin:0 auto 30px;"></div>' +
+                '<h1 style="font-size:28pt;font-weight:900;color:#fff;margin:0 0 25px;">User Manual</h1>' +
+                '<p style="font-size:12pt;color:rgba(255,255,255,0.75);line-height:1.8;max-width:400px;">Step-by-step guide to all features<br>of the AI Election Solution</p>' +
+                '<div style="width:80px;height:2px;background:#d4af37;margin:40px auto 30px;"></div>' +
+                '<p style="font-size:9pt;color:rgba(255,255,255,0.45);">AI Election Solution Lab</p>' +
+            '</div>';
+
+            // ── Page 2: Table of Contents ──
+            var tocItems = [
+                ['01','Getting Started - Account & Login'],
+                ['02','Dashboard Overview'],
+                ['03','AI Policy Generation System'],
+                ['04','Voter Data Analysis'],
+                ['05','Content Auto-Generation'],
+                ['06','AI TalkHub (Chatbot) Setup'],
+                ['07','Campaign Vehicle AI System'],
+                ['08','Campaign Performance Analytics'],
+                ['09','Election Law Compliance Guide'],
+                ['10','Frequently Asked Questions']
+            ];
+            var tocHtml = '<div style="' + baseStyle + pageBreak + 'min-height:257mm;">' +
+                '<h2 style="font-size:18pt;color:#d4af37;border-bottom:2px solid rgba(212,175,55,0.3);padding-bottom:12px;margin:0 0 25px;">Table of Contents</h2>';
+            tocItems.forEach(function(item, i) {
+                tocHtml += '<div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(212,175,55,0.1);">' +
+                    '<span style="font-size:12pt;font-weight:700;color:#d4af37;min-width:35px;">' + item[0] + '</span>' +
+                    '<span style="font-size:11pt;color:rgba(255,255,255,0.85);flex:1;">' + item[1] + '</span>' +
+                    '<span style="font-size:9pt;color:rgba(255,255,255,0.4);">' + (i + 3) + '</span>' +
+                '</div>';
+            });
+            tocHtml += '</div>';
+            pdfWrap.innerHTML += tocHtml;
+
+            // ── Page 3+: Content sections ──
+            var cards = document.querySelectorAll('.manual-card');
+            cards.forEach(function(card, idx) {
+                var clone = card.cloneNode(true);
+                var pn = clone.querySelector('.page-number');
+                if (pn) pn.remove();
+                clone.querySelectorAll('.faq-answer').forEach(function(a) { a.style.maxHeight = 'none'; a.style.overflow = 'visible'; });
+
+                clone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '11.5pt'; });
+                clone.querySelectorAll('h4').forEach(function(el) { el.style.fontSize = '10pt'; });
+                clone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                clone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.7'; });
+                clone.querySelectorAll('li').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.6'; });
+                clone.querySelectorAll('strong').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.step-item h5').forEach(function(el) { el.style.fontSize = '8.5pt'; });
+                clone.querySelectorAll('.step-item p').forEach(function(el) { el.style.fontSize = '7.5pt'; });
+                clone.querySelectorAll('.step-num').forEach(function(el) { el.style.fontSize = '9pt'; el.style.width = '28px'; el.style.height = '28px'; });
+                clone.querySelectorAll('.info-box p, .warning-box p').forEach(function(el) { el.style.fontSize = '8pt'; });
+                clone.querySelectorAll('.faq-question h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                clone.querySelectorAll('.faq-answer p').forEach(function(el) { el.style.fontSize = '8pt'; });
+
+                clone.style.cssText = 'background:rgba(10,40,25,0.4);border:1px solid rgba(212,175,55,0.2);border-radius:10px;padding:20px 22px;margin:0;position:relative;';
+
+                var pageDiv = document.createElement('div');
+                pageDiv.style.cssText = baseStyle + pageBreak + 'min-height:257mm;';
+                pageDiv.appendChild(clone);
+                var pgNum = document.createElement('div');
+                pgNum.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
+                pgNum.textContent = '- ' + (idx + 3) + ' -';
+                pageDiv.appendChild(pgNum);
+                pdfWrap.appendChild(pageDiv);
+            });
+
+            var contactSec = document.querySelector('.contact-section');
+            if (contactSec) {
+                var cClone = contactSec.cloneNode(true);
+                var cpn = cClone.querySelector('.page-number');
+                if (cpn) cpn.remove();
+                cClone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '14pt'; });
+                cClone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
+                cClone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8pt'; el.style.lineHeight = '1.6'; });
+                cClone.style.cssText = 'background:rgba(10,40,25,0.5);border:2px solid rgba(212,175,55,0.3);border-radius:10px;padding:25px;';
+
+                var contactPage = document.createElement('div');
+                contactPage.style.cssText = baseStyle + 'min-height:257mm;';
+                contactPage.appendChild(cClone);
+                var lastPg = document.createElement('div');
+                lastPg.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
+                lastPg.textContent = '- ' + (cards.length + 3) + ' -';
+                contactPage.appendChild(lastPg);
+                pdfWrap.appendChild(contactPage);
+            }
+
+            document.body.appendChild(pdfWrap);
+
             var opt = {
-                margin: [10, 10, 15, 10],
+                margin: [0, 0, 0, 0],
                 filename: 'AI_Election_Solution_User_Manual.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a1f14' },
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a1f14', scrollY: 0 },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                pagebreak: { mode: ['css'], before: [], after: [], avoid: [] }
             };
-            html2pdf().set(opt).from(content).save().then(function() {
+
+            html2pdf().set(opt).from(pdfWrap).save().then(function() {
+                document.body.removeChild(pdfWrap);
+                btn.innerHTML = '<span class="dl-icon">📥</span> Download PDF';
+                btn.style.pointerEvents = 'auto';
+            }).catch(function() {
+                document.body.removeChild(pdfWrap);
                 btn.innerHTML = '<span class="dl-icon">📥</span> Download PDF';
                 btn.style.pointerEvents = 'auto';
             });
