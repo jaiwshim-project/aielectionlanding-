@@ -854,120 +854,132 @@
             btn.innerHTML = '<span class="dl-icon">⏳</span> Generating...';
             btn.style.pointerEvents = 'none';
 
-            var pdfWrap = document.createElement('div');
-            pdfWrap.style.cssText = 'position:absolute;left:-9999px;top:0;width:210mm;font-family:"Noto Sans KR",sans-serif;color:#e8e8e8;background:#0a1f14;';
+            var container = document.querySelector('.manual-container');
 
-            var baseStyle = 'background:#0a1f14;color:#e8e8e8;padding:20mm 15mm;box-sizing:border-box;width:100%;';
-            var pageBreak = 'page-break-after:always;';
-
-            // ── Page 1: Cover ──
-            pdfWrap.innerHTML = '<div style="' + baseStyle + pageBreak + 'display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:257mm;text-align:center;">' +
-                '<div style="font-size:11pt;color:#d4af37;letter-spacing:4px;margin-bottom:20px;">AI ELECTION SOLUTION</div>' +
-                '<div style="width:80px;height:2px;background:#d4af37;margin:0 auto 30px;"></div>' +
-                '<h1 style="font-size:28pt;font-weight:900;color:#fff;margin:0 0 25px;">User Manual</h1>' +
-                '<p style="font-size:12pt;color:rgba(255,255,255,0.75);line-height:1.8;max-width:400px;">Step-by-step guide to all features<br>of the AI Election Solution</p>' +
-                '<div style="width:80px;height:2px;background:#d4af37;margin:40px auto 30px;"></div>' +
-                '<p style="font-size:9pt;color:rgba(255,255,255,0.45);">AI Election Solution Lab</p>' +
-            '</div>';
-
-            // ── Page 2: Table of Contents ──
-            var tocItems = [
-                ['01','Getting Started - Account & Login'],
-                ['02','Dashboard Overview'],
-                ['03','AI Policy Generation System'],
-                ['04','Voter Data Analysis'],
-                ['05','Content Auto-Generation'],
-                ['06','AI TalkHub (Chatbot) Setup'],
-                ['07','Campaign Vehicle AI System'],
-                ['08','Campaign Performance Analytics'],
-                ['09','Election Law Compliance Guide'],
-                ['10','Frequently Asked Questions']
-            ];
-            var tocHtml = '<div style="' + baseStyle + pageBreak + 'min-height:257mm;">' +
-                '<h2 style="font-size:18pt;color:#d4af37;border-bottom:2px solid rgba(212,175,55,0.3);padding-bottom:12px;margin:0 0 25px;">Table of Contents</h2>';
-            tocItems.forEach(function(item, i) {
-                tocHtml += '<div style="display:flex;align-items:center;padding:10px 0;border-bottom:1px solid rgba(212,175,55,0.1);">' +
-                    '<span style="font-size:12pt;font-weight:700;color:#d4af37;min-width:35px;">' + item[0] + '</span>' +
-                    '<span style="font-size:11pt;color:rgba(255,255,255,0.85);flex:1;">' + item[1] + '</span>' +
-                    '<span style="font-size:9pt;color:rgba(255,255,255,0.4);">' + (i + 3) + '</span>' +
-                '</div>';
-            });
-            tocHtml += '</div>';
-            pdfWrap.innerHTML += tocHtml;
-
-            // ── Page 3+: Content sections ──
-            var cards = document.querySelectorAll('.manual-card');
-            cards.forEach(function(card, idx) {
-                var clone = card.cloneNode(true);
-                var pn = clone.querySelector('.page-number');
-                if (pn) pn.remove();
-                clone.querySelectorAll('.faq-answer').forEach(function(a) { a.style.maxHeight = 'none'; a.style.overflow = 'visible'; });
-
-                clone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '11.5pt'; });
-                clone.querySelectorAll('h4').forEach(function(el) { el.style.fontSize = '10pt'; });
-                clone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
-                clone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.7'; });
-                clone.querySelectorAll('li').forEach(function(el) { el.style.fontSize = '8.5pt'; el.style.lineHeight = '1.6'; });
-                clone.querySelectorAll('strong').forEach(function(el) { el.style.fontSize = '8.5pt'; });
-                clone.querySelectorAll('.step-item h5').forEach(function(el) { el.style.fontSize = '8.5pt'; });
-                clone.querySelectorAll('.step-item p').forEach(function(el) { el.style.fontSize = '7.5pt'; });
-                clone.querySelectorAll('.step-num').forEach(function(el) { el.style.fontSize = '9pt'; el.style.width = '28px'; el.style.height = '28px'; });
-                clone.querySelectorAll('.info-box p, .warning-box p').forEach(function(el) { el.style.fontSize = '8pt'; });
-                clone.querySelectorAll('.faq-question h5').forEach(function(el) { el.style.fontSize = '9pt'; });
-                clone.querySelectorAll('.faq-answer p').forEach(function(el) { el.style.fontSize = '8pt'; });
-
-                clone.style.cssText = 'background:rgba(10,40,25,0.4);border:1px solid rgba(212,175,55,0.2);border-radius:10px;padding:20px 22px;margin:0;position:relative;';
-
-                var pageDiv = document.createElement('div');
-                pageDiv.style.cssText = baseStyle + pageBreak + 'min-height:257mm;';
-                pageDiv.appendChild(clone);
-                var pgNum = document.createElement('div');
-                pgNum.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
-                pgNum.textContent = '- ' + (idx + 3) + ' -';
-                pageDiv.appendChild(pgNum);
-                pdfWrap.appendChild(pageDiv);
+            // ① Expand all FAQ answers
+            var faqAnswers = document.querySelectorAll('.faq-answer');
+            faqAnswers.forEach(function(a) {
+                a.style.maxHeight = 'none';
+                a.style.overflow = 'visible';
             });
 
-            var contactSec = document.querySelector('.contact-section');
-            if (contactSec) {
-                var cClone = contactSec.cloneNode(true);
-                var cpn = cClone.querySelector('.page-number');
-                if (cpn) cpn.remove();
-                cClone.querySelectorAll('h3').forEach(function(el) { el.style.fontSize = '14pt'; });
-                cClone.querySelectorAll('h5').forEach(function(el) { el.style.fontSize = '9pt'; });
-                cClone.querySelectorAll('p').forEach(function(el) { el.style.fontSize = '8pt'; el.style.lineHeight = '1.6'; });
-                cClone.style.cssText = 'background:rgba(10,40,25,0.5);border:2px solid rgba(212,175,55,0.3);border-radius:10px;padding:25px;';
+            // ② Hide HTML page numbers temporarily
+            var pageNums = document.querySelectorAll('.page-number');
+            pageNums.forEach(function(el) { el.style.display = 'none'; });
 
-                var contactPage = document.createElement('div');
-                contactPage.style.cssText = baseStyle + 'min-height:257mm;';
-                contactPage.appendChild(cClone);
-                var lastPg = document.createElement('div');
-                lastPg.style.cssText = 'text-align:right;font-size:8pt;color:rgba(255,255,255,0.35);margin-top:15px;';
-                lastPg.textContent = '- ' + (cards.length + 3) + ' -';
-                contactPage.appendChild(lastPg);
-                pdfWrap.appendChild(contactPage);
-            }
+            // ③ Reduce text by 2pt (16px → 13.3px root font-size scales all rem units)
+            var origRootSize = document.documentElement.style.fontSize;
+            document.documentElement.style.fontSize = '13.3px';
 
-            document.body.appendChild(pdfWrap);
+            // ④ Insert title header at top
+            var header = document.createElement('div');
+            header.id = 'pdf-title-header';
+            header.style.cssText = [
+                'text-align:center',
+                'padding:28px 0 32px',
+                'margin-bottom:32px',
+                'background:linear-gradient(135deg,#0d2647 0%,#1a3c6e 100%)',
+                'border-radius:12px',
+                'color:#fff'
+            ].join(';');
+            header.innerHTML =
+                '<div style="font-size:32px;font-weight:700;color:#d4af37;letter-spacing:5px;margin-bottom:12px;line-height:1.2;">AI ELECTION SOLUTION</div>' +
+                '<div style="width:60px;height:2px;background:#d4af37;margin:0 auto 16px;"></div>' +
+                '<h1 style="font-size:28px;font-weight:900;color:#ffffff;margin:0 0 14px;font-family:\'Noto Sans KR\',sans-serif;letter-spacing:-0.5px;">User Manual</h1>' +
+                '<p style="font-size:15px;color:rgba(255,255,255,0.42);margin:0;letter-spacing:0.5px;">Step-by-step guide to all features of the AI Election Solution</p>' +
+                '<p style="font-size:10px;color:rgba(212,175,55,0.85);margin:10px 0 0;">AI Election Solution Lab</p>';
+            container.insertBefore(header, container.firstChild);
+
+            // ⑤ Append closing footer page
+            var footer = document.createElement('div');
+            footer.id = 'pdf-closing-footer';
+            footer.style.cssText = [
+                'margin-top:40px',
+                'padding:36px 30px',
+                'background:linear-gradient(135deg,#f0f4fb 0%,#e8f0fa 100%)',
+                'border:1px solid #c8d8ee',
+                'border-top:4px solid #1a3c6e',
+                'border-radius:12px',
+                'text-align:center',
+                'page-break-before:always'
+            ].join(';');
+            footer.innerHTML =
+                '<div style="font-size:9px;font-weight:700;color:#d4af37;letter-spacing:4px;margin-bottom:14px;">AI ELECTION SOLUTION</div>' +
+                '<h2 style="font-size:20px;font-weight:900;color:#1a3c6e;margin:0 0 6px;font-family:\'Noto Sans KR\',sans-serif;">AI Election Solution Lab</h2>' +
+                '<p style="font-size:10px;color:#6b7280;margin:0 0 24px;">Korea\'s No.1 AI Election Strategy Partner</p>' +
+                '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:580px;margin:0 auto 28px;">' +
+                    '<div style="background:#fff;border:1px solid #dde8f4;border-radius:10px;padding:16px 12px;">' +
+                        '<div style="font-size:18px;margin-bottom:6px;">📱</div>' +
+                        '<div style="font-size:9px;font-weight:700;color:#1a3c6e;margin-bottom:4px;">Phone</div>' +
+                        '<div style="font-size:10px;color:#374151;">010-2397-5734</div>' +
+                        '<div style="font-size:8px;color:#9ca3af;margin-top:2px;">Weekdays 09:00~18:00</div>' +
+                    '</div>' +
+                    '<div style="background:#fff;border:1px solid #dde8f4;border-radius:10px;padding:16px 12px;">' +
+                        '<div style="font-size:18px;margin-bottom:6px;">✉️</div>' +
+                        '<div style="font-size:9px;font-weight:700;color:#1a3c6e;margin-bottom:4px;">Email</div>' +
+                        '<div style="font-size:10px;color:#374151;">jaiwshim@gmail.com</div>' +
+                        '<div style="font-size:8px;color:#9ca3af;margin-top:2px;">24/7 inquiries</div>' +
+                    '</div>' +
+                    '<div style="background:#fff;border:1px solid #dde8f4;border-radius:10px;padding:16px 12px;">' +
+                        '<div style="font-size:18px;margin-bottom:6px;">💬</div>' +
+                        '<div style="font-size:9px;font-weight:700;color:#1a3c6e;margin-bottom:4px;">AI Chatbot</div>' +
+                        '<div style="font-size:10px;color:#374151;">aitalker.co.kr</div>' +
+                        '<div style="font-size:8px;color:#9ca3af;margin-top:2px;">24/7 live support</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div style="width:60px;height:2px;background:#d4af37;margin:0 auto 16px;"></div>' +
+                '<p style="font-size:8px;color:#9ca3af;margin:0;">© 2024 AI Election Solution Lab. All rights reserved.</p>' +
+                '<p style="font-size:8px;color:#b0bac8;margin:4px 0 0;">Contents of this manual are subject to change with service updates.</p>';
+            container.appendChild(footer);
 
             var opt = {
-                margin: [0, 0, 0, 0],
+                margin: [10, 8, 10, 8],
                 filename: 'AI_Election_Solution_User_Manual.pdf',
                 image: { type: 'jpeg', quality: 0.95 },
-                html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0a1f14', scrollY: 0 },
+                html2canvas: {
+                    scale: 1.5,
+                    useCORS: true,
+                    scrollX: 0,
+                    scrollY: 0,
+                    backgroundColor: '#f5f7fa'
+                },
                 jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                pagebreak: { mode: ['css'], before: [], after: [], avoid: [] }
+                pagebreak: { mode: ['css', 'legacy'], avoid: ['.step-flow', '.info-box', '.warning-box'] }
             };
 
-            html2pdf().set(opt).from(pdfWrap).save().then(function() {
-                document.body.removeChild(pdfWrap);
+            function cleanup() {
+                document.documentElement.style.fontSize = origRootSize;
+                if (document.getElementById('pdf-title-header')) container.removeChild(header);
+                if (document.getElementById('pdf-closing-footer')) container.removeChild(footer);
+                faqAnswers.forEach(function(a) {
+                    a.style.maxHeight = '';
+                    a.style.overflow = '';
+                });
+                pageNums.forEach(function(el) { el.style.display = ''; });
                 btn.innerHTML = '<span class="dl-icon">📥</span> Download PDF';
                 btn.style.pointerEvents = 'auto';
-            }).catch(function() {
-                document.body.removeChild(pdfWrap);
-                btn.innerHTML = '<span class="dl-icon">📥</span> Download PDF';
-                btn.style.pointerEvents = 'auto';
-            });
+            }
+
+            html2pdf()
+                .set(opt)
+                .from(container)
+                .toPdf()
+                .get('pdf')
+                .then(function(pdf) {
+                    // Add 9pt page numbers to bottom-right of every page
+                    var totalPages = pdf.internal.getNumberOfPages();
+                    var pageW = pdf.internal.pageSize.getWidth();
+                    var pageH = pdf.internal.pageSize.getHeight();
+                    for (var i = 1; i <= totalPages; i++) {
+                        pdf.setPage(i);
+                        pdf.setFontSize(9);
+                        pdf.setTextColor(160, 160, 160);
+                        pdf.text(i + ' / ' + totalPages, pageW - 12, pageH - 6, { align: 'right' });
+                    }
+                })
+                .save()
+                .then(cleanup)
+                .catch(cleanup);
         }
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
