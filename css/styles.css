@@ -4003,3 +4003,89 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ═══════════════════════════════════════════
+           전체 페이지 공통 모바일 최적화 (768px 이하)
+           ═══════════════════════════════════════════ */
+        @media (max-width: 768px) {
+            /* 드롭다운 높이 — 솔루션(6개), 매뉴얼(3개) 모두 수용 */
+            .nav-item.active .dropdown-menu {
+                max-height: 700px;
+            }
+
+            /* 비교 테이블 — 가로 스크롤 허용 */
+            .comparison {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .comparison-table[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                min-width: 480px;
+            }
+
+            /* 공통 섹션 패딩 축소 */
+            .section { padding: 50px 0 !important; }
+            .hero { padding-top: 70px !important; }
+            .hero-content { padding: 20px 15px !important; }
+
+            /* 히어로 h1 크기 */
+            .hero h1 { font-size: 1.8rem !important; line-height: 1.3; }
+            .hero-subtitle { font-size: 0.95rem !important; }
+
+            /* 섹션 제목 */
+            .section-title { font-size: 1.6rem !important; }
+
+            /* 페이지 헤더 (PDF 뷰어 페이지 등) */
+            .page-header { padding: 100px 15px 40px !important; }
+            .page-header h1 { font-size: 1.8rem !important; }
+
+            /* PDF iframe 높이 */
+            .pdf-frame { height: 65vh !important; }
+
+            /* 다운로드 바 세로 배치 */
+            .download-bar {
+                flex-direction: column !important;
+                gap: 12px !important;
+                padding: 16px !important;
+            }
+            .download-btn { width: 100%; justify-content: center; }
+
+            /* 컨테이너 패딩 */
+            .container { padding: 0 15px !important; }
+            .guide-container { padding: 0 15px !important; }
+            .manual-container { padding: 0 15px !important; }
+
+            /* 카드 패딩 */
+            .manual-card { padding: 20px 16px !important; }
+            .manual-toc { padding: 20px 16px !important; }
+
+            /* 목차 — 1열 */
+            .toc-list { grid-template-columns: 1fr !important; }
+
+            /* 일반 flex 요소 — 세로 배치 */
+            .cta-buttons { flex-direction: column; align-items: center; gap: 10px; }
+        }
+
+        /* ═══════════════════════════════════════════
+           소형 모바일 공통 최적화 (480px 이하)
+           ═══════════════════════════════════════════ */
+        @media (max-width: 480px) {
+            /* 드롭다운 최대 높이 */
+            .nav-item.active .dropdown-menu { max-height: 800px; }
+
+            /* 히어로 */
+            .hero h1 { font-size: 1.4rem !important; }
+            .hero-badge { font-size: 0.7rem !important; }
+
+            /* 비교 테이블 셀 패딩 */
+            .comparison-cell { padding: 12px 8px !important; font-size: 0.8rem !important; }
+
+            /* 섹션 패딩 */
+            .section { padding: 35px 0 !important; }
+            .section-title { font-size: 1.3rem !important; }
+
+            /* 버튼 */
+            .btn { padding: 10px 16px !important; font-size: 0.85rem !important; }
+
+            /* PDF iframe */
+            .pdf-frame { height: 55vh !important; }
+        }

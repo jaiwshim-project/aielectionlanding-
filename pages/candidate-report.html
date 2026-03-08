@@ -48,7 +48,26 @@
         .strategy-num-accent { color:var(--accent); }
         .strategy-title { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:900; color:#fff; }
         .strategy-body { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
-        @media(max-width:768px){ .strategy-body{grid-template-columns:1fr;} .roadmap-grid-inner{grid-template-columns:1fr!important;} .roadmap-item{border-right:none!important; border-bottom:1px solid rgba(212,175,55,0.15);} .roadmap-item:last-child{border-bottom:none;} }
+        @media(max-width:768px){
+            .strategy-body{grid-template-columns:1fr;}
+            .roadmap-grid-inner{grid-template-columns:1fr!important;}
+            .roadmap-item{border-right:none!important; border-bottom:1px solid rgba(212,175,55,0.15);}
+            .roadmap-item:last-child{border-bottom:none;}
+            /* 인라인 2열 그리드 모바일 처리 */
+            [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important;}
+            [style*="grid-template-columns:repeat(3,1fr)"],[style*="grid-template-columns: repeat(3, 1fr)"]{grid-template-columns:1fr!important;}
+            [style*="grid-template-columns:repeat(4,1fr)"],[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important;}
+            .top5-grid{grid-template-columns:repeat(2,1fr)!important;}
+            .flow-grid{grid-template-columns:repeat(2,1fr)!important;}
+            .influence-grid{grid-template-columns:repeat(2,1fr)!important;}
+        }
+        @media(max-width:480px){
+            [style*="grid-template-columns:1fr 1fr"],[style*="grid-template-columns: 1fr 1fr"]{grid-template-columns:1fr!important;}
+            .top5-grid{grid-template-columns:1fr!important;}
+            .flow-grid{grid-template-columns:1fr!important;}
+            .influence-grid{grid-template-columns:1fr!important;}
+            [style*="grid-template-columns:repeat(4,1fr)"],[style*="grid-template-columns: repeat(4, 1fr)"]{grid-template-columns:repeat(2,1fr)!important;}
+        }
 
         .check-list { list-style:none; padding:0; margin:0; }
         .check-list li { position:relative; padding:14px 20px 14px 45px; margin-bottom:10px; background:rgba(0,0,0,0.25); border-radius:12px; color:rgba(255,255,255,0.92); font-size:1.02rem; line-height:1.6; transition:all 0.3s ease; border:1px solid rgba(255,255,255,0.05); }
@@ -194,6 +213,8 @@
                         <li><a href="solution-overview.html" class="nav-button">AI 선거솔루션 소개</a></li>
                         <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
                         <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                        <li><a href="election-analysis-guide.html" class="nav-button">선거분석 AI 안내자료</a></li>
+                        <li><a href="electionmap-guide.html" class="nav-button">일렉션맵 AI 안내자료</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -206,7 +227,7 @@
                 <li class="nav-item has-dropdown">
                     <button class="nav-button">가격/비교</button>
                     <ul class="dropdown-menu">
-                        <li><a href="pricing.html" class="nav-button">가격표</a></li>
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li><li><a href="pricing-report.html" class="nav-button">리포트 가격 산정표</a></li>
                         <li><a href="comparison.html" class="nav-button">비교분석</a></li>
                         <li><a href="results.html" class="nav-button">성과</a></li>
                     </ul>
@@ -228,7 +249,7 @@
                         <li><a href="demo.html" class="nav-button nav-cta">무료 데모</a></li>
                     </ul>
                 </li>
-                <li class="nav-item has-dropdown"><button class="nav-button" style="color: var(--gold); font-weight: 700;">매뉴얼</button><ul class="dropdown-menu"><li><a href="user-manual.html" class="nav-button">사용자 매뉴얼</a></li><li><a href="electionmap-manual.html" class="nav-button">일렉션맵AI 매뉴얼</a></li></ul></li>
+                <li class="nav-item has-dropdown"><button class="nav-button" style="color: var(--gold); font-weight: 700;">매뉴얼</button><ul class="dropdown-menu"><li><a href="user-manual.html" class="nav-button">사용자 매뉴얼</a></li><li><a href="electionmap-manual.html" class="nav-button">일렉션맵AI 매뉴얼</a></li><li><a href="report-guide.html" class="nav-button">선거분석 AI 안내자료</a></li></ul></li>
                 <li class="nav-item"><a href="../en/pages/solution.html" class="nav-button" style="font-weight:700;border:1px solid var(--gold);border-radius:5px;padding:6px 12px;">EN</a></li>
             </ul>
         </div>

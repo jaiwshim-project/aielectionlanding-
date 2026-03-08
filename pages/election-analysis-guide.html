@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선거분석 AI 안내자료 - AI 선거 솔루션</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body { background: #f5f7fa !important; }
+
+        .page-header {
+            background: linear-gradient(135deg, #0a1f14 0%, #0a2e1a 100%);
+            padding: 120px 0 60px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        .page-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .guide-section {
+            padding: 60px 0;
+        }
+        .guide-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .download-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            border: 1px solid #dde8f4;
+            border-left: 5px solid #1a3c6e;
+            border-radius: 12px;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px rgba(26,60,110,0.07);
+        }
+        .download-bar span {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a3c6e;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #1a3c6e, #0a2547);
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .download-btn:hover {
+            background: linear-gradient(135deg, #d4af37, #b8960a);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212,175,55,0.3);
+        }
+
+        .pdf-wrapper {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(26,60,110,0.12);
+            overflow: hidden;
+        }
+        .pdf-frame {
+            width: 100%;
+            height: 900px;
+            border: none;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .download-bar { flex-direction: column; gap: 15px; text-align: center; }
+            .pdf-frame { height: 600px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--gold);">AI 선거솔루션 연구소</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">서비스</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="candidate-report.html" class="nav-button">정치인 평가 보고서</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">솔루션</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="solution.html" class="nav-button">AI 선거 시스템</a></li>
+                        <li><a href="solution-overview.html" class="nav-button">AI 선거솔루션 소개</a></li>
+                        <li><a href="strategy.html" class="nav-button">공천 전략</a></li>
+                        <li><a href="election-vehicle.html" class="nav-button">AI 선거차량</a></li>
+                        <li><a href="election-analysis-guide.html" class="nav-button">선거분석 AI 안내자료</a></li>
+                        <li><a href="electionmap-guide.html" class="nav-button">일렉션맵 AI 안내자료</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">법률 가이드</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="legal.html" class="nav-button">불법문자발송</a></li>
+                        <li><a href="election-law.html" class="nav-button">선거법 안내</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">가격/비교</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="pricing.html" class="nav-button">가격표</a></li><li><a href="pricing-report.html" class="nav-button">리포트 가격 산정표</a></li>
+                        <li><a href="comparison.html" class="nav-button">비교분석</a></li>
+                        <li><a href="results.html" class="nav-button">성과</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">자료 보기</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="resources-video.html" class="nav-button">영상자료</a></li>
+                        <li><a href="resources-articles.html" class="nav-button">기사 자료</a></li>
+                        <li><a href="resources-samples.html" class="nav-button">후보자 샘플</a></li>
+                        <li><a href="resources-aitalk.html" class="nav-button">후보자 AI 톡&홈피</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <button class="nav-button">파트너</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="reseller.html" class="nav-button">리셀러 모집</a></li>
+                        <li><a href="developer.html" class="nav-button">개발자 소개</a></li>
+                        <li><a href="demo.html" class="nav-button nav-cta">무료 데모</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown"><button class="nav-button" style="color: var(--gold); font-weight: 700;">매뉴얼</button><ul class="dropdown-menu"><li><a href="user-manual.html" class="nav-button">사용자 매뉴얼</a></li><li><a href="electionmap-manual.html" class="nav-button">일렉션맵AI 매뉴얼</a></li><li><a href="report-guide.html" class="nav-button">선거분석 AI 안내자료</a></li></ul></li>
+                <li class="nav-item"><a href="../en/index.html" class="nav-button" style="font-weight: 700; border: 1px solid var(--gold); border-radius: 5px; padding: 6px 12px;">EN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>선거분석 AI 안내자료</h1>
+        <p>ElectionAnalysis AI 소개 및 활용 안내</p>
+    </div>
+
+    <!-- Content -->
+    <section class="guide-section">
+        <div class="guide-container">
+            <div class="download-bar">
+                <span>📄 ElectionAnalysisReportAI_안내자료.pdf</span>
+                <a href="ElectionAnalysisReportAI_안내자료.pdf" download class="download-btn">
+                    ⬇ PDF 다운로드
+                </a>
+            </div>
+            <div class="pdf-wrapper">
+                <iframe
+                    class="pdf-frame"
+                    src="ElectionAnalysisReportAI_안내자료.pdf"
+                    title="선거분석 AI 안내자료">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile dropdown toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-item.has-dropdown > .nav-button').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (window.innerWidth <= 768) {
+                        const navItem = event.currentTarget.parentElement;
+                        document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
+                            if (item !== navItem) item.classList.remove('active');
+                        });
+                        navItem.classList.toggle('active');
+                        event.stopPropagation();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

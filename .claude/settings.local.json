@@ -11,7 +11,26 @@
       "Bash(git push)",
       "WebFetch(domain:www.ibrandnews.com)",
       "Bash(git commit:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(powershell -Command \"Get-ChildItem -Recurse -Include ''*.html'' | ForEach-Object { \\(Get-Content $_FullName -Raw\\) -replace ''code: \"\"biz011\"\"'', ''code: \"\"biz001\"\"'' | Set-Content $_FullName -NoNewline }\")",
+      "Bash(find:*)",
+      "WebFetch(domain:chatbot-sdk.aitalker.co.kr)",
+      "Bash(node -e:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "WebSearch",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:pixabay.com)",
+      "WebFetch(domain:this-person-does-not-exist.com)",
+      "WebFetch(domain:unsplash.com)",
+      "WebFetch(domain:generated.photos)",
+      "Bash(wc:*)",
+      "Bash(git reset:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(/c/Users/USER/AppData/Local/Programs/Python/Python314/python.exe --version)",
+      "Read(//c/Users/USER/AppData/Local/**)",
+      "Bash(unzip:*)"
     ]
   }
 }
