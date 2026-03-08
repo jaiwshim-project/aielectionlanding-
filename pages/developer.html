@@ -19,6 +19,8 @@
         .dev-stat { font-size: 2rem; font-weight: 900; }
 
         @media (max-width: 768px) {
+            .book-layout { flex-direction: column !important; align-items: center !important; }
+            .book-layout img { width: 160px !important; }
             .dev-section { padding: 20px 10px; }
             .dev-card { padding: 20px 15px; margin-bottom: 15px; }
             .dev-title { font-size: 1.1rem; margin-bottom: 15px; }
@@ -225,6 +227,31 @@
                     <div class="dev-item">
                         <div class="dev-stat" style="color: var(--accent);"><span class="counter" data-target="400">0</span>개</div>
                         <p class="dev-text" style="color: rgba(255,255,255,0.8);">대기업</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Section -->
+            <div class="dev-card" style="background: rgba(255,255,255,0.05); border: 2px solid rgba(212, 175, 55, 0.3);">
+                <h3 class="dev-title" style="color: var(--gold); text-align: center;">📚 대표 저서</h3>
+                <div class="book-layout" style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+                    <div style="flex: 0 0 auto; text-align: center;">
+                        <img src="img-book.png" alt="미래 선거 파워플랜 - AI 선거 솔루션 완전 가이드"
+                             style="width: 200px; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,0.5); display: block;">
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <p style="color: var(--gold); font-size: 1.2rem; font-weight: 900; margin-bottom: 8px; line-height: 1.4;">미래 선거 파워플랜</p>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 700; margin-bottom: 14px;">AI 선거 솔루션 완전 가이드</p>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.83rem; margin-bottom: 6px;">저자 · 심재우 · 정창덕 · 박대겸</p>
+                        <p style="color: rgba(255,255,255,0.6); font-size: 0.83rem; margin-bottom: 16px;">출판사 · 이찬 MOB</p>
+                        <ul style="color: rgba(255,255,255,0.8); font-size: 0.85rem; line-height: 1.9; padding-left: 18px; margin: 0;">
+                            <li>빅데이터 분석과 전략적 메시지로 유권자의 마음을 열어라!</li>
+                            <li>14가지 AI 선거솔루션 · 즉시 활용 가능한 실무 매뉴얼</li>
+                            <li>전문가 3인의 융합 지혜</li>
+                        </ul>
+                        <p style="color: var(--gold); font-size: 0.88rem; font-weight: 700; margin-top: 14px; background: rgba(212,175,55,0.1); padding: 8px 14px; border-radius: 8px; display: inline-block;">
+                            "AI 없는 선거는 더 이상 승리할 수 없다!"
+                        </p>
                     </div>
                 </div>
             </div>
