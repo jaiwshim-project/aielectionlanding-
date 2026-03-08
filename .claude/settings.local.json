@@ -30,7 +30,9 @@
       "Bash(mkdir:*)",
       "Bash(/c/Users/USER/AppData/Local/Programs/Python/Python314/python.exe --version)",
       "Read(//c/Users/USER/AppData/Local/**)",
-      "Bash(unzip:*)"
+      "Bash(unzip:*)",
+      "Bash(do if:*)",
+      "Bash(sed:*)"
     ]
   }
 }
