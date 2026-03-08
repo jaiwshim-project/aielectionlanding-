@@ -1879,6 +1879,18 @@
                 padding: 10px 25px;
                 font-size: 0.9rem;
             }
+
+            /* 비교 카드 (무기 자체가 다릅니다) 모바일 최적화 */
+            .comparison-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+
+            /* 데이터 통계 카드 모바일 최적화 */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
         }
 
         /* 더 작은 화면 (480px 이하) 추가 최적화 */
@@ -2058,6 +2070,15 @@
             .package-features li {
                 font-size: 0.8rem;
                 padding: 5px 0;
+            }
+
+            /* 비교/통계 카드 480px 최적화 */
+            .comparison-grid {
+                gap: 1.2rem !important;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr !important;
             }
 
             footer {
@@ -4371,7 +4392,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="container">
             <h2 class="section-title">무기 자체가 다릅니다. 그리고 그 차이는 '표차'로 드러납니다.</h2>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem;">
+            <div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem;">
                 <!-- Old School -->
                 <div style="background: #fff; padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                     <h3 style="color: #666; font-size: 2rem; margin-bottom: 2rem; text-align: center;">다른 후보가 하는 것</h3>
@@ -4459,9 +4480,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- Results Highlight -->
             <div style="margin-top: 5rem; text-align: center;">
-                <h3 style="font-size: 2.5rem; margin-bottom: 3rem; color: #0a1f14;">데이터가 증명하는 압도적 효율</h3>
+                <h3 style="font-size: 2.5rem; margin-bottom: 3rem; color: #fff;">데이터가 증명하는 압도적 효율</h3>
 
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div class="stats-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                     <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2.5rem; border-radius: 15px; color: white;">
                         <div style="font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem;">90%+</div>
                         <div style="font-size: 1rem; opacity: 0.9;">예측 정확도</div>
