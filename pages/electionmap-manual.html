@@ -390,6 +390,62 @@
             .manual-card { break-inside: avoid; }
         }
     </style>
+    <!-- Mobile Compact Optimization -->
+    <style>
+    @media (max-width: 768px) {
+      .section, section:not(nav) { padding: 22px 0 !important; }
+      .container { padding: 0 10px !important; }
+      .hero { padding: 60px 0 18px !important; min-height: auto !important; }
+      .hero-content { padding: 10px 8px !important; }
+      h1 { font-size: 1.5rem !important; margin-bottom: 8px !important; line-height: 1.2 !important; }
+      h2 { font-size: 1.25rem !important; margin-bottom: 6px !important; }
+      h3 { font-size: 1.05rem !important; margin-bottom: 5px !important; }
+      h4, h5, h6 { margin-bottom: 4px !important; }
+      p { margin-bottom: 6px !important; }
+      .section-title { font-size: 1.2rem !important; margin-bottom: 6px !important; padding: 0 4px !important; }
+      .section-subtitle { font-size: 0.82rem !important; margin-bottom: 10px !important; line-height: 1.4 !important; }
+      [class*="-card"], [class*="card-"], .card,
+      .pricing-card, .package-card, .stat-card, .strategy-item,
+      .highlight-card, .problem-card, .solution-card,
+      .benefit-item, .dev-card, .result-card,
+      .reseller-hero, .reseller-cta-box, .pricing-notice,
+      .comparison, .video-container, .law-intro-box,
+      .law-pillars, .legal-warning-box, .flowchart-box,
+      .legal-solution-box, .law-summary-box, .golden-rule-box { padding: 12px 10px !important; }
+      [class*="-grid"], [class*="grid-"],
+      .problem-grid, .stats, .strategy-grid, .pricing-grid,
+      .benefits-grid, .solution-grid, .solution-features-grid,
+      .legal-risks-grid, .risk-grid, .prohibited-grid { gap: 8px !important; margin-top: 10px !important; }
+      .strategy-intro { margin-top: 15px !important; }
+      .section-nav-btn { margin-top: 12px !important; }
+      table { font-size: 0.78rem !important; }
+      th, td { padding: 5px 6px !important; }
+      .form-section, .reseller-form-section, .form-download-section { padding: 10px 8px !important; }
+      .cta-section { padding: 20px 10px !important; }
+      .cta-section h2 { font-size: 1.1rem !important; margin-bottom: 8px !important; }
+      .hero-badge { font-size: 0.65rem !important; padding: 4px 10px !important; margin-bottom: 8px !important; }
+      .hero-subtitle { font-size: 0.82rem !important; margin-bottom: 12px !important; }
+      .btn { padding: 10px 14px !important; font-size: 0.82rem !important; }
+      .cta-buttons { gap: 6px !important; }
+      .stat-value { font-size: 1.6rem !important; }
+      .stat-label { font-size: 0.75rem !important; margin-top: 2px !important; }
+      footer { padding: 18px 10px 12px !important; }
+      .footer-contact { padding: 10px 8px !important; margin-bottom: 12px !important; }
+      .footer-links { margin-top: 10px !important; gap: 12px !important; }
+    }
+    @media (max-width: 480px) {
+      .section, section:not(nav) { padding: 15px 0 !important; }
+      .hero { padding: 52px 0 12px !important; }
+      h1 { font-size: 1.25rem !important; }
+      h2 { font-size: 1.1rem !important; }
+      h3 { font-size: 0.95rem !important; }
+      table { font-size: 0.72rem !important; }
+      th, td { padding: 4px 5px !important; }
+      [class*="-card"], .card, .pricing-card, .stat-card,
+      .strategy-item, .highlight-card, .problem-card,
+      .benefit-item, .dev-card { padding: 10px 8px !important; }
+    }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
